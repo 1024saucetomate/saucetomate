@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
+import React from "react";
+import SplashScreen from "@/components/SplashScreen";
+import Transition from "@/components/Transition";
 
 export const metadata: Metadata = {
   title: "SAUCETOMATE",
@@ -14,7 +17,8 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body>
-        {children}
+        <SplashScreen />
+        <Transition>{children}</Transition>
       </body>
     </html>
   );
