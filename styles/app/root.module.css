@@ -1,3 +1,11 @@
+.header {
+  position: fixed;
+  top: var(--spacing);
+  left: var(--spacing);
+  z-index: 10;
+  color: var(--color-black);
+}
+
 .container {
   display: flex;
   flex-flow: column nowrap;
