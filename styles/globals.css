@@ -1,22 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
-    --color-red: #F3070B;
-    --color-black: #000000;
-    --color-white: #FFFFFF;
-
-    --font-family: 'DM Sans', sans-serif;
+  --color-red: #f3070b;
+  --color-black: #000;
+  --color-white: #fff;
+  --font-family: "Inter", sans-serif;
+  --spacing: 20px;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+*::selection {
+  color: var(--color-red);
+  background-color: var(--color-black);
 }
 
 body {
-    font-family: var(--font-family);
-    font-size: 16px;
-    color: var(--color-black);
-    background-color: var(--color-red);
+  color: var(--color-black);
+  font-weight: bold;
+  font-size: 16px;
+  font-family: var(--font-family);
+  background-color: var(--color-red);
 }
