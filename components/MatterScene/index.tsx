@@ -1,11 +1,16 @@
+"use client";
+
 import Matter from "matter-js";
 import React, { useEffect, useRef } from "react";
 
-export default function MatterScene({
-  className,
-}: Readonly<{ className?: string }>) {
-  const sceneRef = useRef<HTMLDivElement | null>(null);
+interface MatterSceneProps {
+  className?: string;
+}
+
+export default function MatterScene({ className }: Readonly<MatterSceneProps>) {
+  const sceneRef = useRef<HTMLDivElement>(null);
   const engineRef = useRef<Matter.Engine | null>(null);
+  const renderRef = useRef<Matter.Render | null>(null);
 
   useEffect(() => {
     const {
@@ -26,7 +31,7 @@ export default function MatterScene({
 
     const { clientWidth: width, clientHeight: height } = sceneRef.current;
 
-    const render = Render.create({
+    renderRef.current = Render.create({
       element: sceneRef.current,
       engine: engineRef.current,
       options: {
@@ -34,22 +39,22 @@ export default function MatterScene({
         height,
         wireframes: false,
         background: "transparent",
+        pixelRatio: window.devicePixelRatio || 1,
       },
     });
 
     const images = ["/assets/donaldtrump.png", "/assets/kamalaharris.png"];
-
     const imageSizes = [
       { width: 727.36, height: 1000 },
       { width: 940.69, height: 1000 },
     ];
-
     const scale = 0.1;
 
     const createCircularImage = (x: number, y: number, imgIndex: number) => {
-      const width = imageSizes[imgIndex].width * scale;
-      const height = imageSizes[imgIndex].height * scale;
-      const radius = Math.max(width, height) / 2;
+      const { width: imgWidth, height: imgHeight } = imageSizes[imgIndex];
+      const scaledWidth = imgWidth * scale;
+      const scaledHeight = imgHeight * scale;
+      const radius = Math.max(scaledWidth, scaledHeight) / 2;
 
       return Bodies.circle(x, y, radius, {
         restitution: 0.5,
@@ -69,7 +74,7 @@ export default function MatterScene({
     };
 
     const generateImages = () => {
-      const objectCount = Math.floor(width / 20);
+      const objectCount = Math.floor(width / 20) - Math.floor(height / 100);
       const objects = Array.from({ length: objectCount }, () => {
         const imgIndex = Math.floor(Math.random() * images.length);
         const imgSize = imageSizes[imgIndex];
@@ -84,22 +89,30 @@ export default function MatterScene({
       Composite.add(world, objects);
     };
 
-    const boundaries = [
-      Bodies.rectangle(width / 2, height, width, 1, { isStatic: true }),
-      Bodies.rectangle(0, height / 2, 1, height, { isStatic: true }),
-      Bodies.rectangle(width, height / 2, 1, height, { isStatic: true }),
-      Bodies.rectangle(width / 2, 0, width, 1, { isStatic: true }),
-    ];
+    const createBoundaries = () => {
+      const boundaries = [
+        Bodies.rectangle(width / 2, height + 50, width * 2, 100, {
+          isStatic: true,
+        }),
+        Bodies.rectangle(-50, height / 2, 100, height * 2, { isStatic: true }),
+        Bodies.rectangle(width + 50, height / 2, 100, height * 2, {
+          isStatic: true,
+        }),
+        Bodies.rectangle(width / 2, -50, width * 2, 100, { isStatic: true }),
+      ];
 
-    boundaries.forEach((boundary) => {
-      boundary.render.visible = false;
-    });
+      boundaries.forEach((boundary) => {
+        boundary.render.visible = false;
+      });
 
-    Composite.add(world, boundaries);
+      Composite.add(world, boundaries);
+      return boundaries;
+    };
 
+    const boundaries = createBoundaries();
     generateImages();
 
-    const mouse = Mouse.create(render.canvas);
+    const mouse = Mouse.create(renderRef.current.canvas);
     const mouseConstraint = MouseConstraint.create(engineRef.current, {
       mouse: mouse,
       constraint: {
@@ -109,48 +122,42 @@ export default function MatterScene({
     });
 
     Composite.add(world, mouseConstraint);
-    render.mouse = mouse;
+    renderRef.current.mouse = mouse;
 
-    Render.run(render);
+    Render.run(renderRef.current);
     Runner.run(Runner.create(), engineRef.current);
 
     const handleResize = () => {
-      if (!sceneRef.current) return;
+      if (!sceneRef.current || !renderRef.current) return;
       const { clientWidth: newWidth, clientHeight: newHeight } =
         sceneRef.current;
-      render.canvas.width = newWidth;
-      render.canvas.height = newHeight;
+
+      renderRef.current.canvas.width =
+        newWidth * (window.devicePixelRatio || 1);
+      renderRef.current.canvas.height =
+        newHeight * (window.devicePixelRatio || 1);
+      renderRef.current.canvas.style.width = `${newWidth}px`;
+      renderRef.current.canvas.style.height = `${newHeight}px`;
+      Render.setPixelRatio(renderRef.current, window.devicePixelRatio || 1);
+
       boundaries.forEach((boundary, index) => {
-        switch (index) {
-          case 0:
-            Matter.Body.setPosition(
-              boundary,
-              Matter.Vector.create(newWidth / 2, newHeight),
-            );
-            break;
-          case 1:
-            Matter.Body.setPosition(
-              boundary,
-              Matter.Vector.create(0, newHeight / 2),
-            );
-            break;
-          case 2:
-            Matter.Body.setPosition(
-              boundary,
-              Matter.Vector.create(newWidth, newHeight / 2),
-            );
-            break;
-          case 3:
-            Matter.Body.setPosition(
-              boundary,
-              Matter.Vector.create(newWidth / 2, 0),
-            );
-            break;
-        }
+        const positions = [
+          Matter.Vector.create(newWidth / 2, newHeight + 50),
+          Matter.Vector.create(-50, newHeight / 2),
+          Matter.Vector.create(newWidth + 50, newHeight / 2),
+          Matter.Vector.create(newWidth / 2, -50),
+        ];
+        Matter.Body.setPosition(boundary, positions[index]);
+      });
+
+      Render.lookAt(renderRef.current, {
+        min: { x: 0, y: 0 },
+        max: { x: newWidth, y: newHeight },
       });
     };
 
     window.addEventListener("resize", handleResize);
+    handleResize();
   }, []);
 
   return <div ref={sceneRef} className={className} />;
