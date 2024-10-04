@@ -3,6 +3,7 @@
   "plugins": ["stylelint-order"],
   "rules": {
     "order/properties-order": [],
-    "plugin/rational-order": [true, { "border-in-box-model": true }]
+    "plugin/rational-order": [true, { "border-in-box-model": true }],
+    "selector-class-pattern": null
   }
 }
