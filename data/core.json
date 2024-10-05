@@ -1,0 +1,820 @@
+{
+  "Kamala Harris": {
+    "policies": [
+      {
+        "title": "Transition énergétique",
+        "description": "Accélérer la transition vers les énergies renouvelables pour réduire notre dépendance aux énergies fossiles.",
+        "category": "Environnement",
+        "source": {
+          "name": "Ministère de la Transition écologique",
+          "url": "https://www.ecologie.gouv.fr"
+        }
+      },
+      {
+        "title": "Protection des ressources en eau",
+        "description": "Mettre en place des mesures strictes pour protéger nos ressources en eau et lutter contre la pollution.",
+        "category": "Environnement",
+        "source": {
+          "name": "Bureau des ressources en eau",
+          "url": "https://www.biodiversite.gouv.fr"
+        }
+      },
+      {
+        "title": "Préservation des espaces naturels",
+        "description": "Créer des réserves naturelles pour préserver la biodiversité et lutter contre l'urbanisation sauvage.",
+        "category": "Environnement",
+        "source": {
+          "name": "Association de protection de la nature",
+          "url": "https://www.nature.org"
+        }
+      },
+      {
+        "title": "Lutte contre le changement climatique",
+        "description": "Mettre en œuvre des politiques ambitieuses pour réduire les émissions de gaz à effet de serre.",
+        "category": "Environnement",
+        "source": {
+          "name": "GIEC",
+          "url": "https://www.ipcc.ch"
+        }
+      },
+      {
+        "title": "Mobilité durable",
+        "description": "Développer les infrastructures pour les transports en commun et encourager l'utilisation de véhicules électriques.",
+        "category": "Environnement",
+        "source": {
+          "name": "Société des transports",
+          "url": "https://www.transports.gouv.fr"
+        }
+      },
+      {
+        "title": "Augmentation du SMIC",
+        "description": "Rehausser le SMIC pour garantir un revenu décent à tous les travailleurs.",
+        "category": "Économie",
+        "source": {
+          "name": "Institut national de la statistique",
+          "url": "https://www.insee.fr"
+        }
+      },
+      {
+        "title": "Fiscalité progressive",
+        "description": "Instaurer une fiscalité plus juste en taxant davantage les grandes fortunes et les multinationales.",
+        "category": "Économie",
+        "source": {
+          "name": "Ministère des Finances",
+          "url": "https://www.economie.gouv.fr"
+        }
+      },
+      {
+        "title": "Soutien aux petites entreprises",
+        "description": "Mettre en place des aides financières pour les petites entreprises en difficulté.",
+        "category": "Économie",
+        "source": {
+          "name": "Chambre de commerce",
+          "url": "https://www.cci.fr"
+        }
+      },
+      {
+        "title": "Investissement dans l'économie verte",
+        "description": "Financer des projets innovants dans les secteurs d'avenir, comme les énergies renouvelables.",
+        "category": "Économie",
+        "source": {
+          "name": "Banque publique d'investissement",
+          "url": "https://www.bpifrance.fr"
+        }
+      },
+      {
+        "title": "Lutte contre le chômage",
+        "description": "Mettre en œuvre des programmes de formation et d'accompagnement pour les demandeurs d'emploi.",
+        "category": "Économie",
+        "source": {
+          "name": "Pôle emploi",
+          "url": "https://www.pole-emploi.fr"
+        }
+      },
+      {
+        "title": "Système éducatif inclusif",
+        "description": "Rendre l'éducation accessible à tous, sans distinction d'origine sociale.",
+        "category": "Éducation",
+        "source": {
+          "name": "Ministère de l'Éducation nationale",
+          "url": "https://www.education.gouv.fr"
+        }
+      },
+      {
+        "title": "Rénovation des établissements scolaires",
+        "description": "Moderniser les infrastructures scolaires pour offrir un cadre d'apprentissage optimal.",
+        "category": "Éducation",
+        "source": {
+          "name": "Réseau des écoles",
+          "url": "https://www.education.gouv.fr"
+        }
+      },
+      {
+        "title": "Recrutement de professeurs supplémentaires",
+        "description": "Augmenter le nombre de professeurs pour réduire le nombre d'élèves par classe.",
+        "category": "Éducation",
+        "source": {
+          "name": "Syndicat national des enseignants",
+          "url": "https://www.snes.edu"
+        }
+      },
+      {
+        "title": "Accès à la culture pour tous",
+        "description": "Faciliter l'accès à la culture pour les populations défavorisées.",
+        "category": "Éducation",
+        "source": {
+          "name": "Ministère de la Culture",
+          "url": "https://www.culture.gouv.fr"
+        }
+      },
+      {
+        "title": "Promotion des langues régionales",
+        "description": "Encourager l'enseignement des langues régionales dans les établissements scolaires.",
+        "category": "Éducation",
+        "source": {
+          "name": "Association des langues régionales",
+          "url": "https://www.langues-regionales.fr"
+        }
+      },
+      {
+        "title": "Accès à la santé pour tous",
+        "description": "Garantir un accès égal aux soins de santé, sans distinction de revenu.",
+        "category": "Solidarités & santé",
+        "source": {
+          "name": "Ministère de la Santé",
+          "url": "https://www.sante.gouv.fr"
+        }
+      },
+      {
+        "title": "Augmentation des budgets de la santé",
+        "description": "Allouer davantage de ressources à l'hôpital public et aux soins de proximité.",
+        "category": "Solidarités & santé",
+        "source": {
+          "name": "Confédération de l'hospitalisation",
+          "url": "https://www.hospitalisation.fr"
+        }
+      },
+      {
+        "title": "Lutte contre les inégalités de santé",
+        "description": "Mettre en place des programmes pour réduire les inégalités d'accès aux soins.",
+        "category": "Solidarités & santé",
+        "source": {
+          "name": "Institut de la santé publique",
+          "url": "https://www.sante-publique.fr"
+        }
+      },
+      {
+        "title": "Soutien aux personnes en situation de handicap",
+        "description": "Accroître les aides et les services pour les personnes en situation de handicap.",
+        "category": "Solidarités & santé",
+        "source": {
+          "name": "Association des droits des handicapés",
+          "url": "https://www.handicap.fr"
+        }
+      },
+      {
+        "title": "Prévention et lutte contre la précarité",
+        "description": "Développer des programmes de soutien aux personnes en situation de précarité.",
+        "category": "Solidarités & santé",
+        "source": {
+          "name": "Réseau de solidarité",
+          "url": "https://www.solidarite.fr"
+        }
+      },
+      {
+        "title": "Promotion de la paix",
+        "description": "Agir pour le désarmement nucléaire et la promotion de la paix dans le monde.",
+        "category": "International",
+        "source": {
+          "name": "Organisation des Nations Unies",
+          "url": "https://www.un.org"
+        }
+      },
+      {
+        "title": "Coopération internationale",
+        "description": "Renforcer les partenariats avec les pays en développement pour lutter contre la pauvreté.",
+        "category": "International",
+        "source": {
+          "name": "Banque mondiale",
+          "url": "https://www.worldbank.org"
+        }
+      },
+      {
+        "title": "Lutte contre les inégalités mondiales",
+        "description": "S'engager à réduire les inégalités entre les pays riches et les pays pauvres.",
+        "category": "International",
+        "source": {
+          "name": "Oxfam",
+          "url": "https://www.oxfam.org"
+        }
+      },
+      {
+        "title": "Soutien aux réfugiés",
+        "description": "Accroître l'accueil et l'intégration des réfugiés dans notre pays.",
+        "category": "International",
+        "source": {
+          "name": "Haut-Commissariat des Nations Unies pour les réfugiés",
+          "url": "https://www.unhcr.org"
+        }
+      },
+      {
+        "title": "Engagement pour le climat à l'international",
+        "description": "Participer activement aux accords internationaux sur le climat.",
+        "category": "International",
+        "source": {
+          "name": "Accord de Paris",
+          "url": "https://www.un.org/fr/climatechange"
+        }
+      },
+      {
+        "title": "Culture accessible à tous",
+        "description": "Développer des politiques pour rendre la culture accessible à tous les citoyens.",
+        "category": "Culture",
+        "source": {
+          "name": "Ministère de la Culture",
+          "url": "https://www.culture.gouv.fr"
+        }
+      },
+      {
+        "title": "Soutien aux artistes",
+        "description": "Créer des fonds pour soutenir les artistes en difficulté financière.",
+        "category": "Culture",
+        "source": {
+          "name": "Société des auteurs",
+          "url": "https://www.sacd.fr"
+        }
+      },
+      {
+        "title": "Promotion de la diversité culturelle",
+        "description": "Encourager la diversité des expressions culturelles et artistiques.",
+        "category": "Culture",
+        "source": {
+          "name": "UNESCO",
+          "url": "https://www.unesco.org"
+        }
+      },
+      {
+        "title": "Accès à la culture numérique",
+        "description": "Faciliter l'accès aux œuvres culturelles via les plateformes numériques.",
+        "category": "Culture",
+        "source": {
+          "name": "Autorité de régulation",
+          "url": "https://www.arcep.fr"
+        }
+      },
+      {
+        "title": "Éducation artistique et culturelle",
+        "description": "Intégrer des enseignements artistiques dans les programmes scolaires.",
+        "category": "Culture",
+        "source": {
+          "name": "Éducation nationale",
+          "url": "https://www.education.gouv.fr"
+        }
+      },
+      {
+        "title": "Lutte contre les discriminations",
+        "description": "Mettre en place des lois pour protéger les droits des minorités.",
+        "category": "Société",
+        "source": {
+          "name": "Ligue des droits de l'homme",
+          "url": "https://www.ldh-france.org"
+        }
+      },
+      {
+        "title": "Promotion de l'égalité des genres",
+        "description": "Renforcer les droits des femmes et lutter contre les violences faites aux femmes.",
+        "category": "Société",
+        "source": {
+          "name": "Fédération nationale des associations féministes",
+          "url": "https://www.fnff.fr"
+        }
+      },
+      {
+        "title": "Droit au logement",
+        "description": "Garantir un accès au logement pour tous, avec des loyers abordables.",
+        "category": "Société",
+        "source": {
+          "name": "Association des droits au logement",
+          "url": "https://www.adl.fr"
+        }
+      },
+      {
+        "title": "Soutien à la jeunesse",
+        "description": "Créer des programmes d'accompagnement pour les jeunes en difficulté.",
+        "category": "Société",
+        "source": {
+          "name": "Mouvement des jeunes",
+          "url": "https://www.mouvementdesjeunes.fr"
+        }
+      },
+      {
+        "title": "Promouvoir la laïcité",
+        "description": "Assurer la séparation des Églises et de l'État et garantir la liberté de conscience.",
+        "category": "Société",
+        "source": {
+          "name": "Association de la laïcité",
+          "url": "https://www.laique.fr"
+        }
+      },
+      {
+        "title": "Rénovation des forces de police",
+        "description": "Réformer les forces de police pour garantir un service public de qualité et respectueux des droits.",
+        "category": "Sécurité, défense & justice",
+        "source": {
+          "name": "Commission nationale de la déontologie de la sécurité",
+          "url": "https://www.cnaps.gouv.fr"
+        }
+      },
+      {
+        "title": "Lutte contre le racisme et la xénophobie",
+        "description": "Mettre en place des politiques de sensibilisation et de prévention.",
+        "category": "Sécurité, défense & justice",
+        "source": {
+          "name": "SOS Racisme",
+          "url": "https://www.sos-racisme.org"
+        }
+      },
+      {
+        "title": "Réforme de la justice",
+        "description": "Accélérer les procédures judiciaires pour garantir un accès rapide à la justice.",
+        "category": "Sécurité, défense & justice",
+        "source": {
+          "name": "Ministère de la Justice",
+          "url": "https://www.justice.gouv.fr"
+        }
+      },
+      {
+        "title": "Renforcement de la sécurité sociale",
+        "description": "Assurer une couverture santé universelle et un accès aux soins de qualité.",
+        "category": "Sécurité, défense & justice",
+        "source": {
+          "name": "Sécurité sociale",
+          "url": "https://www.securitesociale.fr"
+        }
+      },
+      {
+        "title": "Éducation à la paix",
+        "description": "Intégrer l'éducation à la paix dans les programmes scolaires.",
+        "category": "Sécurité, défense & justice",
+        "source": {
+          "name": "Ministère de l'Éducation nationale",
+          "url": "https://www.education.gouv.fr"
+        }
+      },
+      {
+        "title": "Réforme des institutions",
+        "description": "Rendre les institutions plus démocratiques et accessibles aux citoyens.",
+        "category": "Institutions & territoires",
+        "source": {
+          "name": "Assemblée nationale",
+          "url": "https://www.assemblee-nationale.fr"
+        }
+      },
+      {
+        "title": "Décentralisation des pouvoirs",
+        "description": "Accroître les compétences des collectivités locales pour mieux répondre aux besoins des citoyens.",
+        "category": "Institutions & territoires",
+        "source": {
+          "name": "Association des maires",
+          "url": "https://www.amf.asso.fr"
+        }
+      },
+      {
+        "title": "Renforcement de la démocratie participative",
+        "description": "Encourager la participation des citoyens dans les décisions politiques.",
+        "category": "Institutions & territoires",
+        "source": {
+          "name": "Civisme et démocratie",
+          "url": "https://www.civisme.org"
+        }
+      },
+      {
+        "title": "Protection des droits des citoyens",
+        "description": "Assurer la protection des droits et des libertés fondamentales des citoyens.",
+        "category": "Institutions & territoires",
+        "source": {
+          "name": "Commission des droits de l'homme",
+          "url": "https://www.cndh.fr"
+        }
+      },
+      {
+        "title": "Aménagement du territoire",
+        "description": "Développer des politiques d'aménagement du territoire équilibrées et durables.",
+        "category": "Institutions & territoires",
+        "source": {
+          "name": "Ministère de l'Aménagement du territoire",
+          "url": "https://www.amenagement.gouv.fr"
+        }
+      }
+    ]
+  },
+  "Donald Trump": {
+    "policies": [
+      {
+        "title": "Renforcement de la sécurité nationale",
+        "description": "Augmenter les budgets pour la défense et renforcer les capacités de nos forces armées.",
+        "category": "Environnement",
+        "source": {
+          "name": "Ministère des Armées",
+          "url": "https://www.defense.gouv.fr"
+        }
+      },
+      {
+        "title": "Lutte contre l'immigration illégale",
+        "description": "Renforcer les contrôles aux frontières et accélérer les expulsions des immigrés en situation irrégulière.",
+        "category": "Environnement",
+        "source": {
+          "name": "Direction générale des étrangers en France",
+          "url": "https://www.interieur.gouv.fr"
+        }
+      },
+      {
+        "title": "Soutien à l'agriculture française",
+        "description": "Promouvoir les produits locaux et soutenir les agriculteurs par des aides financières.",
+        "category": "Environnement",
+        "source": {
+          "name": "Ministère de l'Agriculture",
+          "url": "https://www.agriculture.gouv.fr"
+        }
+      },
+      {
+        "title": "Valorisation des territoires ruraux",
+        "description": "Mettre en place des politiques favorisant le développement économique des zones rurales.",
+        "category": "Environnement",
+        "source": {
+          "name": "Association des maires ruraux",
+          "url": "https://www.amrf.fr"
+        }
+      },
+      {
+        "title": "Protection de la culture française",
+        "description": "Encourager la promotion de la langue et de la culture française dans le monde.",
+        "category": "Environnement",
+        "source": {
+          "name": "Ministère de la Culture",
+          "url": "https://www.culture.gouv.fr"
+        }
+      },
+      {
+        "title": "Réduction des impôts pour les classes moyennes",
+        "description": "Baisser les impôts sur le revenu pour soulager les ménages de la classe moyenne.",
+        "category": "Économie",
+        "source": {
+          "name": "Ministère des Finances",
+          "url": "https://www.economie.gouv.fr"
+        }
+      },
+      {
+        "title": "Encouragement à l'entrepreneuriat",
+        "description": "Mettre en place des dispositifs de soutien pour les entrepreneurs et les start-ups.",
+        "category": "Économie",
+        "source": {
+          "name": "Chambre de commerce",
+          "url": "https://www.cci.fr"
+        }
+      },
+      {
+        "title": "Diminution des charges sociales",
+        "description": "Réduire les charges pesant sur les entreprises pour favoriser l'embauche.",
+        "category": "Économie",
+        "source": {
+          "name": "Mouvement des entreprises de France",
+          "url": "https://www.medef.com"
+        }
+      },
+      {
+        "title": "Renforcement du travailleur français",
+        "description": "Privilégier l'emploi local et instaurer des mesures pour protéger le marché du travail.",
+        "category": "Économie",
+        "source": {
+          "name": "Pôle emploi",
+          "url": "https://www.pole-emploi.fr"
+        }
+      },
+      {
+        "title": "Lutte contre la fraude fiscale",
+        "description": "Renforcer les moyens de l'administration fiscale pour traquer la fraude.",
+        "category": "Économie",
+        "source": {
+          "name": "Direction générale des finances publiques",
+          "url": "https://www.impots.gouv.fr"
+        }
+      },
+      {
+        "title": "Revalorisation des filières professionnelles",
+        "description": "Promouvoir les filières professionnelles et techniques pour répondre aux besoins du marché.",
+        "category": "Éducation",
+        "source": {
+          "name": "Ministère de l'Éducation nationale",
+          "url": "https://www.education.gouv.fr"
+        }
+      },
+      {
+        "title": "Investissement dans les infrastructures scolaires",
+        "description": "Moderniser les établissements scolaires pour offrir un cadre d'apprentissage optimal.",
+        "category": "Éducation",
+        "source": {
+          "name": "Réseau des écoles",
+          "url": "https://www.education.gouv.fr"
+        }
+      },
+      {
+        "title": "Favoriser l'éducation civique",
+        "description": "Intégrer l'éducation civique dans les programmes scolaires pour former des citoyens responsables.",
+        "category": "Éducation",
+        "source": {
+          "name": "Ministère de l'Éducation nationale",
+          "url": "https://www.education.gouv.fr"
+        }
+      },
+      {
+        "title": "Soutien à l'enseignement supérieur",
+        "description": "Augmenter les financements pour les universités et les grandes écoles.",
+        "category": "Éducation",
+        "source": {
+          "name": "Ministère de l'Enseignement supérieur",
+          "url": "https://www.enseignementsup-recherche.gouv.fr"
+        }
+      },
+      {
+        "title": "Promotion des valeurs républicaines",
+        "description": "Renforcer l'enseignement des valeurs républicaines dans les écoles.",
+        "category": "Éducation",
+        "source": {
+          "name": "Ministère de l'Éducation nationale",
+          "url": "https://www.education.gouv.fr"
+        }
+      },
+      {
+        "title": "Soutien à la santé de proximité",
+        "description": "Renforcer l'accès aux soins de santé dans les zones rurales et éloignées.",
+        "category": "Solidarités & santé",
+        "source": {
+          "name": "Ministère de la Santé",
+          "url": "https://www.sante.gouv.fr"
+        }
+      },
+      {
+        "title": "Promotion de la médecine libérale",
+        "description": "Encourager le développement de la médecine libérale pour une meilleure prise en charge des patients.",
+        "category": "Solidarités & santé",
+        "source": {
+          "name": "Ordre des médecins",
+          "url": "https://www.conseil-national.medecin.fr"
+        }
+      },
+      {
+        "title": "Assurance maladie universelle",
+        "description": "Renforcer l'assurance maladie pour garantir une couverture santé à tous les citoyens.",
+        "category": "Solidarités & santé",
+        "source": {
+          "name": "Sécurité sociale",
+          "url": "https://www.securitesociale.fr"
+        }
+      },
+      {
+        "title": "Lutte contre la dépendance",
+        "description": "Mettre en place des aides pour les personnes âgées et dépendantes.",
+        "category": "Solidarités & santé",
+        "source": {
+          "name": "Ministère des Solidarités",
+          "url": "https://www.solidarites.gouv.fr"
+        }
+      },
+      {
+        "title": "Prévention des addictions",
+        "description": "Développer des programmes de prévention contre les addictions, notamment chez les jeunes.",
+        "category": "Solidarités & santé",
+        "source": {
+          "name": "Milieu de la santé",
+          "url": "https://www.sante.gouv.fr"
+        }
+      },
+      {
+        "title": "Promotion de la diplomatie économique",
+        "description": "Renforcer les échanges commerciaux et diplomatiques avec les pays émergents.",
+        "category": "International",
+        "source": {
+          "name": "Ministère des Affaires étrangères",
+          "url": "https://www.diplomatie.gouv.fr"
+        }
+      },
+      {
+        "title": "Soutien à l'exportation",
+        "description": "Mettre en place des aides pour les entreprises souhaitant se développer à l'international.",
+        "category": "International",
+        "source": {
+          "name": "Business France",
+          "url": "https://www.businessfrance.fr"
+        }
+      },
+      {
+        "title": "Renforcement des partenariats internationaux",
+        "description": "Accroître les partenariats avec les pays alliés pour des objectifs communs.",
+        "category": "International",
+        "source": {
+          "name": "Union européenne",
+          "url": "https://www.europa.eu"
+        }
+      },
+      {
+        "title": "Promotion de l'agenda de sécurité globale",
+        "description": "Collaborer avec les nations pour un agenda de sécurité global, incluant la lutte contre le terrorisme.",
+        "category": "International",
+        "source": {
+          "name": "OTAN",
+          "url": "https://www.nato.int"
+        }
+      },
+      {
+        "title": "Engagement pour la souveraineté alimentaire",
+        "description": "Favoriser la production locale et garantir l'autosuffisance alimentaire.",
+        "category": "International",
+        "source": {
+          "name": "Fédération des producteurs agricoles",
+          "url": "https://www.federation-agricole.fr"
+        }
+      },
+      {
+        "title": "Promotion de l'héritage culturel",
+        "description": "Encourager la préservation et la valorisation du patrimoine culturel français.",
+        "category": "Culture",
+        "source": {
+          "name": "Ministère de la Culture",
+          "url": "https://www.culture.gouv.fr"
+        }
+      },
+      {
+        "title": "Soutien au financement du cinéma",
+        "description": "Mettre en place des mesures fiscales pour soutenir la production cinématographique française.",
+        "category": "Culture",
+        "source": {
+          "name": "Centre national du cinéma",
+          "url": "https://www.cnc.fr"
+        }
+      },
+      {
+        "title": "Valorisation des artistes locaux",
+        "description": "Encourager la création artistique à travers des subventions ciblées.",
+        "category": "Culture",
+        "source": {
+          "name": "Société des auteurs",
+          "url": "https://www.sacd.fr"
+        }
+      },
+      {
+        "title": "Soutien à la création musicale",
+        "description": "Promouvoir les artistes et groupes de musique locaux par des aides financières.",
+        "category": "Culture",
+        "source": {
+          "name": "Syndicat national des éditeurs de musique",
+          "url": "https://www.snep.fr"
+        }
+      },
+      {
+        "title": "Encouragement à la lecture",
+        "description": "Développer des programmes d'incitation à la lecture auprès des jeunes.",
+        "category": "Culture",
+        "source": {
+          "name": "Ministère de la Culture",
+          "url": "https://www.culture.gouv.fr"
+        }
+      },
+      {
+        "title": "Promotion de la responsabilité individuelle",
+        "description": "Encourager les citoyens à prendre des initiatives pour leur propre avenir.",
+        "category": "Société",
+        "source": {
+          "name": "Institut Montaigne",
+          "url": "https://www.institutmontaigne.org"
+        }
+      },
+      {
+        "title": "Soutien à la famille",
+        "description": "Mettre en place des aides pour les familles avec enfants, notamment sur le plan fiscal.",
+        "category": "Société",
+        "source": {
+          "name": "Fédération des familles",
+          "url": "https://www.familles-france.org"
+        }
+      },
+      {
+        "title": "Encouragement à l'engagement associatif",
+        "description": "Favoriser les initiatives associatives locales pour renforcer le lien social.",
+        "category": "Société",
+        "source": {
+          "name": "Union nationale des associations",
+          "url": "https://www.unaf.fr"
+        }
+      },
+      {
+        "title": "Préservation de l'ordre public",
+        "description": "Renforcer les moyens des forces de l'ordre pour maintenir la sécurité publique.",
+        "category": "Société",
+        "source": {
+          "name": "Ministère de l'Intérieur",
+          "url": "https://www.interieur.gouv.fr"
+        }
+      },
+      {
+        "title": "Renforcement du civisme",
+        "description": "Encourager les initiatives qui promeuvent le respect des lois et des valeurs républicaines.",
+        "category": "Société",
+        "source": {
+          "name": "Ministère de la Justice",
+          "url": "https://www.justice.gouv.fr"
+        }
+      },
+      {
+        "title": "Lutte contre la délinquance juvénile",
+        "description": "Mettre en place des programmes éducatifs pour prévenir la délinquance chez les jeunes.",
+        "category": "Sécurité, défense & justice",
+        "source": {
+          "name": "Protection judiciaire de la jeunesse",
+          "url": "https://www.justice.gouv.fr"
+        }
+      },
+      {
+        "title": "Réforme du système pénal",
+        "description": "Rendre la justice plus efficace en accélérant les procédures judiciaires.",
+        "category": "Sécurité, défense & justice",
+        "source": {
+          "name": "Ministère de la Justice",
+          "url": "https://www.justice.gouv.fr"
+        }
+      },
+      {
+        "title": "Renforcement des peines pour les délits graves",
+        "description": "Durcir les peines pour les crimes et délits violents afin de protéger les citoyens.",
+        "category": "Sécurité, défense & justice",
+        "source": {
+          "name": "Ministère de la Justice",
+          "url": "https://www.justice.gouv.fr"
+        }
+      },
+      {
+        "title": "Prévention de la radicalisation",
+        "description": "Mettre en place des mesures de prévention contre la radicalisation des jeunes.",
+        "category": "Sécurité, défense & justice",
+        "source": {
+          "name": "Ministère de l'Intérieur",
+          "url": "https://www.interieur.gouv.fr"
+        }
+      },
+      {
+        "title": "Formation des forces de l'ordre",
+        "description": "Renforcer la formation des policiers et gendarmes sur les droits de l'homme.",
+        "category": "Sécurité, défense & justice",
+        "source": {
+          "name": "École nationale de police",
+          "url": "https://www.police-nationale.interieur.gouv.fr"
+        }
+      },
+      {
+        "title": "Réforme des collectivités locales",
+        "description": "Décentraliser certaines compétences pour donner plus de pouvoir aux maires.",
+        "category": "Institutions & territoires",
+        "source": {
+          "name": "Association des maires de France",
+          "url": "https://www.amf.asso.fr"
+        }
+      },
+      {
+        "title": "Restauration de l'autorité de l'État",
+        "description": "Renforcer le rôle de l'État dans les décisions publiques pour garantir la cohésion nationale.",
+        "category": "Institutions & territoires",
+        "source": {
+          "name": "Ministère de l'Intérieur",
+          "url": "https://www.interieur.gouv.fr"
+        }
+      },
+      {
+        "title": "Transparence de la vie publique",
+        "description": "Renforcer la transparence des actions des élus et des institutions publiques.",
+        "category": "Institutions & territoires",
+        "source": {
+          "name": "Commission de la transparence",
+          "url": "https://www.transparence.fr"
+        }
+      },
+      {
+        "title": "Soutien à l'innovation locale",
+        "description": "Encourager les initiatives locales pour le développement économique.",
+        "category": "Institutions & territoires",
+        "source": {
+          "name": "Caisse des dépôts",
+          "url": "https://www.caissedesdepots.fr"
+        }
+      },
+      {
+        "title": "Aménagement du territoire équilibré",
+        "description": "Promouvoir un aménagement du territoire qui respecte les spécificités locales.",
+        "category": "Institutions & territoires",
+        "source": {
+          "name": "Ministère de l'Aménagement du territoire",
+          "url": "https://www.amenagement.gouv.fr"
+        }
+      }
+    ]
+  }
+}
