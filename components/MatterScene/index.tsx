@@ -31,6 +31,8 @@ export default function MatterScene({ className }: Readonly<MatterSceneProps>) {
 
     const { clientWidth: width, clientHeight: height } = sceneRef.current;
 
+    console.log(sceneRef.current.clientWidth, sceneRef.current.clientHeight);
+
     renderRef.current = Render.create({
       element: sceneRef.current,
       engine: engineRef.current,
@@ -38,7 +40,7 @@ export default function MatterScene({ className }: Readonly<MatterSceneProps>) {
         width,
         height,
         wireframes: false,
-        background: "transparent",
+        background: "var(--color-red)",
         pixelRatio: window.devicePixelRatio || 1,
       },
     });
@@ -157,7 +159,7 @@ export default function MatterScene({ className }: Readonly<MatterSceneProps>) {
     };
 
     window.addEventListener("resize", handleResize);
-    handleResize();
+    setTimeout(handleResize, 0);
   }, []);
 
   return <div ref={sceneRef} className={className} />;
