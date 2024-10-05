@@ -36,7 +36,6 @@ export default function Swipper({
         className={styles.card__container}
         preventSwipe={["up", "down", "right", "left"]}
         key={policies.length + 1}
-        swipeRequirementType="position"
       >
         <div className={styles.card}>
           <p className={styles.card__content__category}>{"FIN"}</p>
@@ -54,7 +53,6 @@ export default function Swipper({
           className={styles.card__container}
           preventSwipe={["up", "down"]}
           key={index + 1}
-          swipeRequirementType="position"
           onCardLeftScreen={(direction) => onCardLeftScreen(direction, program)}
         >
           <div
@@ -74,7 +72,6 @@ export default function Swipper({
         className={styles.card__container}
         preventSwipe={["up", "down"]}
         key={0}
-        swipeRequirementType="position"
       >
         <div className={styles.card}>
           <p className={styles.card__content__category}>{"MODE D'EMPLOI"}</p>
