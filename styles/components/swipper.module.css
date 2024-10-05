@@ -1,0 +1,35 @@
+.card__container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--spacing);
+  width: 100%;
+  height: 100%;
+  padding: var(--spacing);
+  border: 5px solid var(--color-black);
+  background-color: var(--color-white);
+}
+
+.card__content__category {
+  width: fit-content;
+  max-width: 100%;
+  padding: calc(var(--spacing) / 3);
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
+.card__content__title,
+.card__content__date {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lastCard {
+  z-index: -1;
+}
