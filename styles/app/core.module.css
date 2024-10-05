@@ -1,0 +1,39 @@
+.container {
+  position: fixed;
+  width: 100dvw;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.header {
+  position: absolute;
+  top: var(--spacing);
+  left: var(--spacing);
+  text-decoration: underline;
+}
+
+.container__swipper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: calc(var(--spacing) * 2);
+  align-items: center;
+  width: 100%;
+  padding: var(--spacing);
+  transform: translate(-50%, -50%);
+}
+
+.container__swipper_app {
+  position: relative;
+  display: block;
+  width: 80dvw;
+  max-width: 300px;
+  height: calc(80dvw * 1.5);
+  max-height: calc(300px * 1.5);
+}
+
+.container__swipper_remaining {
+  text-align: center;
+}
