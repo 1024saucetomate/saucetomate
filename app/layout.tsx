@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import React from "react";
 import SplashScreen from "@/components/SplashScreen";
-import Transition from "@/components/Transition";
 
 export const metadata: Metadata = {
   title: "SAUCETOMATE",
@@ -18,7 +17,7 @@ export default function RootLayout({
     <html lang="fr">
       <body>
         <SplashScreen />
-        <Transition>{children}</Transition>
+        {children}
       </body>
     </html>
   );
