@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/Link";
 import MatterScene from "@/components/MatterScene";
 import styles from "@/styles/app/root.module.css";
 
