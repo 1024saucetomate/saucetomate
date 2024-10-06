@@ -17,6 +17,7 @@ type PolicyType = {
 };
 
 type CandidateDataType = {
+  description: string;
   policies: PolicyType[];
 };
 
@@ -30,7 +31,7 @@ type RandomPolicyType = PolicyType & { candidate: string };
 
 export default function Core() {
   const [randomPolicies, setRandomPolicies] = useState<RandomPolicyType[]>([]);
-  const [cardsRemaining, setCardsRemaining] = useState<string | number>("--");
+  const [cardsRemaining, setCardsRemaining] = useState<number>(0);
 
   useEffect(() => {
     const newRandomPolicies: RandomPolicyType[] = [];
@@ -75,13 +76,14 @@ export default function Core() {
       </Link>
       <div className={styles.container__swipper}>
         <small className={styles.container__swipper_remaining}>
-          {`${cardsRemaining === 0 ? "Aucune" : cardsRemaining} ${
+          {`${cardsRemaining === 0 ? "Aucune" : cardsRemaining.toString()} ${
             cardsRemaining === 1 ? "proposition" : "propositions"
           } restante${cardsRemaining === 1 ? "" : "s"}`}
         </small>
         <Swipper
           policies={randomPolicies}
           className={styles.container__swipper_app}
+          cardsRemaining={cardsRemaining}
           setCardsRemaining={setCardsRemaining}
         />
       </div>
