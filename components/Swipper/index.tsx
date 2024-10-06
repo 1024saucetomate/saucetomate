@@ -1,11 +1,34 @@
 "use client";
 import { useEffect, useState } from "react";
 import SwippableCard from "react-tinder-card";
+import coreDataImport from "@/data/core.json";
 import styles from "@/styles/components/swipper.module.css";
+
+type PolicyType = {
+  title: string;
+  description: string;
+  category: string;
+  source: {
+    name: string;
+    url: string;
+  };
+};
+
+type CandidateDataType = {
+  description: string;
+  policies: PolicyType[];
+};
+
+type CoreDataType = {
+  [key: string]: CandidateDataType;
+};
+
+const coreData: CoreDataType = coreDataImport;
 
 export default function Swipper({
   className,
   policies,
+  cardsRemaining,
   setCardsRemaining,
 }: Readonly<{
   className?: string;
@@ -15,12 +38,16 @@ export default function Swipper({
     description: string;
     candidate: string;
   }[];
+  cardsRemaining: number;
   setCardsRemaining: any;
 }>) {
   const [candidateCount, setCandidateCount] = useState<{
     [key: string]: number;
   }>({});
   const [bestCandidate, setBestCandidate] = useState<string>("");
+  const [isFinished, setIsFinished] = useState<boolean>(false);
+
+  isFinished;
 
   function onCardLeftScreen(
     direction: string,
@@ -62,6 +89,12 @@ export default function Swipper({
     setBestCandidate(bestCandidate.candidate);
   }, [candidateCount]);
 
+  useEffect(() => {
+    if (cardsRemaining === 0) {
+      setIsFinished(true);
+    }
+  }, [cardsRemaining]);
+
   return (
     <div className={className}>
       <SwippableCard
@@ -76,9 +109,7 @@ export default function Swipper({
             {`Le candidat qui vous correspond le mieux est ${bestCandidate}`}
           </h3>
           <small className={styles.card__content__description}>
-            {bestCandidate === "Donald Trump"
-              ? "Donald Trump prône l'« Amérique d'abord » avec des politiques protectionnistes, réductions d'impôts et déréglementation. Il est contre l'immigration illégale et soutient une politique énergétique axée sur les énergies fossiles. Sur les questions sociales, il est conservateur, s'opposant à l'avortement et aux droits LGBTQ+."
-              : "Kamala Harris défend des politiques progressistes, axées sur la justice sociale, l'égalité raciale et les droits des femmes. Elle soutient une réforme de la police, une couverture santé élargie, et des politiques climatiques fortes. Harris est favorable aux droits LGBTQ+, au droit à l'avortement, et à une immigration plus humaine."}
+            {bestCandidate ? coreData[bestCandidate].description : ""}
           </small>
         </div>
       </SwippableCard>
