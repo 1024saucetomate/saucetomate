@@ -7,11 +7,11 @@ export default function Link({
   children,
   href,
   className,
-}: {
+}: Readonly<{
   children: React.ReactNode;
   href: string;
   className?: string;
-}) {
+}>) {
   const router = useRouter();
 
   function handleClick(e: React.MouseEvent<HTMLAnchorElement>) {

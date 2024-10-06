@@ -7,7 +7,7 @@ export default function Swipper({
   className,
   policies,
   setCardsRemaining,
-}: {
+}: Readonly<{
   className?: string;
   policies: {
     category: string;
@@ -16,7 +16,7 @@ export default function Swipper({
     candidate: string;
   }[];
   setCardsRemaining: any;
-}) {
+}>) {
   const [candidateCount, setCandidateCount] = useState<{
     [key: string]: number;
   }>({});
