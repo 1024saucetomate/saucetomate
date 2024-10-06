@@ -31,8 +31,6 @@ export default function MatterScene({ className }: Readonly<MatterSceneProps>) {
 
     const { clientWidth: width, clientHeight: height } = sceneRef.current;
 
-    console.log(sceneRef.current.clientWidth, sceneRef.current.clientHeight);
-
     renderRef.current = Render.create({
       element: sceneRef.current,
       engine: engineRef.current,
