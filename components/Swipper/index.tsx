@@ -71,12 +71,14 @@ export default function Swipper({
         swipeRequirementType="position"
       >
         <div className={styles.card}>
-          <p className={styles.card__content__category}>{"FIN"}</p>
+          <p className={styles.card__content__category}>{"Fin"}</p>
           <h3 className={styles.card__content__title}>
-            {"Vous avez fini de lire les propositions"}
-          </h3>
-          <small className={styles.card__content__date}>
             {`Le candidat qui vous correspond le mieux est ${bestCandidate}`}
+          </h3>
+          <small className={styles.card__content__description}>
+            {bestCandidate === "Donald Trump"
+              ? "Donald Trump prône l'« Amérique d'abord » avec des politiques protectionnistes, réductions d'impôts et déréglementation. Il est contre l'immigration illégale et soutient une politique énergétique axée sur les énergies fossiles. Sur les questions sociales, il est conservateur, s'opposant à l'avortement et aux droits LGBTQ+."
+              : "Kamala Harris défend des politiques progressistes, axées sur la justice sociale, l'égalité raciale et les droits des femmes. Elle soutient une réforme de la police, une couverture santé élargie, et des politiques climatiques fortes. Harris est favorable aux droits LGBTQ+, au droit à l'avortement, et à une immigration plus humaine."}
           </small>
         </div>
       </SwippableCard>
@@ -95,7 +97,7 @@ export default function Swipper({
           >
             <p className={styles.card__content__category}>{program.category}</p>
             <h3 className={styles.card__content__title}>{program.title}</h3>
-            <small className={styles.card__content__date}>
+            <small className={styles.card__content__description}>
               {program.description}
             </small>
           </div>
@@ -113,7 +115,7 @@ export default function Swipper({
           <h3 className={styles.card__content__title}>
             {"Faites glisser les propositions pour les lire"}
           </h3>
-          <p className={styles.card__content__date}>
+          <p className={styles.card__content__description}>
             {
               "Si vous êtes d'accord, glissez la carte vers la droite. Sinon, glissez la carte vers la gauche"
             }
