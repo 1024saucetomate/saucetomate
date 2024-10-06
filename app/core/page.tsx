@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { useState, useEffect } from "react";
+import Link from "@/components/Link";
 import Swipper from "@/components/Swipper";
 import coreDataImport from "@/data/core.json";
 import styles from "@/styles/app/core.module.css";
@@ -46,7 +46,22 @@ export default function Core() {
         newRandomPolicies.push(...randomCandidatePolicies);
       }
     });
-    setRandomPolicies(newRandomPolicies);
+
+    const candidates = Object.keys(coreData);
+    if (candidates.length > 0) {
+      const randomCandidate =
+        candidates[Math.floor(Math.random() * candidates.length)];
+      const extraPolicy = coreData[randomCandidate].policies
+        .sort(() => Math.random() - 0.5)
+        .slice(0, 1)
+        .map((policy) => ({
+          ...policy,
+          candidate: randomCandidate,
+        }));
+      newRandomPolicies.push(...extraPolicy);
+    }
+
+    setRandomPolicies(newRandomPolicies.sort(() => Math.random() - 0.5));
   }, []);
 
   useEffect(() => {
