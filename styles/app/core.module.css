@@ -5,13 +5,6 @@
   overflow: hidden;
 }
 
-.header {
-  position: absolute;
-  top: var(--spacing);
-  left: var(--spacing);
-  text-decoration: underline;
-}
-
 .container__swipper {
   position: absolute;
   top: 50%;
@@ -30,10 +23,42 @@
   display: block;
   width: 80dvw;
   max-width: 300px;
-  height: calc(80dvw * 1.5);
-  max-height: calc(300px * 1.5);
+  min-height: calc(300px * 1.5);
 }
 
 .container__swipper_remaining {
   text-align: center;
+}
+
+.container__header {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--spacing);
+}
+
+.container__header_link {
+  text-decoration: underline;
+}
+
+.container__header_counter {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  font-size: 18.72px;
+}
+
+.container__header_counter_char {
+  font-size: 18.72px;
+}
+
+.matter_scene {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  width: 100dvw;
+  height: 100dvh;
+  overflow: hidden;
 }
