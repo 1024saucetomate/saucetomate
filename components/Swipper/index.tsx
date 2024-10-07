@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import SwippableCard from "react-tinder-card";
 import coreDataImport from "@/data/core.json";
@@ -42,8 +42,8 @@ export default function Swipper({
     candidate: string;
   }[];
   cardsRemaining: number;
-  setCardsRemaining: any;
-  setBestCandidate: any;
+  setCardsRemaining: React.Dispatch<React.SetStateAction<number>>;
+  setBestCandidate: React.Dispatch<React.SetStateAction<string>>;
 }>) {
   const [candidateCount, setCandidateCount] = useState<{
     [key: string]: number;
@@ -51,8 +51,6 @@ export default function Swipper({
   const [bestCandidate, setBestCandidate] = useState<string>("");
   const [isFinished, setIsFinished] = useState<boolean>(false);
   const [cardsSwiped, setCardsSwiped] = useState<string[]>([]);
-
-  isFinished;
 
   function onSwipe(
     direction: string,
@@ -62,11 +60,12 @@ export default function Swipper({
       description: string;
       candidate: string;
     },
+    index: number,
   ) {
-    if (cardsSwiped.includes(policy.title)) {
+    if (cardsSwiped.includes(policy.title + index)) {
       return;
     }
-    setCardsSwiped((prev) => [...prev, policy.title]);
+    setCardsSwiped((prev) => [...prev, policy.title + index]);
     setCardsRemaining((prev: number) => prev - 1);
     switch (direction) {
       case "left":
@@ -86,17 +85,12 @@ export default function Swipper({
   }
 
   useEffect(() => {
-    const bestCandidate = Object.entries(candidateCount).reduce(
-      (acc, [candidate, count]) => {
-        if (Math.abs(count) > Math.abs(acc.count)) {
-          return { candidate, count };
-        }
-        return acc;
-      },
-      { candidate: "", count: 0 },
-    );
-    setBestCandidate(bestCandidate.candidate);
-    setBestCandidateProp(bestCandidate.candidate);
+    const bestCandidate =
+      Object.entries(candidateCount).toSorted(
+        (a, b) => Math.abs(b[1]) - Math.abs(a[1]),
+      )[0]?.[0] || "";
+    setBestCandidate(bestCandidate);
+    setBestCandidateProp(bestCandidate);
   }, [candidateCount, setBestCandidateProp]);
 
   useEffect(() => {
@@ -105,31 +99,35 @@ export default function Swipper({
     }
   }, [cardsRemaining]);
 
+  const reversedPolicies = [...policies].reverse();
+
   return (
     <div className={className}>
-      <SwippableCard
-        className={styles.card__container}
-        preventSwipe={["up", "down", "right", "left"]}
-        key={policies.length + 1}
-        swipeRequirementType="position"
-      >
-        <div className={styles.card}>
-          <p className={styles.card__content__category}>{"Fin"}</p>
-          <h3 className={styles.card__content__title}>
-            {`Le candidat qui vous correspond le mieux est ${bestCandidate}`}
-          </h3>
-          <small className={styles.card__content__description}>
-            {bestCandidate ? coreData[bestCandidate].description : ""}
-          </small>
-        </div>
-      </SwippableCard>
+      {isFinished && (
+        <SwippableCard
+          className={styles.card__container}
+          preventSwipe={["up", "down", "right", "left"]}
+          key="end"
+          swipeRequirementType="position"
+        >
+          <div className={styles.card}>
+            <p className={styles.card__content__category}>{"Fin"}</p>
+            <h3 className={styles.card__content__title}>
+              {`Le candidat qui vous correspond le mieux est ${bestCandidate}`}
+            </h3>
+            <small className={styles.card__content__description}>
+              {bestCandidate ? coreData[bestCandidate].description : ""}
+            </small>
+          </div>
+        </SwippableCard>
+      )}
 
-      {policies.map((program, index) => (
+      {reversedPolicies.map((program, index) => (
         <SwippableCard
           className={styles.card__container}
           preventSwipe={["up", "down"]}
-          key={index + 1}
-          onSwipe={(direction) => onSwipe(direction, program)}
+          key={program.title + index}
+          onSwipe={(direction) => onSwipe(direction, program, index)}
           swipeRequirementType="position"
         >
           <div
@@ -148,7 +146,7 @@ export default function Swipper({
       <SwippableCard
         className={styles.card__container}
         preventSwipe={["up", "down"]}
-        key={0}
+        key="instructions"
         swipeRequirementType="position"
       >
         <div className={styles.card}>
