@@ -75,9 +75,9 @@ export default function MatterEndingScene({
     };
 
     const generateHeads = () => {
-      const heads = Array.from({ length: width * height * 0.0001 }, () => {
+      const heads = Array.from({ length: width * height * 0.00007 }, () => {
         const x = Math.random() * width;
-        const y = -Math.random() * height;
+        const y = -Math.random() * height * 3;
         const head = createHead(x, y);
         Matter.Body.rotate(head, Math.random() * Math.PI * 2);
         return head;
@@ -85,7 +85,6 @@ export default function MatterEndingScene({
       Composite.add(world, heads);
     };
 
-    // Create ground and walls
     const wallThickness = 50;
     const ground = Bodies.rectangle(
       width / 2,
@@ -136,7 +135,6 @@ export default function MatterEndingScene({
       renderRef.current.canvas.style.height = `${newHeight}px`;
       Render.setPixelRatio(renderRef.current, window.devicePixelRatio || 1);
 
-      // Update ground and walls positions
       Matter.Body.setPosition(ground, {
         x: newWidth / 2,
         y: newHeight + wallThickness / 2,
