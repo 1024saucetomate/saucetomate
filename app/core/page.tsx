@@ -43,7 +43,7 @@ export default function Core() {
     Object.entries(coreData).forEach(([candidate, candidateData]) => {
       if (Array.isArray(candidateData.policies)) {
         const randomCandidatePolicies = candidateData.policies
-          .toSorted(() => Math.random() - 0.5)
+          .sort(() => Math.random() - 0.5)
           .slice(0, 10)
           .map((policy) => ({
             ...policy,
@@ -58,7 +58,7 @@ export default function Core() {
       const randomCandidate =
         candidates[Math.floor(Math.random() * candidates.length)];
       const extraPolicy = coreData[randomCandidate].policies
-        .toSorted(() => Math.random() - 0.5)
+        .sort(() => Math.random() - 0.5)
         .slice(0, 1)
         .map((policy) => ({
           ...policy,
@@ -67,7 +67,7 @@ export default function Core() {
       newRandomPolicies.push(...extraPolicy);
     }
 
-    setRandomPolicies(newRandomPolicies.toSorted(() => Math.random() - 0.5));
+    setRandomPolicies(newRandomPolicies.sort(() => Math.random() - 0.5));
   }, []);
 
   useEffect(() => {

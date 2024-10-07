@@ -27,13 +27,7 @@ type CoreDataType = {
 
 const coreData: CoreDataType = coreDataImport;
 
-export default function Swipper({
-  className,
-  policies,
-  cardsRemaining,
-  setCardsRemaining,
-  setBestCandidate: setBestCandidateProp,
-}: Readonly<{
+interface SwipperProps {
   className?: string;
   policies: {
     category: string;
@@ -44,7 +38,15 @@ export default function Swipper({
   cardsRemaining: number;
   setCardsRemaining: React.Dispatch<React.SetStateAction<number>>;
   setBestCandidate: React.Dispatch<React.SetStateAction<string>>;
-}>) {
+}
+
+export default function Swipper({
+  className,
+  policies,
+  cardsRemaining,
+  setCardsRemaining,
+  setBestCandidate: setBestCandidateProp,
+}: SwipperProps) {
   const [candidateCount, setCandidateCount] = useState<{
     [key: string]: number;
   }>({});
@@ -52,7 +54,7 @@ export default function Swipper({
   const [isFinished, setIsFinished] = useState<boolean>(false);
   const [cardsSwiped, setCardsSwiped] = useState<string[]>([]);
 
-  function onSwipe(
+  const handleSwipe = (
     direction: string,
     policy: {
       category: string;
@@ -61,12 +63,12 @@ export default function Swipper({
       candidate: string;
     },
     index: number,
-  ) {
+  ) => {
     if (cardsSwiped.includes(policy.title + index)) {
       return;
     }
     setCardsSwiped((prev) => [...prev, policy.title + index]);
-    setCardsRemaining((prev: number) => prev - 1);
+    setCardsRemaining((prev) => prev - 1);
     switch (direction) {
       case "left":
         setCandidateCount((prev) => ({
@@ -74,7 +76,6 @@ export default function Swipper({
           [policy.candidate]: (prev[policy.candidate] || 0) - 1,
         }));
         break;
-
       case "right":
         setCandidateCount((prev) => ({
           ...prev,
@@ -82,16 +83,15 @@ export default function Swipper({
         }));
         break;
     }
-  }
+  };
 
   useEffect(() => {
     const bestCandidate =
-      Object.entries(candidateCount).toSorted(
+      Object.entries(candidateCount).sort(
         (a, b) => Math.abs(b[1]) - Math.abs(a[1]),
       )[0]?.[0] || "";
-    setBestCandidate(bestCandidate);
     setBestCandidateProp(bestCandidate);
-  }, [candidateCount, setBestCandidateProp]);
+  }, [candidateCount, setBestCandidate]);
 
   useEffect(() => {
     if (cardsRemaining === 0) {
@@ -127,7 +127,7 @@ export default function Swipper({
           className={styles.card__container}
           preventSwipe={["up", "down"]}
           key={program.title + index}
-          onSwipe={(direction) => onSwipe(direction, program, index)}
+          onSwipe={(direction) => handleSwipe(direction, program, index)}
           swipeRequirementType="position"
         >
           <div
