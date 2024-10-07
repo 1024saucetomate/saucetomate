@@ -1,5 +1,7 @@
 "use client";
+
 import { useEffect, useState } from "react";
+
 import SwippableCard from "react-tinder-card";
 import coreDataImport from "@/data/core.json";
 import styles from "@/styles/components/swipper.module.css";
@@ -30,6 +32,7 @@ export default function Swipper({
   policies,
   cardsRemaining,
   setCardsRemaining,
+  setBestCandidate: setBestCandidateProp,
 }: Readonly<{
   className?: string;
   policies: {
@@ -40,16 +43,18 @@ export default function Swipper({
   }[];
   cardsRemaining: number;
   setCardsRemaining: any;
+  setBestCandidate: any;
 }>) {
   const [candidateCount, setCandidateCount] = useState<{
     [key: string]: number;
   }>({});
   const [bestCandidate, setBestCandidate] = useState<string>("");
   const [isFinished, setIsFinished] = useState<boolean>(false);
+  const [cardsSwiped, setCardsSwiped] = useState<string[]>([]);
 
   isFinished;
 
-  function onCardLeftScreen(
+  function onSwipe(
     direction: string,
     policy: {
       category: string;
@@ -58,6 +63,10 @@ export default function Swipper({
       candidate: string;
     },
   ) {
+    if (cardsSwiped.includes(policy.title)) {
+      return;
+    }
+    setCardsSwiped((prev) => [...prev, policy.title]);
     setCardsRemaining((prev: number) => prev - 1);
     switch (direction) {
       case "left":
@@ -87,7 +96,8 @@ export default function Swipper({
       { candidate: "", count: 0 },
     );
     setBestCandidate(bestCandidate.candidate);
-  }, [candidateCount]);
+    setBestCandidateProp(bestCandidate.candidate);
+  }, [candidateCount, setBestCandidateProp]);
 
   useEffect(() => {
     if (cardsRemaining === 0) {
@@ -119,7 +129,7 @@ export default function Swipper({
           className={styles.card__container}
           preventSwipe={["up", "down"]}
           key={index + 1}
-          onCardLeftScreen={(direction) => onCardLeftScreen(direction, program)}
+          onSwipe={(direction) => onSwipe(direction, program)}
           swipeRequirementType="position"
         >
           <div
