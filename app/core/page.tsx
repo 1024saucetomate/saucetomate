@@ -76,10 +76,9 @@ export default function Core() {
 
   useEffect(() => {
     if (cardsRemaining === 0 && bestCandidate) {
-      // Delay the start of the ending scene
       const timer = setTimeout(() => {
         setShowEndingScene(true);
-      }, 1000); // Adjust this delay as needed
+      }, 1000);
 
       return () => clearTimeout(timer);
     }
