@@ -90,8 +90,9 @@ export default function Swipper({
       Object.entries(candidateCount).sort(
         (a, b) => Math.abs(b[1]) - Math.abs(a[1]),
       )[0]?.[0] || "";
+    setBestCandidate(bestCandidate);
     setBestCandidateProp(bestCandidate);
-  }, [candidateCount, setBestCandidate]);
+  }, [candidateCount, setBestCandidateProp]);
 
   useEffect(() => {
     if (cardsRemaining === 0) {
