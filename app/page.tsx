@@ -12,7 +12,9 @@ export default function Root() {
           <Link href="/core">
             <h1>{"Démarrer"}</h1>
           </Link>
-          <h3>{"Les programmes"}</h3>
+          <Link href="/programs">
+            <h3>{"Les programmes"}</h3>
+          </Link>
           <h3>{"À propos"}</h3>
         </div>
       </div>
