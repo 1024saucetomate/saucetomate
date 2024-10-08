@@ -7,7 +7,7 @@
 
 .container__swipper {
   position: absolute;
-  top: 50%;
+  top: calc(50% + var(--spacing));
   left: 50%;
   display: flex;
   flex-flow: column nowrap;
