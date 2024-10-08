@@ -42,10 +42,7 @@ export default function MatterEndingScene({
       },
     });
 
-    const image =
-      candidate === "Donald Trump"
-        ? "/assets/donaldtrump.png"
-        : "/assets/kamalaharris.png";
+    const image = `/assets/${candidate.toLowerCase().replace(/\s/g, "")}.png`;
     const imageSize =
       candidate === "Donald Trump"
         ? { width: 727.36, height: 1000 }

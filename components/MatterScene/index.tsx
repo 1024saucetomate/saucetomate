@@ -3,6 +3,29 @@
 import Matter from "matter-js";
 import React, { useEffect, useRef } from "react";
 
+import coreDataImport from "@/data/core.json";
+
+type PolicyType = {
+  title: string;
+  description: string;
+  category: string;
+  source: {
+    name: string;
+    url: string;
+  };
+};
+
+type CandidateDataType = {
+  description: string;
+  policies: PolicyType[];
+};
+
+type CoreDataType = {
+  [key: string]: CandidateDataType;
+};
+
+const coreData: CoreDataType = coreDataImport;
+
 interface MatterSceneProps {
   className?: string;
 }
@@ -43,7 +66,10 @@ export default function MatterScene({ className }: Readonly<MatterSceneProps>) {
       },
     });
 
-    const images = ["/assets/donaldtrump.png", "/assets/kamalaharris.png"];
+    const images = Object.keys(coreData).map(
+      (candidate) =>
+        `/assets/${candidate.toLowerCase().replace(/\s/g, "")}.png`,
+    );
     const imageSizes = [
       { width: 727.36, height: 1000 },
       { width: 940.69, height: 1000 },
@@ -74,7 +100,7 @@ export default function MatterScene({ className }: Readonly<MatterSceneProps>) {
     };
 
     const generateImages = () => {
-      const objectCount = Math.floor(width / 20) - Math.floor(height / 100);
+      const objectCount = width * height * 0.00005;
       const objects = Array.from({ length: objectCount }, () => {
         const imgIndex = Math.floor(Math.random() * images.length);
         const imgSize = imageSizes[imgIndex];
