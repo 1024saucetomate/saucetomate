@@ -10,7 +10,7 @@
   --transition-duration: 0.5s;
   --transition-timing-function: ease;
 
-  --spacing: 10px;
+  --spacing: 20px;
 }
 
 * {
@@ -24,4 +24,13 @@
 
 body {
   background-color: var(--color-red);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
 }
