@@ -14,7 +14,7 @@
   z-index: 2;
   display: flex;
   flex-flow: column nowrap;
-  gap: var(--spacing);
+  gap: calc(var(--spacing) / 2);
 }
 
 .container__scene {
