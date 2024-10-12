@@ -1,5 +1,5 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript", "prettier", "airbnb"],
+  "extends": ["next/core-web-vitals", "next/typescript", "prettier"],
   "plugins": ["prettier", "unused-imports", "simple-import-sort"],
   "rules": {
     "prettier/prettier": "error",
