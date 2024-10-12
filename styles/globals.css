@@ -4,12 +4,9 @@
   --color-red: #f00;
   --color-black: #000;
   --color-white: #fff;
-
   --font-family: "Inter", sans-serif;
-
   --transition-duration: 0.5s;
   --transition-timing-function: ease;
-
   --spacing: 20px;
 }
 
