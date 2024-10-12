@@ -1,0 +1,28 @@
+[
+  {
+    "id": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "profile": {
+      "name": "Donald Trump",
+      "party": "Républicain",
+      "age": 78
+    },
+    "image": {
+      "src": "/assets/candidates/donald-trump.png",
+      "width": 363.68,
+      "height": 500
+    }
+  },
+  {
+    "id": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
+    "profile": {
+      "name": "Kamala Harris",
+      "party": "Démocrate",
+      "age": 59
+    },
+    "image": {
+      "src": "/assets/candidates/kamala-harris.png",
+      "width": 470.34,
+      "height": 500
+    }
+  }
+]
