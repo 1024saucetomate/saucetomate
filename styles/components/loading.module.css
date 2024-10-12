@@ -1,8 +1,11 @@
 .container {
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100dvh;
   width: 100dvw;
+  background-color: var(--color-red);
+  z-index: 1000;
   transition: opacity var(--transition-duration) var(--transition-timing-function);
 }
