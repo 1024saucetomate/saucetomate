@@ -21,7 +21,7 @@ export default function Loading() {
 
   return (
     <div className={styles.container} ref={containerRef}>
-      <h1>SAUCETOMATE</h1>
+      <h3>SAUCETOMATE</h3>
     </div>
   );
 }
