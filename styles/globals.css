@@ -9,6 +9,8 @@
 
   --transition-duration: 0.5s;
   --transition-timing-function: ease;
+
+  --spacing: 10px;
 }
 
 * {
@@ -17,6 +19,7 @@
   box-sizing: border-box;
   font-family: var(--font-family);
   text-transform: uppercase;
+  user-select: none;
 }
 
 body {
