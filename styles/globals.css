@@ -4,7 +4,11 @@
   --color-red: #f00;
   --color-black: #000;
   --color-white: #fff;
+
   --font-family: "Inter", sans-serif;
+
+  --transition-duration: 0.5s;
+  --transition-timing-function: ease;
 }
 
 * {
@@ -12,6 +16,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: var(--font-family);
+  text-transform: uppercase;
 }
 
 body {
