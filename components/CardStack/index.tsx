@@ -6,6 +6,8 @@ import Card from "react-tinder-card";
 import styles from "@/styles/components/card-stack.module.css";
 import MockAPI from "@/utils/MockAPI";
 
+import MaskedText from "../MaskedText";
+
 export default function CardStack({
   className,
   onPercentageUpdate,
@@ -57,13 +59,13 @@ export default function CardStack({
       <Card className={styles.card} key={"result"} preventSwipe={["up", "down", "left", "right"]}>
         <div key={"result"} className={styles.card__content}>
           <div className={styles.card__header} key={"result"}>
-            <span>Vous avez fini</span>
-            <h3>Le candidat qui vous correspond le plus est Donald Trump</h3>
+            <span className={styles.card__header__theme}>Vous avez fini</span>
+            <MaskedText
+              text="D'après vos choix, ----------------- semble être le candidat qui vous correspond le plus"
+              maskedPart="-----------------"
+              className={styles.card__header__masked}
+            />
           </div>
-          <small>
-            Si vous êtes d&apos;accord avec une proposition, glissez la carte vers la droite. Sinon, glissez la vers la
-            gauche.
-          </small>
         </div>
       </Card>
 
@@ -80,10 +82,10 @@ export default function CardStack({
             style={{ transform: `rotate(${index % 2 === 0 ? 5 : -5}deg)` }}
           >
             <div className={styles.card__header}>
-              <span>{policy.theme}</span>
-              <h3>{policy.title}</h3>
+              <span className={styles.card__header__theme}>{policy.theme}</span>
+              <h3 className={styles.card__header__title}>{policy.title}</h3>
             </div>
-            <small>{policy.description}</small>
+            <small className={styles.card__description}>{policy.description}</small>
           </div>
         </Card>
       ))}
@@ -91,10 +93,12 @@ export default function CardStack({
       <Card className={styles.card} key={""} preventSwipe={["up", "down"]} swipeRequirementType="position">
         <div key={"mode-emploi"} className={styles.card__content}>
           <div className={styles.card__header} key={"mode-emploi"}>
-            <span>Mode d&apos;emploi</span>
-            <h3>Faites glisser les cartes pour découvrir les propositions des candidats</h3>
+            <span className={styles.card__header__theme}>Mode d&apos;emploi</span>
+            <h3 className={styles.card__header__title}>
+              Faites glisser les cartes pour découvrir les propositions des candidats
+            </h3>
           </div>
-          <small>
+          <small className={styles.card__description}>
             Si vous êtes d&apos;accord avec une proposition, glissez la carte vers la droite. Sinon, glissez la vers la
             gauche.
           </small>
