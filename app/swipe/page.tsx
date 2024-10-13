@@ -21,7 +21,7 @@ export default function Swipe() {
           <h3>Retour</h3>
         </Link>
         <h3 className={styles.header__percentage}>
-          <SlotCounter value={Math.round(percentage) || 0} duration={0.5} /> <span>%</span>
+          <SlotCounter value={Math.round(percentage) || 0} duration={0.5} startValue={0} /> <span>%</span>
         </h3>
       </div>
       <div className={styles.stack__container}>
