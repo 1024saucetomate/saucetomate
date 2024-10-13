@@ -1,15 +1,6 @@
-import { NextRequest, NextResponse } from "next/server";
-
 import policies from "@/data/policies.json";
 
-export function GET(req: NextRequest) {
-  let count = (req.nextUrl.searchParams.get("count") || "20") as string | number;
-  try {
-    count = parseInt(count as string, 10);
-  } catch {
-    count = 20;
-  }
-
+export function random(count: number) {
   const candidateIds = Array.from(new Set(policies.map((policy) => policy.candidateId)));
 
   const basePoliciesPerCandidate = Math.floor(count / candidateIds.length);
@@ -50,5 +41,5 @@ export function GET(req: NextRequest) {
     [result[i], result[j]] = [result[j], result[i]];
   }
 
-  return NextResponse.json(result);
+  return result;
 }

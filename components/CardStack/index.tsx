@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Card from "react-tinder-card";
 
 import styles from "@/styles/components/card-stack.module.css";
+import MockAPI from "@/utils/MockAPI";
 
 export default function CardStack({
   className,
@@ -29,25 +30,12 @@ export default function CardStack({
   }
 
   useEffect(() => {
-    async function fetchCandidates() {
-      const response = await fetch("/api/candidates");
-      const data = await response.json();
-      return data;
-    }
-
-    async function fetchRandomPolicies() {
-      const candidates = await fetchCandidates();
-      const response = await fetch(`/api/policies/random?count=${candidates.length * 10}`);
-      const data = await response.json();
-      setPolicies(data);
-    }
-
-    fetchRandomPolicies();
+    const candidates = MockAPI.get.candidates();
+    setPolicies(MockAPI.get.policies.random(candidates.length * 10) as unknown as []);
   }, []);
 
   useEffect(() => {
     onPercentageUpdate((swipedPolicies.length / policies.length) * 100);
-    console.log(swipedPolicies);
   }, [swipedPolicies, onPercentageUpdate, policies.length]);
 
   return (

@@ -3,6 +3,8 @@
 import Matter from "matter-js";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
+import MockAPI from "@/utils/MockAPI";
+
 export default function MatterScene__CandidatesBubble({
   className,
 }: Readonly<{
@@ -14,13 +16,7 @@ export default function MatterScene__CandidatesBubble({
   const [candidates, setCandidates] = useState<{ image: { src: string; width: number; height: number } }[]>([]);
 
   useEffect(() => {
-    async function fetchCandidates() {
-      const response = await fetch("/api/candidates");
-      const data = await response.json();
-      setCandidates(data);
-    }
-
-    fetchCandidates();
+    setCandidates(MockAPI.get.candidates());
   }, []);
 
   useLayoutEffect(() => {
