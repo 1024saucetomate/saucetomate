@@ -8,7 +8,7 @@ export default function Root() {
       <div className={styles.container__menu}>
         <h1>SAUCETOMATE</h1>
         <div>
-          <Link href="#">
+          <Link href="/swipe">
             <h3>Démarrer</h3>
           </Link>
           <Link href="#">
