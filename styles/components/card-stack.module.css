@@ -1,0 +1,42 @@
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.card__content {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--spacing);
+  width: 100%;
+  height: 100%;
+  padding: var(--spacing);
+  border: 5px solid var(--color-black);
+  background-color: var(--color-white);
+}
+
+.card__header {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: calc(var(--spacing) / 2);
+}
+
+.card__content h3,
+.card__content small,
+.card__content span {
+  word-break: break-word;
+}
+
+.card__content small {
+  font-weight: var(--font-weight);
+}
+
+.card__content span {
+  font-weight: var(--font-weight);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: calc(var(--spacing) / 3);
+  width: fit-content;
+  max-width: 100%;
+}
