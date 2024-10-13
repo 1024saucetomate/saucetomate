@@ -7,8 +7,10 @@ export default function Link({ children, href, ...props }: Readonly<{ children: 
 
   function handleClick(event: React.MouseEvent<HTMLAnchorElement>) {
     event.preventDefault();
-    // TODO: Implement loading animation
-    router.push(href);
+    document.getElementById("smooth-transition-container")?.classList.add("hidden");
+    setTimeout(() => {
+      router.push(href);
+    }, 500);
   }
   return (
     <a href={href} {...props} onClick={handleClick}>
