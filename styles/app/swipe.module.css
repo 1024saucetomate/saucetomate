@@ -1,0 +1,44 @@
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  padding: var(--spacing);
+  overflow: hidden;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__percentage {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.stack__container {
+  position: relative;
+  top: calc(50% + var(--spacing));
+  left: 50%;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: calc(var(--spacing) * 2);
+  align-items: center;
+  width: 100%;
+  padding: var(--spacing);
+  transform: translate(-50%, -50%);
+}
+
+.stack {
+  position: relative;
+  display: block;
+  width: 80dvw;
+  max-width: 300px;
+  min-height: calc(300px * 1.5);
+}
