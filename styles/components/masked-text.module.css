@@ -1,0 +1,22 @@
+.container {
+  position: relative;
+  display: inline;
+}
+
+.container__content {
+  position: relative;
+  display: inline-block;
+}
+
+.container__content__text {
+  visibility: hidden;
+  display: inline-block;
+}
+
+.container__content__canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  display: block;
+}
