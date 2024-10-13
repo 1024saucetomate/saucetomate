@@ -22,21 +22,27 @@
   gap: calc(var(--spacing) / 2);
 }
 
-.card__content h3,
-.card__content small,
+.card__header__theme,
+.card__description,
+.card__header__theme,
 .card__content span {
   word-break: break-word;
 }
 
-.card__content small {
+.card__description {
   font-weight: var(--font-weight);
 }
 
-.card__content span {
+.card__header__theme {
   font-weight: var(--font-weight);
   background-color: var(--color-black);
   color: var(--color-white);
   padding: calc(var(--spacing) / 3);
   width: fit-content;
   max-width: 100%;
+}
+
+.card__header__masked {
+  font-weight: var(--font-weight);
+  font-size: 18.72px;
 }
