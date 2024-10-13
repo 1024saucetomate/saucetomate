@@ -13,7 +13,14 @@ export default function CardStack({
   className?: string;
   onPercentageUpdate: (percentage: number) => void;
 }) {
-  const [policies, setPolicies] = useState([]);
+  const [policies, setPolicies] = useState<
+    {
+      id: string;
+      theme: string;
+      title: string;
+      description: string;
+    }[]
+  >([]);
   const [swipedPolicies, setSwipedPolicies] = useState<
     {
       id: string;
@@ -31,7 +38,14 @@ export default function CardStack({
 
   useEffect(() => {
     const candidates = MockAPI.get.candidates();
-    setPolicies(MockAPI.get.policies.random(candidates.length * 10) as unknown as []);
+    setPolicies(
+      MockAPI.get.policies.random(candidates.length * 10) as {
+        id: string;
+        theme: string;
+        title: string;
+        description: string;
+      }[],
+    );
   }, []);
 
   useEffect(() => {
