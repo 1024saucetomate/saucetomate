@@ -31,3 +31,11 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+#smooth-transition-container {
+  transition: opacity var(--transition-duration) var(--transition-timing-function);
+}
+
+#smooth-transition-container.hidden {
+  opacity: 0;
+}
