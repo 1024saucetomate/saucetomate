@@ -1,9 +1,7 @@
 "use client";
 
 import Matter from "matter-js";
-import { useLayoutEffect, useRef } from "react";
-
-import candidates from "@/data/candidates.json";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 export default function MatterScene__CandidatesBubble({
   className,
@@ -13,8 +11,21 @@ export default function MatterScene__CandidatesBubble({
   const sceneRef = useRef<HTMLDivElement>(null);
   const engineRef = useRef<Matter.Engine | null>(null);
   const renderRef = useRef<Matter.Render | null>(null);
+  const [candidates, setCandidates] = useState<{ image: { src: string; width: number; height: number } }[]>([]);
+
+  useEffect(() => {
+    async function fetchCandidates() {
+      const response = await fetch("/api/candidates");
+      const data = await response.json();
+      setCandidates(data);
+    }
+
+    fetchCandidates();
+  }, []);
 
   useLayoutEffect(() => {
+    if (candidates.length === 0) return;
+
     const { Engine, Render, Bodies, Body, Composite, Runner, Mouse, MouseConstraint, Vector } = Matter;
 
     engineRef.current = Engine.create();
@@ -131,7 +142,7 @@ export default function MatterScene__CandidatesBubble({
     }
 
     window.addEventListener("resize", handleResize);
-  }, []);
+  }, [candidates]);
 
   return <div className={className} ref={sceneRef} />;
 }
