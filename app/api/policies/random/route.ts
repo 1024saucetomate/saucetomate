@@ -3,17 +3,17 @@ import { NextRequest, NextResponse } from "next/server";
 import policies from "@/data/policies.json";
 
 export function GET(req: NextRequest) {
-  let length = (req.nextUrl.searchParams.get("length") || "20") as string | number;
+  let count = (req.nextUrl.searchParams.get("count") || "20") as string | number;
   try {
-    length = parseInt(length as string, 10);
+    count = parseInt(count as string, 10);
   } catch {
-    length = 20;
+    count = 20;
   }
 
   const candidateIds = Array.from(new Set(policies.map((policy) => policy.candidateId)));
 
-  const basePoliciesPerCandidate = Math.floor(length / candidateIds.length);
-  let remainingPolicies = length % candidateIds.length;
+  const basePoliciesPerCandidate = Math.floor(count / candidateIds.length);
+  let remainingPolicies = count % candidateIds.length;
 
   const candidatePolicies: { [key: string]: unknown[] } = {};
   candidateIds.forEach((id) => {
