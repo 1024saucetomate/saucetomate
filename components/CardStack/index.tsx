@@ -5,6 +5,9 @@ import Card from "react-tinder-card";
 
 import styles from "@/styles/components/card-stack.module.css";
 import MockAPI from "@/utils/MockAPI";
+import rtb64 from "@/utils/resultToBase64";
+
+import Link from "../Link";
 
 export default function CardStack({
   className,
@@ -27,6 +30,7 @@ export default function CardStack({
       validated: boolean;
     }[]
   >([]);
+  const [resultToBase64, setResultToBase64] = useState<string>("");
 
   function handleSwipe(policyId: string, direction: string) {
     const swipedPolicy = swipedPolicies.find((p) => p.id === policyId);
@@ -39,7 +43,7 @@ export default function CardStack({
   useEffect(() => {
     const candidates = MockAPI.get.candidates();
     setPolicies(
-      MockAPI.get.policies.random(candidates.length * 0) as {
+      MockAPI.get.policies.random(candidates.length * 10) as {
         id: string;
         theme: string;
         title: string;
@@ -51,6 +55,10 @@ export default function CardStack({
   useEffect(() => {
     onPercentageUpdate((swipedPolicies.length / policies.length) * 100);
   }, [swipedPolicies, onPercentageUpdate, policies.length]);
+
+  useEffect(() => {
+    setResultToBase64(rtb64(swipedPolicies));
+  }, [swipedPolicies]);
 
   return (
     <div className={className}>
@@ -66,9 +74,11 @@ export default function CardStack({
               est le candidat qui vous correspond le plus
             </h3>
           </div>
-          <button>
-            <h3>Afficher mes résultats</h3>
-          </button>
+          <Link href={`/swipe/result?data=${resultToBase64}`}>
+            <button>
+              <h3>Afficher mes résultats</h3>
+            </button>
+          </Link>
         </div>
       </div>
 
