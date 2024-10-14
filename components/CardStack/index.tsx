@@ -5,9 +5,6 @@ import Card from "react-tinder-card";
 
 import styles from "@/styles/components/card-stack.module.css";
 import MockAPI from "@/utils/MockAPI";
-import rtb64 from "@/utils/resultToBase64";
-
-import Link from "../Link";
 
 export default function CardStack({
   className,
@@ -22,6 +19,7 @@ export default function CardStack({
       theme: string;
       title: string;
       description: string;
+      candidateId: string;
     }[]
   >([]);
   const [swipedPolicies, setSwipedPolicies] = useState<
@@ -30,7 +28,7 @@ export default function CardStack({
       validated: boolean;
     }[]
   >([]);
-  const [resultToBase64, setResultToBase64] = useState<string>("");
+  const [bestCandidate, setBestCandidate] = useState<string | null>(null);
 
   function handleSwipe(policyId: string, direction: string) {
     const swipedPolicy = swipedPolicies.find((p) => p.id === policyId);
@@ -41,13 +39,14 @@ export default function CardStack({
   }
 
   useEffect(() => {
-    const candidates = MockAPI.get.candidates();
+    const candidates = MockAPI.get.candidates.all();
     setPolicies(
       MockAPI.get.policies.random(candidates.length * 10) as {
         id: string;
         theme: string;
         title: string;
         description: string;
+        candidateId: string;
       }[],
     );
   }, []);
@@ -57,30 +56,37 @@ export default function CardStack({
   }, [swipedPolicies, onPercentageUpdate, policies.length]);
 
   useEffect(() => {
-    setResultToBase64(rtb64(swipedPolicies));
+    const candidatesCount: { [key: string]: number } = {};
+    policies.forEach((policy) => {
+      if (swipedPolicies.find((p) => p.id === policy.id && p.validated)) {
+        if (!candidatesCount[policy.candidateId]) {
+          candidatesCount[policy.candidateId] = 0;
+        }
+        candidatesCount[policy.candidateId]++;
+      }
+    });
+
+    if (Object.keys(candidatesCount).length === 0) return;
+
+    const bestCandidateId = Object.keys(candidatesCount).reduce((a, b) =>
+      candidatesCount[a] > candidatesCount[b] ? a : b,
+    );
+
+    setBestCandidate(MockAPI.get.candidates.id(bestCandidateId)?.profile.name as string);
   }, [swipedPolicies]);
 
   return (
     <div className={className}>
-      <div className={styles.card} key={"result-container"}>
+      <Card className={styles.card} key={"result-container"} preventSwipe={["up", "down", "left", "right"]}>
         <div key={"result"} className={styles.card__content}>
           <div className={styles.card__header} key={"result"}>
             <span className={styles.card__header__theme}>Vous avez fini</span>
             <h3 className={styles.card__header__title}>
-              D&apos;après vos choix,{" "}
-              <span className={styles.card__header__title__masked}>
-                {MockAPI.get.candidates()[Math.floor(Math.random() * MockAPI.get.candidates().length)].profile.name}
-              </span>{" "}
-              est le candidat qui vous correspond le plus
+              {`D'après vos choix, ${bestCandidate} est le candidat qui vous correspond le mieux`}
             </h3>
           </div>
-          <Link href={`/swipe/result?data=${resultToBase64}`}>
-            <button>
-              <h3>Afficher mes résultats</h3>
-            </button>
-          </Link>
         </div>
-      </div>
+      </Card>
 
       {policies.map((policy: { id: string; theme: string; title: string; description: string }, index: number) => (
         <Card
