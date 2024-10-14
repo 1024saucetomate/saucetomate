@@ -6,8 +6,6 @@ import Card from "react-tinder-card";
 import styles from "@/styles/components/card-stack.module.css";
 import MockAPI from "@/utils/MockAPI";
 
-import MaskedText from "../MaskedText";
-
 export default function CardStack({
   className,
   onPercentageUpdate,
@@ -41,7 +39,7 @@ export default function CardStack({
   useEffect(() => {
     const candidates = MockAPI.get.candidates();
     setPolicies(
-      MockAPI.get.policies.random(candidates.length * 10) as {
+      MockAPI.get.policies.random(candidates.length * 0) as {
         id: string;
         theme: string;
         title: string;
@@ -60,11 +58,7 @@ export default function CardStack({
         <div key={"result"} className={styles.card__content}>
           <div className={styles.card__header} key={"result"}>
             <span className={styles.card__header__theme}>Vous avez fini</span>
-            <MaskedText
-              text="D'après vos choix, ----------------- semble être le candidat qui vous correspond le plus"
-              maskedPart="-----------------"
-              className={styles.card__header__masked}
-            />
+            <h3 className={styles.card__header__title}>Merci pour votre participation</h3>
           </div>
         </div>
       </Card>

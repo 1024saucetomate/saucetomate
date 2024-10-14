@@ -27,3 +27,7 @@
 .container__scene canvas:not(:first-child) {
   display: none;
 }
+
+.container__scene canvas:first-child {
+  display: block;
+}

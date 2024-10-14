@@ -41,8 +41,3 @@
   width: fit-content;
   max-width: 100%;
 }
-
-.card__header__masked {
-  font-weight: var(--font-weight);
-  font-size: 18.72px;
-}
