@@ -33,6 +33,21 @@ a:hover {
   text-decoration: underline;
 }
 
+button {
+  border: none;
+  padding: calc(var(--spacing) / 1.5);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
 #smooth-transition-container {
   transition: opacity var(--transition-duration) var(--transition-timing-function);
 }
