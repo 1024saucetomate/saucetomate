@@ -54,14 +54,23 @@ export default function CardStack({
 
   return (
     <div className={className}>
-      <Card className={styles.card} key={"result"} preventSwipe={["up", "down", "left", "right"]}>
+      <div className={styles.card} key={"result-container"}>
         <div key={"result"} className={styles.card__content}>
           <div className={styles.card__header} key={"result"}>
             <span className={styles.card__header__theme}>Vous avez fini</span>
-            <h3 className={styles.card__header__title}>Merci pour votre participation</h3>
+            <h3 className={styles.card__header__title}>
+              D&apos;après vos choix,{" "}
+              <span className={styles.card__header__title__masked}>
+                {MockAPI.get.candidates()[Math.floor(Math.random() * MockAPI.get.candidates().length)].profile.name}
+              </span>{" "}
+              est le candidat qui vous correspond le plus
+            </h3>
           </div>
+          <button>
+            <h3>Afficher mes résultats</h3>
+          </button>
         </div>
-      </Card>
+      </div>
 
       {policies.map((policy: { id: string; theme: string; title: string; description: string }, index: number) => (
         <Card
