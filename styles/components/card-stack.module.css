@@ -41,7 +41,3 @@
   width: fit-content;
   max-width: 100%;
 }
-
-.card__header__title__masked {
-  filter: blur(0.3rem);
-}
