@@ -16,7 +16,7 @@ export default function MatterScene__CandidatesBubble({
   const [candidates, setCandidates] = useState<{ image: { src: string; width: number; height: number } }[]>([]);
 
   useEffect(() => {
-    setCandidates(MockAPI.get.candidates());
+    setCandidates(MockAPI.get.candidates.all());
   }, []);
 
   useLayoutEffect(() => {
