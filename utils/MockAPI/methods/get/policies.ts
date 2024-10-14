@@ -43,3 +43,7 @@ export function random(count: number) {
 
   return result;
 }
+
+export function fromId(id: string) {
+  return policies.find((policy) => policy.id === id);
+}
