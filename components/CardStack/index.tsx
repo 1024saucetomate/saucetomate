@@ -1,10 +1,14 @@
 "use client";
 
+import { ArcElement, Chart as ChartJS, Legend, Tooltip } from "chart.js";
 import { useEffect, useState } from "react";
+import { Doughnut } from "react-chartjs-2";
 import Card from "react-tinder-card";
 
 import styles from "@/styles/components/card-stack.module.css";
 import MockAPI from "@/utils/MockAPI";
+
+ChartJS.register(ArcElement, Tooltip, Legend);
 
 export default function CardStack({
   className,
@@ -41,7 +45,7 @@ export default function CardStack({
   useEffect(() => {
     const candidates = MockAPI.get.candidates.all();
     setPolicies(
-      MockAPI.get.policies.random(candidates.length * 10) as {
+      MockAPI.get.policies.random(candidates.length * 2) as {
         id: string;
         theme: string;
         title: string;
@@ -79,12 +83,35 @@ export default function CardStack({
     <div className={className}>
       <Card className={styles.card} key={"result-container"} preventSwipe={["up", "down", "left", "right"]}>
         <div key={"result"} className={styles.card__content}>
-          <div className={styles.card__header} key={"result"}>
-            <span className={styles.card__header__theme}>Vous avez fini</span>
+          {(swipedPolicies.length === policies.length && (
+            <>
+              <div className={styles.card__header} key={"result"}>
+                <span className={styles.card__header__theme}>Vous avez fini</span>
+                <h3 className={styles.card__header__title}>
+                  {`D'après vos choix, ${bestCandidate} est le candidat qui vous correspond le plus`}
+                </h3>
+              </div>
+              <small className={styles.card__description}>{`Consultez les résultats des autres utilisateurs`}</small>
+              <Doughnut
+                data={{
+                  // TODO: Use real data
+                  labels: ["Kamala Harris", "Donald Trump"],
+                  datasets: [
+                    {
+                      data: [70, 30],
+                      backgroundColor: ["#FF6384", "#36A2EB"],
+                      hoverBackgroundColor: ["#FF6384", "#36A2EB"],
+                    },
+                  ],
+                }}
+                className={styles.card__stats}
+              />
+            </>
+          )) || (
             <h3 className={styles.card__header__title}>
-              {`D'après vos choix, ${bestCandidate} est le candidat qui vous correspond le mieux`}
+              {`Continuez à swiper pour découvrir le candidat qui vous correspond le plus`}
             </h3>
-          </div>
+          )}
         </div>
       </Card>
 
