@@ -16,6 +16,9 @@
     ]
   },
   "dependencies": {
+    "@libsql/client": "^0.8.1",
+    "@prisma/adapter-libsql": "^5.21.0",
+    "@prisma/client": "^5.21.0",
     "@react-spring/web": "^9.7.5",
     "chart.js": "^4.4.4",
     "matter-js": "^0.20.0",
