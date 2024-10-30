@@ -1,7 +1,8 @@
 "use client";
 
-import Image from "next/image";
+import axios from "axios";
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import Card from "react-tinder-card";
 
 import styles from "@/styles/components/card-stack.module.css";
@@ -26,7 +27,7 @@ export default function CardStack({
   const [swipedPolicies, setSwipedPolicies] = useState<
     {
       id: string;
-      validated: boolean;
+      isFor: boolean;
     }[]
   >([]);
   const [bestCandidate, setBestCandidate] = useState<{
@@ -39,13 +40,15 @@ export default function CardStack({
     url: string;
     alt: string;
   } | null>(null);
+  const [voteId, setVoteId] = useState<string | null>(null);
+  const [hasError, setHasError] = useState<boolean>(false);
 
   function handleSwipe(policyId: string, direction: string) {
     const swipedPolicy = swipedPolicies.find((p) => p.id === policyId);
     if (swipedPolicy) {
       return;
     }
-    setSwipedPolicies([...swipedPolicies, { id: policyId, validated: direction === "right" }]);
+    setSwipedPolicies([...swipedPolicies, { id: policyId, isFor: direction === "right" }]);
   }
 
   useEffect(() => {
@@ -63,12 +66,34 @@ export default function CardStack({
 
   useEffect(() => {
     onPercentageUpdate((swipedPolicies.length / policies.length) * 100);
-  }, [swipedPolicies, onPercentageUpdate, policies.length]);
+    if (policies.length !== 0 && swipedPolicies.length === policies.length) {
+      const res = axios.post("/api/save", swipedPolicies);
+      res
+        .then((data) => {
+          setVoteId(data.data.data.voteId);
+        })
+        .catch(() => {
+          setHasError(true);
+          toast.error("Impossible de sauvegarder votre vote. Veuillez réessayer plus tard.", {
+            style: {
+              border: "5px solid var(--color-black)",
+              color: "var(--color-black)",
+              background: "var(--color-white)",
+              fontFamily: "var(--font-family)",
+              fontWeight: "var(--font-weight)",
+              borderRadius: "0",
+              width: "90dvw",
+              maxWidth: "350px",
+            },
+          });
+        });
+    }
+  }, [swipedPolicies, policies.length, onPercentageUpdate]);
 
   useEffect(() => {
     const candidatesCount: { [key: string]: number } = {};
     policies.forEach((policy) => {
-      if (swipedPolicies.find((p) => p.id === policy.id && p.validated)) {
+      if (swipedPolicies.find((p) => p.id === policy.id && p.isFor)) {
         if (!candidatesCount[policy.candidateId]) {
           candidatesCount[policy.candidateId] = 0;
         }
@@ -88,7 +113,7 @@ export default function CardStack({
       slogan: MockAPI.get.candidates.fromId(bestCandidateId)?.profile.slogan as string,
       sex: MockAPI.get.candidates.fromId(bestCandidateId)?.profile.sex as string,
     });
-  }, [swipedPolicies]);
+  }, [swipedPolicies, policies]);
 
   useEffect(() => {
     if (bestCandidate) {
@@ -100,7 +125,7 @@ export default function CardStack({
       if (gifURL) {
         setGif({
           url: gifURL,
-          alt: `GIF de ${bestCandidate}`,
+          alt: `GIF de ${bestCandidate.name}`,
         });
       }
     }
@@ -118,15 +143,20 @@ export default function CardStack({
                   {`${bestCandidate?.name} semble être ${bestCandidate?.sex === "M" ? "le candidat" : "la candidate"} qui vous correspond le plus`}
                 </h3>
               </div>
-              <Image
-                src={gif?.url || "/assets/gif/error.gif"}
-                alt={gif?.alt || "Une erreur est survenue"}
+              <div
+                aria-label={gif?.alt || "Une erreur est survenue"}
+                style={{
+                  backgroundImage: `url(${gif?.url})`,
+                }}
                 className={styles.card__image}
                 draggable={false}
-                width={0}
-                height={0}
               />
-              <button>{`Afficher mes résultats`}</button>
+              {!hasError && (
+                <button
+                  className={styles.card__button}
+                  disabled={!voteId}
+                >{`Pourquoi ${bestCandidate?.sex === "M" ? "lui" : "elle"} ?`}</button>
+              )}
             </>
           )) || (
             <h3 className={styles.card__header__title}>
