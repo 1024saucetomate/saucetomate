@@ -33,6 +33,7 @@ export default function CardStack({
     }[]
   >([]);
   const [bestCandidate, setBestCandidate] = useState<string | null>(null);
+  const [bestCandidateSlogan, setBestCandidateSlogan] = useState<string | null>(null);
   const [gif, setGif] = useState<{
     url: string;
     alt: string;
@@ -81,6 +82,7 @@ export default function CardStack({
     );
 
     setBestCandidate(MockAPI.get.candidates.fromId(bestCandidateId)?.profile.name as string);
+    setBestCandidateSlogan(MockAPI.get.candidates.fromId(bestCandidateId)?.profile.slogan as string);
   }, [swipedPolicies]);
 
   useEffect(() => {
@@ -106,9 +108,9 @@ export default function CardStack({
           {(swipedPolicies.length === policies.length && (
             <>
               <div className={styles.card__header} key={"result"}>
-                <span className={styles.card__header__theme}>Vous avez fini</span>
+                <span className={styles.card__header__theme}>{bestCandidateSlogan}</span>
                 <h3 className={styles.card__header__title}>
-                  {`D'après vos choix, ${bestCandidate} est le candidat qui vous correspond le plus`}
+                  {`${bestCandidate} semble être le candidat qui vous correspond le plus`}
                 </h3>
               </div>
               <Image
@@ -116,9 +118,10 @@ export default function CardStack({
                 alt={gif?.alt || "Une erreur est survenue"}
                 className={styles.card__image}
                 draggable={false}
-                width={100}
-                height={100}
+                width={0}
+                height={0}
               />
+              <button>{`Afficher mes résultats`}</button>
             </>
           )) || (
             <h3 className={styles.card__header__title}>
