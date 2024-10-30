@@ -10,6 +10,10 @@
       "src": "/assets/candidates/donald-trump.png",
       "width": 363.68,
       "height": 500
+    },
+    "gif": {
+      "directory": "/assets/candidates/gif/donald-trump/",
+      "count": 10
     }
   },
   {
@@ -23,6 +27,10 @@
       "src": "/assets/candidates/kamala-harris.png",
       "width": 470.34,
       "height": 500
+    },
+    "gif": {
+      "directory": "/assets/candidates/gif/kamala-harris/",
+      "count": 10
     }
   }
 ]
