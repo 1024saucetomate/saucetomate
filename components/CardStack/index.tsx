@@ -1,14 +1,11 @@
 "use client";
 
-import { ArcElement, Chart as ChartJS, Legend, Tooltip } from "chart.js";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Card from "react-tinder-card";
 
 import styles from "@/styles/components/card-stack.module.css";
 import MockAPI from "@/utils/MockAPI";
-
-ChartJS.register(ArcElement, Tooltip, Legend);
 
 export default function CardStack({
   className,
