@@ -43,8 +43,10 @@
   max-width: 100%;
 }
 
-.card__stats {
+.card__image {
   position: relative;
-  width: 70% !important;
-  height: auto !important;
+  width: 100% !important;
+  height: 40%;
+  object-fit: cover;
+  user-select: none;
 }

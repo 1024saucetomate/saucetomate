@@ -1,8 +1,8 @@
 "use client";
 
 import { ArcElement, Chart as ChartJS, Legend, Tooltip } from "chart.js";
+import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Doughnut } from "react-chartjs-2";
 import Card from "react-tinder-card";
 
 import styles from "@/styles/components/card-stack.module.css";
@@ -33,6 +33,10 @@ export default function CardStack({
     }[]
   >([]);
   const [bestCandidate, setBestCandidate] = useState<string | null>(null);
+  const [gif, setGif] = useState<{
+    url: string;
+    alt: string;
+  } | null>(null);
 
   function handleSwipe(policyId: string, direction: string) {
     const swipedPolicy = swipedPolicies.find((p) => p.id === policyId);
@@ -79,9 +83,25 @@ export default function CardStack({
     setBestCandidate(MockAPI.get.candidates.fromId(bestCandidateId)?.profile.name as string);
   }, [swipedPolicies]);
 
+  useEffect(() => {
+    if (bestCandidate) {
+      const bestCandidateId = MockAPI.get.candidates
+        .all()
+        .find((candidate) => candidate.profile.name === bestCandidate);
+
+      const gifURL = MockAPI.get.candidates.randomGIF(bestCandidateId?.id as string);
+      if (gifURL) {
+        setGif({
+          url: gifURL,
+          alt: `GIF de ${bestCandidate}`,
+        });
+      }
+    }
+  }, [bestCandidate]);
+
   return (
     <div className={className}>
-      <Card className={styles.card} key={"result-container"} preventSwipe={["up", "down", "left", "right"]}>
+      <div className={styles.card} key={"result-container"}>
         <div key={"result"} className={styles.card__content}>
           {(swipedPolicies.length === policies.length && (
             <>
@@ -91,20 +111,13 @@ export default function CardStack({
                   {`D'après vos choix, ${bestCandidate} est le candidat qui vous correspond le plus`}
                 </h3>
               </div>
-              <small className={styles.card__description}>{`Consultez les résultats des autres élèves`}</small>
-              <Doughnut
-                data={{
-                  // TODO: Use real data
-                  labels: ["Kamala Harris", "Donald Trump"],
-                  datasets: [
-                    {
-                      data: [70, 30],
-                      backgroundColor: ["#FF6384", "#36A2EB"],
-                      hoverBackgroundColor: ["#FF6384", "#36A2EB"],
-                    },
-                  ],
-                }}
-                className={styles.card__stats}
+              <Image
+                src={gif?.url || "/assets/gif/error.gif"}
+                alt={gif?.alt || "Une erreur est survenue"}
+                className={styles.card__image}
+                draggable={false}
+                width={100}
+                height={100}
               />
             </>
           )) || (
@@ -113,7 +126,7 @@ export default function CardStack({
             </h3>
           )}
         </div>
-      </Card>
+      </div>
 
       {policies.map((policy: { id: string; theme: string; title: string; description: string }, index: number) => (
         <Card
