@@ -32,8 +32,12 @@ export default function CardStack({
       validated: boolean;
     }[]
   >([]);
-  const [bestCandidate, setBestCandidate] = useState<string | null>(null);
-  const [bestCandidateSlogan, setBestCandidateSlogan] = useState<string | null>(null);
+  const [bestCandidate, setBestCandidate] = useState<{
+    id: string;
+    name: string;
+    slogan: string;
+    sex: string;
+  } | null>(null);
   const [gif, setGif] = useState<{
     url: string;
     alt: string;
@@ -81,15 +85,19 @@ export default function CardStack({
       candidatesCount[a] > candidatesCount[b] ? a : b,
     );
 
-    setBestCandidate(MockAPI.get.candidates.fromId(bestCandidateId)?.profile.name as string);
-    setBestCandidateSlogan(MockAPI.get.candidates.fromId(bestCandidateId)?.profile.slogan as string);
+    setBestCandidate({
+      id: bestCandidateId,
+      name: MockAPI.get.candidates.fromId(bestCandidateId)?.profile.name as string,
+      slogan: MockAPI.get.candidates.fromId(bestCandidateId)?.profile.slogan as string,
+      sex: MockAPI.get.candidates.fromId(bestCandidateId)?.profile.sex as string,
+    });
   }, [swipedPolicies]);
 
   useEffect(() => {
     if (bestCandidate) {
       const bestCandidateId = MockAPI.get.candidates
         .all()
-        .find((candidate) => candidate.profile.name === bestCandidate);
+        .find((candidate) => candidate.profile.name === bestCandidate.name);
 
       const gifURL = MockAPI.get.candidates.randomGIF(bestCandidateId?.id as string);
       if (gifURL) {
@@ -108,9 +116,9 @@ export default function CardStack({
           {(swipedPolicies.length === policies.length && (
             <>
               <div className={styles.card__header} key={"result"}>
-                <span className={styles.card__header__theme}>{bestCandidateSlogan}</span>
+                <span className={styles.card__header__theme}>{bestCandidate?.slogan}</span>
                 <h3 className={styles.card__header__title}>
-                  {`${bestCandidate} semble être le candidat qui vous correspond le plus`}
+                  {`${bestCandidate?.name} semble être ${bestCandidate?.sex === "M" ? "le candidat" : "la candidate"} qui vous correspond le plus`}
                 </h3>
               </div>
               <Image

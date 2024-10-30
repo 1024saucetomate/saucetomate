@@ -4,8 +4,9 @@
     "profile": {
       "name": "Donald Trump",
       "party": "Républicain",
+      "slogan": "Make America Great Again",
       "age": 78,
-      "slogan": "Make America Great Again"
+      "sex": "M"
     },
     "image": {
       "src": "/assets/candidates/donald-trump.png",
@@ -22,8 +23,9 @@
     "profile": {
       "name": "Kamala Harris",
       "party": "Démocrate",
+      "slogan": "We Are Not Going Back",
       "age": 59,
-      "slogan": "We Are Not Going Back"
+      "sex": "W"
     },
     "image": {
       "src": "/assets/candidates/kamala-harris.png",
