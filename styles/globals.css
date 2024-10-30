@@ -52,6 +52,14 @@ button:active {
   transform: translateY(1px);
 }
 
+button:disabled {
+  opacity: 0.1;
+  cursor: not-allowed;
+}
+button:disabled:active {
+  transform: none;
+}
+
 #smooth-transition-container {
   transition: opacity var(--transition-duration) var(--transition-timing-function);
 }
