@@ -9,7 +9,6 @@ export function fromId(id: string) {
 }
 
 export function randomGIF(candidateId: string) {
-  // candidates.candidateId.gif.directory + candidates.candidateId.gif.count (random, from 0 to count - 1).gif
   const candidate = fromId(candidateId);
   if (!candidate) {
     return null;
