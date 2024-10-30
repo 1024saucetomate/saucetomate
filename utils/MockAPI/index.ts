@@ -5,11 +5,11 @@ export default class MockAPI {
   static get = {
     candidates: {
       all: getCandidates,
-      id: getCandidateFromId,
+      fromId: getCandidateFromId,
     },
     policies: {
       random: getRandomPolicies,
-      id: getPolicyFromId,
+      fromId: getPolicyFromId,
     },
   };
 }

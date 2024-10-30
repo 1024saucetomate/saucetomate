@@ -76,7 +76,7 @@ export default function CardStack({
       candidatesCount[a] > candidatesCount[b] ? a : b,
     );
 
-    setBestCandidate(MockAPI.get.candidates.id(bestCandidateId)?.profile.name as string);
+    setBestCandidate(MockAPI.get.candidates.fromId(bestCandidateId)?.profile.name as string);
   }, [swipedPolicies]);
 
   return (
