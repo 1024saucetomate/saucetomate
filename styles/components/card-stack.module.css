@@ -21,6 +21,7 @@
   display: flex;
   flex-flow: column nowrap;
   gap: calc(var(--spacing) / 2);
+  width: 100%;
 }
 
 .card__header__theme,
