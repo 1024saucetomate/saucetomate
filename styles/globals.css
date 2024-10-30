@@ -44,6 +44,7 @@ button {
   align-items: center;
   font-family: var(--font-family) !important;
   font-weight: var(--font-weight) !important;
+  font-size: 1rem;
   width: 100%;
 }
 
