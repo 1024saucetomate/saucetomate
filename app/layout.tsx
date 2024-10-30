@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 
 import type { Metadata } from "next";
+import { Toaster } from "react-hot-toast";
 
 import Loading from "@/components/Loading";
 
@@ -18,6 +19,7 @@ export default function RootLayout({
     <html lang="fr">
       <body>
         <Loading />
+        <Toaster />
         {children}
       </body>
     </html>
