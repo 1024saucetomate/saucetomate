@@ -91,7 +91,7 @@ export default function CardStack({
                   {`D'après vos choix, ${bestCandidate} est le candidat qui vous correspond le plus`}
                 </h3>
               </div>
-              <small className={styles.card__description}>{`Consultez les résultats des autres utilisateurs`}</small>
+              <small className={styles.card__description}>{`Consultez les résultats des autres élèves`}</small>
               <Doughnut
                 data={{
                   // TODO: Use real data
