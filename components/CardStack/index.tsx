@@ -66,6 +66,9 @@ export default function CardStack({
 
   useEffect(() => {
     onPercentageUpdate((swipedPolicies.length / policies.length) * 100);
+  }, [swipedPolicies, policies.length, onPercentageUpdate]);
+
+  useEffect(() => {
     if (policies.length !== 0 && swipedPolicies.length === policies.length) {
       const res = axios.post("/api/save", swipedPolicies);
       res
@@ -88,7 +91,7 @@ export default function CardStack({
           });
         });
     }
-  }, [swipedPolicies, policies.length, onPercentageUpdate]);
+  }, [swipedPolicies, policies]);
 
   useEffect(() => {
     const candidatesCount: { [key: string]: number } = {};
@@ -146,7 +149,7 @@ export default function CardStack({
               <div
                 aria-label={gif?.alt || "Une erreur est survenue"}
                 style={{
-                  backgroundImage: `url(${gif?.url})`,
+                  backgroundImage: gif ? `url(${gif.url})` : "none",
                 }}
                 className={styles.card__image}
                 draggable={false}
