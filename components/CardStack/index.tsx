@@ -116,34 +116,15 @@ export default function CardStack({
   }, [swipedPolicies, policies]);
 
   useEffect(() => {
-    const calculateBestCandidate = () => {
-      const candidateVotes = policies.reduce((acc: Record<string, number>, policy) => {
-        const isVotedFor = swipedPolicies.some((p) => p.id === policy.id && p.isFor);
-        if (isVotedFor) {
-          acc[policy.candidateId] = (acc[policy.candidateId] || 0) + 1;
-        }
-        return acc;
-      }, {});
-
-      if (Object.keys(candidateVotes).length === 0) return;
-
-      const bestCandidateId = Object.entries(candidateVotes).reduce(
-        (best, [id, votes]) => (votes > candidateVotes[best] ? id : best),
-        Object.keys(candidateVotes)[0],
-      );
-
-      const candidate = MockAPI.get.candidates.fromId(bestCandidateId)?.profile;
-      if (!candidate) return;
-
-      setBestCandidate({
-        id: bestCandidateId,
-        name: candidate.name,
-        slogan: candidate.slogan,
-        sex: candidate.sex,
-      });
-    };
-
-    calculateBestCandidate();
+    const bestCandidateId = MockAPI.get.score.compute(swipedPolicies);
+    const candidate = MockAPI.get.candidates.fromId(bestCandidateId)?.profile;
+    if (!candidate) return;
+    setBestCandidate({
+      id: bestCandidateId,
+      name: candidate.name,
+      slogan: candidate.slogan,
+      sex: candidate.sex,
+    });
   }, [swipedPolicies, policies]);
 
   useEffect(() => {
