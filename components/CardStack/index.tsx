@@ -71,7 +71,7 @@ export default function CardStack({
   useEffect(() => {
     const candidates = MockAPI.get.candidates.all();
     setPolicies(
-      MockAPI.get.policies.random(candidates.length * 2) as {
+      MockAPI.get.policies.random(candidates.length * 10) as {
         id: string;
         theme: string;
         title: string;
@@ -117,6 +117,7 @@ export default function CardStack({
 
   useEffect(() => {
     const bestCandidateId = MockAPI.get.score.compute(swipedPolicies);
+    if (!bestCandidateId) return;
     const candidate = MockAPI.get.candidates.fromId(bestCandidateId)?.profile;
     if (!candidate) return;
     setBestCandidate({
