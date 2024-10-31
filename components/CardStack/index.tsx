@@ -93,7 +93,6 @@ export default function CardStack({
       return axios
         .post("/api/save", swipedPolicies)
         .then((response) => {
-          console.log(response.data);
           setVoteId(response.data.data.voteId);
         })
         .catch((error) => {
