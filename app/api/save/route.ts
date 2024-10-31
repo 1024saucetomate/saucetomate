@@ -37,6 +37,9 @@ export async function POST(req: Request) {
     }
 
     const winnerId = await MockAPI.get.score.compute(body);
+    if (!winnerId) {
+      return createErrorResponse(500, "INTERNAL_SERVER_ERROR");
+    }
 
     await prisma.candidate.upsert({
       where: { id: winnerId },
