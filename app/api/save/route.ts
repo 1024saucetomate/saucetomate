@@ -6,8 +6,6 @@ import { isRateLimited } from "@/utils/rate-limit";
 
 const prisma = new PrismaClient();
 
-type VoteTracker = Record<string, number>;
-
 const isValidPolicyVote = (
   item: unknown,
 ): item is {
@@ -27,13 +25,13 @@ const createErrorResponse = (status: number, error: string) => {
   return NextResponse.json({ code: status, error }, { status });
 };
 
-const computeCandidateScores = (
+const computeCandidateScores = async (
   votes: {
     id: string;
     isFor: boolean;
   }[],
-): VoteTracker => {
-  const tracker: VoteTracker = {};
+): Promise<Record<string, number>> => {
+  const tracker: Record<string, number> = {};
 
   for (const vote of votes) {
     const policy = MockAPI.get.policies.fromId(vote.id);
@@ -48,7 +46,7 @@ const computeCandidateScores = (
   return tracker;
 };
 
-const findBestCandidate = (scores: VoteTracker) => {
+const findBestCandidate = (scores: Record<string, number>) => {
   const entries = Object.entries(scores);
   if (entries.length === 0) {
     throw new Error("No votes recorded");
@@ -68,47 +66,47 @@ export async function POST(req: Request) {
       return createErrorResponse(400, "BAD_REQUEST");
     }
 
-    const candidateScores = computeCandidateScores(body);
+    const candidateScores = await computeCandidateScores(body);
     const [winnerId] = findBestCandidate(candidateScores);
 
-    try {
-      await prisma.candidate.upsert({
-        where: { id: winnerId },
-        update: { votes: { increment: 1 } },
-        create: { id: winnerId, votes: 1 },
-      });
+    await prisma.candidate.upsert({
+      where: { id: winnerId },
+      update: { votes: { increment: 1 } },
+      create: { id: winnerId, votes: 1 },
+    });
 
-      body.forEach(async ({ id, isFor }) => {
+    await Promise.all(
+      body.map(async ({ id, isFor }) => {
         await prisma.policy.upsert({
           where: { id },
           update: { votes: { increment: isFor ? 1 : -1 } },
           create: { id, votes: isFor ? 1 : -1 },
         });
-      });
+      }),
+    );
 
-      const vote = await prisma.vote.create({
+    const vote = await prisma.vote.create({
+      data: {
+        candidateId: winnerId,
+        policies: body.map(({ id }) => id),
+      },
+    });
+
+    await prisma.$disconnect();
+
+    return NextResponse.json(
+      {
+        code: 200,
+        message: "OK",
         data: {
-          candidateId: winnerId,
-          policies: body.map(({ id }) => id),
+          voteId: vote.id,
         },
-      });
-
-      return NextResponse.json(
-        {
-          code: 200,
-          message: "OK",
-          data: {
-            voteId: vote.id,
-          },
-        },
-        { status: 200 },
-      );
-    } catch (error) {
-      console.error("Error saving votes:", error);
-      return createErrorResponse(500, "INTERNAL_SERVER_ERROR");
-    }
+      },
+      { status: 200 },
+    );
   } catch (error) {
     console.error("Error processing votes:", error);
+    await prisma.$disconnect();
     return createErrorResponse(500, "INTERNAL_SERVER_ERROR");
   }
 }
