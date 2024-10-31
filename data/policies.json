@@ -2,414 +2,78 @@
   {
     "id": "b8c6e340-0db3-4876-8e6b-77c9e344d18b",
     "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Réduction des émissions de carbone",
+    "title": "Donald Trump",
     "description": "Mettre en place des mesures pour réduire les émissions de gaz à effet de serre des industries.",
     "theme": "Environnement"
   },
   {
     "id": "4eb3b4e6-30c5-4144-b84b-49046c20a928",
     "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Promotion des énergies fossiles",
+    "title": "Donald Trump",
     "description": "Soutenir l'exploitation des ressources énergétiques américaines pour stimuler l'économie.",
     "theme": "Environnement"
   },
   {
     "id": "a965f8b4-9e6a-4873-b97d-7c2df914e6ed",
     "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Diminution des réglementations environnementales",
+    "title": "Donald Trump",
     "description": "Réduire les réglementations pour faciliter les activités commerciales.",
     "theme": "Environnement"
   },
   {
     "id": "4e6cdaee-f493-4d52-803f-8e5552da3bc2",
     "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Développement des infrastructures vertes",
+    "title": "Donald Trump",
     "description": "Investir dans des infrastructures favorisant le développement durable.",
     "theme": "Environnement"
   },
   {
     "id": "e5eb1ef0-96db-47c5-bfb8-31a368f1ee14",
     "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Soutien aux entreprises agricoles durables",
+    "title": "Donald Trump",
     "description": "Encourager les pratiques agricoles respectueuses de l'environnement.",
     "theme": "Environnement"
   },
   {
     "id": "a7f325f0-3b5d-4dcb-b7c0-efae92dfdf4e",
     "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Investissement dans les énergies renouvelables",
+    "title": "Kamala Harris",
     "description": "Promouvoir le développement d'énergies renouvelables comme l'éolien et le solaire.",
     "theme": "Environnement"
   },
   {
     "id": "3aeb4d46-3d30-4ff8-9e82-2b4011c2c7ae",
     "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Accords internationaux sur le climat",
+    "title": "Kamala Harris",
     "description": "Rejoindre et respecter les accords internationaux sur la réduction des émissions de carbone.",
     "theme": "Environnement"
   },
   {
     "id": "cd80f55e-fb3f-49b2-b88e-85e83b4d27b6",
     "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Réglementation des industries polluantes",
+    "title": "Kamala Harris",
     "description": "Imposer des normes strictes aux industries pour limiter la pollution.",
     "theme": "Environnement"
   },
   {
     "id": "bca46c77-1c60-4634-8ef3-6635184de6c5",
     "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Promotion de l'agriculture biologique",
+    "title": "Kamala Harris",
     "description": "Encourager les pratiques agricoles durables et respectueuses de l'environnement.",
     "theme": "Environnement"
   },
   {
     "id": "3c511473-0d7b-4742-b276-10ad7247dfb3",
     "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Sensibilisation à l'écologie",
+    "title": "Kamala Harris",
     "description": "Éduquer le public sur l'importance de la protection de l'environnement.",
     "theme": "Environnement"
   },
   {
     "id": "18f2e9f7-7358-4810-abc1-b4cdd3c96436",
     "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Réduction des impôts sur les entreprises",
+    "title": "Donald Trump",
     "description": "Diminuer les impôts pour stimuler l'investissement des entreprises.",
     "theme": "Économie"
-  },
-  {
-    "id": "0dca67ee-ec94-40a5-a94f-67267291593e",
-    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Augmentation des budgets militaires",
-    "description": "Allouer davantage de ressources pour renforcer les forces armées.",
-    "theme": "Économie"
-  },
-  {
-    "id": "f08ae99b-10d5-4be4-a988-12880bb2c0c7",
-    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Négociation d'accords commerciaux",
-    "description": "Négocier des accords commerciaux favorables pour stimuler l'économie.",
-    "theme": "Économie"
-  },
-  {
-    "id": "94d0d54d-2c1f-4d6e-aeeb-8b793b7c68ab",
-    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Réduction des dépenses publiques",
-    "description": "Limiter les dépenses gouvernementales pour assainir les finances publiques.",
-    "theme": "Économie"
-  },
-  {
-    "id": "d00bb0e2-b768-4c99-b878-9b68c98dcdbe",
-    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Infrastructures de transport",
-    "description": "Investir dans les infrastructures pour améliorer le transport et le commerce.",
-    "theme": "Économie"
-  },
-  {
-    "id": "5b0523d5-f7c1-48ed-8454-50aa27866c31",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Augmentation du salaire minimum",
-    "description": "Élever le salaire minimum pour améliorer le pouvoir d'achat des travailleurs.",
-    "theme": "Économie"
-  },
-  {
-    "id": "e7370f4a-8d79-44a3-9665-f04e17e4375c",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Investissement dans l'innovation",
-    "description": "Soutenir les start-ups et l'innovation technologique pour créer des emplois.",
-    "theme": "Économie"
-  },
-  {
-    "id": "f2b7ae45-b5e3-41bc-bfb9-2d3918ccac4d",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Renforcement du filet de sécurité sociale",
-    "description": "Élargir l'accès aux programmes d'assistance sociale pour les familles à faibles revenus.",
-    "theme": "Économie"
-  },
-  {
-    "id": "4aa02fc1-706e-4d68-9c5b-ff19e8603b40",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Soutien aux petites entreprises",
-    "description": "Fournir des subventions et des prêts aux petites entreprises pour stimuler la croissance économique.",
-    "theme": "Économie"
-  },
-  {
-    "id": "f8d1714a-03cb-4af6-b6aa-1c94c2e1b654",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Éducation gratuite pour tous",
-    "description": "Garantir l'accès à l'éducation gratuite au niveau universitaire pour tous les étudiants.",
-    "theme": "Éducation"
-  },
-  {
-    "id": "57fca7d3-0b81-44e8-8bfc-993c219fa0b4",
-    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Soutien aux écoles privées",
-    "description": "Accroître le financement des écoles privées pour améliorer la qualité de l'éducation.",
-    "theme": "Éducation"
-  },
-  {
-    "id": "5c53a5d0-1cb1-4968-9466-d1a73c0bdb0c",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Formation professionnelle",
-    "description": "Encourager les programmes de formation professionnelle pour les étudiants.",
-    "theme": "Éducation"
-  },
-  {
-    "id": "733caaf7-71f4-4576-99cb-23d563b4f6f4",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Accès élargi aux bourses",
-    "description": "Offrir davantage de bourses d'études pour aider les étudiants issus de milieux défavorisés.",
-    "theme": "Éducation"
-  },
-  {
-    "id": "aefc09a6-1298-4da8-9b2e-e9e350e83efb",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Réduction des frais de scolarité",
-    "description": "Baisser les frais de scolarité pour rendre l'éducation supérieure plus accessible.",
-    "theme": "Éducation"
-  },
-  {
-    "id": "74f87759-4801-417f-89ea-0ff9a4b7aaab",
-    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Renforcement des programmes STEM",
-    "description": "Investir dans les programmes de science, technologie, ingénierie et mathématiques dans les écoles.",
-    "theme": "Éducation"
-  },
-  {
-    "id": "0c233d44-ec4e-411c-97d6-1d053e5ac767",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Soutien à la santé mentale dans les écoles",
-    "description": "Fournir des ressources et du soutien en santé mentale pour les étudiants.",
-    "theme": "Solidarités & santé"
-  },
-  {
-    "id": "5d367733-8e1c-47ae-9b66-7cf8c6b3ccbc",
-    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Réduction des dépenses de santé",
-    "description": "Réduire les dépenses de santé pour alléger le fardeau fiscal.",
-    "theme": "Solidarités & santé"
-  },
-  {
-    "id": "c12ae5ef-cf04-44a1-92ae-b64c3b1f762e",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Couverture santé universelle",
-    "description": "Établir un système de couverture santé pour tous les citoyens.",
-    "theme": "Solidarités & santé"
-  },
-  {
-    "id": "7ec4eb3f-0be6-47b0-bd5e-10f2c90593d5",
-    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Lutte contre les addictions",
-    "description": "Renforcer les programmes de lutte contre les addictions et l'abus de substances.",
-    "theme": "Solidarités & santé"
-  },
-  {
-    "id": "cf8ed0da-24bc-4934-9224-b8b3922de68a",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Accès aux soins pour les familles à faible revenu",
-    "description": "Améliorer l'accès aux soins de santé pour les familles à faible revenu.",
-    "theme": "Solidarités & santé"
-  },
-  {
-    "id": "46e4fd8b-8029-4a67-9ff3-bc6d1e9b0581",
-    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Soutien à la recherche en santé",
-    "description": "Financer la recherche sur les maladies chroniques et les traitements innovants.",
-    "theme": "Solidarités & santé"
-  },
-  {
-    "id": "6c028b5e-02b6-44aa-8c8c-4e4dfd15eede",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Partenariats internationaux en santé",
-    "description": "Établir des partenariats avec d'autres pays pour améliorer les soins de santé.",
-    "theme": "Solidarités & santé"
-  },
-  {
-    "id": "c64f5284-d70e-4152-bd05-6a5c88a568e2",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Amélioration des infrastructures médicales",
-    "description": "Investir dans la modernisation des hôpitaux et des cliniques.",
-    "theme": "Solidarités & santé"
-  },
-  {
-    "id": "9a3a4c62-0d95-43b1-b792-e41c74cdb3c4",
-    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Stratégies de sécurité nationale",
-    "description": "Élaborer des stratégies pour protéger la nation contre les menaces internes et externes.",
-    "theme": "Sécurité, défense & justice"
-  },
-  {
-    "id": "24e3a7d3-1fa1-4695-a9ba-9c3e49a2b8a2",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Renforcement des forces de l'ordre",
-    "description": "Accroître le financement et les ressources pour les agences de sécurité.",
-    "theme": "Sécurité, défense & justice"
-  },
-  {
-    "id": "f71bcd28-09e7-494e-9081-c456cf61dc93",
-    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Lutte contre le terrorisme",
-    "description": "Mettre en œuvre des mesures strictes pour combattre le terrorisme à l'intérieur et à l'extérieur du pays.",
-    "theme": "Sécurité, défense & justice"
-  },
-  {
-    "id": "52be7fd8-41c4-4bb5-9e53-4ef6de69e2ff",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Réforme de la justice pénale",
-    "description": "Réformer le système pénal pour réduire les peines et améliorer la réhabilitation.",
-    "theme": "Sécurité, défense & justice"
-  },
-  {
-    "id": "31e1e8cf-feb7-4731-a82f-5d96be40770f",
-    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Contrôle des frontières",
-    "description": "Renforcer la sécurité des frontières pour empêcher l'immigration illégale.",
-    "theme": "Sécurité, défense & justice"
-  },
-  {
-    "id": "9c49d1b5-d357-4679-b25e-3d285f49375e",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Formation des forces de l'ordre",
-    "description": "Améliorer la formation des policiers pour garantir le respect des droits de l'homme.",
-    "theme": "Sécurité, défense & justice"
-  },
-  {
-    "id": "c0f449d4-0d9a-4c63-a586-e36e0a9f3bc3",
-    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Renforcement de la cybersécurité",
-    "description": "Investir dans des technologies pour protéger les infrastructures critiques des cyberattaques.",
-    "theme": "Sécurité, défense & justice"
-  },
-  {
-    "id": "d94a2197-cf84-4a67-b56c-e013cb623dc5",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Équité raciale dans le système judiciaire",
-    "description": "Travailler pour éliminer les disparités raciales dans le système judiciaire.",
-    "theme": "Sécurité, défense & justice"
-  },
-  {
-    "id": "0df1c24c-21b0-4752-967c-36c724b6c62b",
-    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Politique étrangère ferme",
-    "description": "Adopter une approche rigoureuse dans les relations internationales.",
-    "theme": "International"
-  },
-  {
-    "id": "eb5b5158-2a94-4935-b2d6-2ae1e2df7ac5",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Diplomatie axée sur les droits de l'homme",
-    "description": "Promouvoir les droits de l'homme comme priorité dans la politique étrangère.",
-    "theme": "International"
-  },
-  {
-    "id": "c9f1e1cd-ff1b-4429-a50a-59dafe1f1c5a",
-    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Partenariats stratégiques",
-    "description": "Établir des alliances solides avec des pays clés pour renforcer la sécurité nationale.",
-    "theme": "International"
-  },
-  {
-    "id": "b69b953c-b3b8-4b77-8601-7f943716c94c",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Aide internationale",
-    "description": "Accroître l'aide humanitaire et économique aux pays en développement.",
-    "theme": "International"
-  },
-  {
-    "id": "b1d4db71-e50e-4182-b7d8-cc2793aa6e4e",
-    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Contrôle des armements",
-    "description": "Travailler avec d'autres nations pour limiter la prolifération des armes nucléaires.",
-    "theme": "International"
-  },
-  {
-    "id": "b5b88e4d-2c68-4ab0-9798-6db90518a4eb",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Promotion de la culture",
-    "description": "Soutenir la diffusion de la culture américaine à l'étranger.",
-    "theme": "Culture"
-  },
-  {
-    "id": "faac37cb-7f9d-49a5-a30d-c63910a18544",
-    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Soutien aux artistes",
-    "description": "Investir dans les programmes qui soutiennent les artistes américains.",
-    "theme": "Culture"
-  },
-  {
-    "id": "72da751b-cc2c-4b08-8d1a-27c8b5bc0ef9",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Accès à l'art pour tous",
-    "description": "Promouvoir l'accès à l'art dans les écoles et les communautés.",
-    "theme": "Culture"
-  },
-  {
-    "id": "1bdaec8c-77ec-46c2-a4a3-5386b9e2caa1",
-    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Éducation culturelle",
-    "description": "Inclure des programmes éducatifs sur la culture américaine dans les écoles.",
-    "theme": "Culture"
-  },
-  {
-    "id": "7a2a8e3b-070f-42a5-bfa3-08a0c9fd6062",
-    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Préservation du patrimoine",
-    "description": "Soutenir les initiatives de préservation du patrimoine culturel américain.",
-    "theme": "Culture"
-  },
-  {
-    "id": "e23440e4-e176-4f2b-a577-5d16a31b18da",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Droit d'auteur et propriété intellectuelle",
-    "description": "Renforcer les lois sur le droit d'auteur pour protéger les créateurs.",
-    "theme": "Culture"
-  },
-  {
-    "id": "da0f98f8-5b0e-4b11-a2ea-174b54b5c9c5",
-    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Encouragement du multiculturalisme",
-    "description": "Promouvoir la diversité culturelle et le respect entre les communautés.",
-    "theme": "Société"
-  },
-  {
-    "id": "f65eec7f-51f7-47f8-b9a7-e9e764b663dc",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Lutte contre la pauvreté",
-    "description": "Mettre en place des programmes pour réduire la pauvreté dans les communautés.",
-    "theme": "Société"
-  },
-  {
-    "id": "8c68d5c1-d0d0-417f-8743-23901c7c89a1",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Égalité des droits",
-    "description": "Promouvoir l'égalité des droits pour toutes les minorités.",
-    "theme": "Société"
-  },
-  {
-    "id": "2920da05-6c65-4589-b56e-dfdd7c8b86b4",
-    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Réforme de l'immigration",
-    "description": "Réformer le système d'immigration pour le rendre plus accessible.",
-    "theme": "Société"
-  },
-  {
-    "id": "99ca2133-77a3-4bb9-8f6e-adebc91ec003",
-    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Protection des droits civiques",
-    "description": "Protéger les droits civiques de tous les citoyens, notamment ceux des minorités.",
-    "theme": "Société"
-  },
-  {
-    "id": "85cfd8f4-e2bc-49e2-b15c-8e9cb48c7246",
-    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Lutte contre la discrimination",
-    "description": "Mettre en œuvre des lois pour lutter contre la discrimination de toute sorte.",
-    "theme": "Société"
-  },
-  {
-    "id": "65b8e5ed-35b0-4e94-93a4-15377cc48fd7",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Engagement communautaire",
-    "description": "Encourager l'engagement des citoyens dans les projets communautaires.",
-    "theme": "Société"
   }
 ]
