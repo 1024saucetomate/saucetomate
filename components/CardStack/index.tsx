@@ -1,12 +1,26 @@
 "use client";
 
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import toast from "react-hot-toast";
+import { TailSpin } from "react-loader-spinner";
 import Card from "react-tinder-card";
 
 import styles from "@/styles/components/card-stack.module.css";
 import MockAPI from "@/utils/MockAPI";
+
+import Link from "../Link";
+
+const TOAST_STYLE = {
+  border: "5px solid var(--color-black)",
+  color: "var(--color-black)",
+  background: "var(--color-white)",
+  fontFamily: "var(--font-family)",
+  fontWeight: "var(--font-weight)",
+  borderRadius: "0",
+  width: "90dvw",
+  maxWidth: "350px",
+};
 
 export default function CardStack({
   className,
@@ -36,20 +50,23 @@ export default function CardStack({
     slogan: string;
     sex: string;
   } | null>(null);
-  const [gif, setGif] = useState<{
-    url: string;
-    alt: string;
-  } | null>(null);
+  const [gifs, setGifs] = useState<
+    | {
+        url: string;
+        alt: string;
+        candidateId?: string;
+      }[]
+    | null
+  >(null);
   const [voteId, setVoteId] = useState<string | null>(null);
-  const [hasError, setHasError] = useState<boolean>(false);
+  const [hasError, setHasError] = useState(false);
 
-  function handleSwipe(policyId: string, direction: string) {
-    const swipedPolicy = swipedPolicies.find((p) => p.id === policyId);
-    if (swipedPolicy) {
-      return;
-    }
-    setSwipedPolicies([...swipedPolicies, { id: policyId, isFor: direction === "right" }]);
-  }
+  const handleSwipe = useCallback((policyId: string, direction: string) => {
+    setSwipedPolicies((prev) => {
+      if (prev.some((p) => p.id === policyId)) return prev;
+      return [...prev, { id: policyId, isFor: direction === "right" }];
+    });
+  }, []);
 
   useEffect(() => {
     const candidates = MockAPI.get.candidates.all();
@@ -66,144 +83,182 @@ export default function CardStack({
 
   useEffect(() => {
     onPercentageUpdate((swipedPolicies.length / policies.length) * 100);
-  }, [swipedPolicies, policies.length, onPercentageUpdate]);
+  }, [swipedPolicies.length, policies.length, onPercentageUpdate]);
 
   useEffect(() => {
-    if (policies.length !== 0 && swipedPolicies.length === policies.length) {
-      const res = axios.post("/api/save", swipedPolicies);
-      res
-        .then((data) => {
-          setVoteId(data.data.data.voteId);
+    const isComplete = policies.length !== 0 && swipedPolicies.length === policies.length;
+    if (!isComplete) return;
+
+    async function saveVotes() {
+      return axios
+        .post("/api/save", swipedPolicies)
+        .then((response) => {
+          console.log(response.data);
+          setVoteId(response.data.data.voteId);
         })
-        .catch(() => {
+        .catch((error) => {
           setHasError(true);
-          toast.error("Impossible de sauvegarder votre vote. Veuillez réessayer plus tard.", {
-            style: {
-              border: "5px solid var(--color-black)",
-              color: "var(--color-black)",
-              background: "var(--color-white)",
-              fontFamily: "var(--font-family)",
-              fontWeight: "var(--font-weight)",
-              borderRadius: "0",
-              width: "90dvw",
-              maxWidth: "350px",
-            },
-          });
+          throw new Error(error);
         });
     }
-  }, [swipedPolicies, policies]);
 
-  useEffect(() => {
-    const candidatesCount: { [key: string]: number } = {};
-    policies.forEach((policy) => {
-      if (swipedPolicies.find((p) => p.id === policy.id && p.isFor)) {
-        if (!candidatesCount[policy.candidateId]) {
-          candidatesCount[policy.candidateId] = 0;
-        }
-        candidatesCount[policy.candidateId]++;
-      }
-    });
-
-    if (Object.keys(candidatesCount).length === 0) return;
-
-    const bestCandidateId = Object.keys(candidatesCount).reduce((a, b) =>
-      candidatesCount[a] > candidatesCount[b] ? a : b,
+    toast.promise(
+      saveVotes(),
+      {
+        loading: "Sauvegarde de votre vote...",
+        success: "Votre vote a été sauvegardé",
+        error: "Impossible de sauvegarder votre vote. Veuillez réessayer plus tard.",
+      },
+      {
+        style: TOAST_STYLE,
+      },
     );
-
-    setBestCandidate({
-      id: bestCandidateId,
-      name: MockAPI.get.candidates.fromId(bestCandidateId)?.profile.name as string,
-      slogan: MockAPI.get.candidates.fromId(bestCandidateId)?.profile.slogan as string,
-      sex: MockAPI.get.candidates.fromId(bestCandidateId)?.profile.sex as string,
-    });
   }, [swipedPolicies, policies]);
 
   useEffect(() => {
-    if (bestCandidate) {
-      const bestCandidateId = MockAPI.get.candidates
-        .all()
-        .find((candidate) => candidate.profile.name === bestCandidate.name);
+    const calculateBestCandidate = () => {
+      const candidateVotes = policies.reduce((acc: Record<string, number>, policy) => {
+        const isVotedFor = swipedPolicies.some((p) => p.id === policy.id && p.isFor);
+        if (isVotedFor) {
+          acc[policy.candidateId] = (acc[policy.candidateId] || 0) + 1;
+        }
+        return acc;
+      }, {});
 
-      const gifURL = MockAPI.get.candidates.randomGIF(bestCandidateId?.id as string);
-      if (gifURL) {
-        setGif({
-          url: gifURL,
-          alt: `GIF de ${bestCandidate.name}`,
-        });
-      }
+      if (Object.keys(candidateVotes).length === 0) return;
+
+      const bestCandidateId = Object.entries(candidateVotes).reduce(
+        (best, [id, votes]) => (votes > candidateVotes[best] ? id : best),
+        Object.keys(candidateVotes)[0],
+      );
+
+      const candidate = MockAPI.get.candidates.fromId(bestCandidateId)?.profile;
+      if (!candidate) return;
+
+      setBestCandidate({
+        id: bestCandidateId,
+        name: candidate.name,
+        slogan: candidate.slogan,
+        sex: candidate.sex,
+      });
+    };
+
+    calculateBestCandidate();
+  }, [swipedPolicies, policies]);
+
+  useEffect(() => {
+    const loadGifs = () => {
+      const candidates = MockAPI.get.candidates.all();
+      const newGifs = candidates.map((candidate) => ({
+        url: MockAPI.get.candidates.randomGIF(candidate.id) || "",
+        alt: `GIF de ${candidate.profile.name}`,
+        candidateId: candidate.id,
+      }));
+      setGifs(newGifs);
+    };
+
+    loadGifs();
+  }, []);
+
+  const renderResultCard = () => (
+    <div className={styles.card} key="result-container">
+      <div className={styles.card__content}>
+        <div className={styles.card__header}>
+          <span className={styles.card__header__theme}>{bestCandidate?.slogan}</span>
+          <h3 className={styles.card__header__title}>
+            {`${bestCandidate?.name} semble être ${bestCandidate?.sex === "M" ? "le candidat" : "la candidate"} qui vous correspond le plus`}
+          </h3>
+        </div>
+        <div className={styles.card__gifs__container}>
+          {gifs?.map((gif, index) => (
+            <div
+              key={index}
+              aria-label={gif.alt || "Une erreur est survenue"}
+              style={{
+                backgroundImage: `url(${gif.url})`,
+                display:
+                  swipedPolicies.length !== policies.length || gif.candidateId === bestCandidate?.id ? "block" : "none",
+              }}
+              className={styles.card__gif}
+              draggable={false}
+            />
+          ))}
+        </div>
+        {!hasError && renderActionButton()}
+      </div>
+    </div>
+  );
+
+  const renderActionButton = () => {
+    if (voteId) {
+      return (
+        <Link href={`/vote/${voteId}`} className={styles.card__button__container}>
+          <button className={styles.card__button}>{`Analyser mon vote`}</button>
+        </Link>
+      );
     }
-  }, [bestCandidate]);
+    return (
+      <button className={styles.card__button} disabled>
+        <TailSpin width={20} height={20} strokeWidth={7} />
+      </button>
+    );
+  };
+
+  const renderLoaderCard = () => (
+    <div
+      className={styles.card}
+      key="result-container-loader"
+      style={{ display: swipedPolicies.length === policies.length ? "none" : "block" }}
+    >
+      <div className={styles.card__content}>
+        <h3 className={styles.card__header__title}>
+          Continuez à swiper pour découvrir le candidat qui vous correspond le plus
+        </h3>
+      </div>
+    </div>
+  );
+
+  const renderPolicyCards = () =>
+    policies.map((policy, index) => (
+      <Card
+        key={policy.id}
+        className={styles.card}
+        preventSwipe={["up", "down"]}
+        onSwipe={(direction) => handleSwipe(policy.id, direction)}
+      >
+        <div className={styles.card__content} style={{ transform: `rotate(${index % 2 === 0 ? 5 : -5}deg)` }}>
+          <div className={styles.card__header}>
+            <span className={styles.card__header__theme}>{policy.theme}</span>
+            <h3 className={styles.card__header__title}>{policy.title}</h3>
+          </div>
+          <small className={styles.card__description}>{policy.description}</small>
+        </div>
+      </Card>
+    ));
+
+  const renderInstructionCard = () => (
+    <Card className={styles.card} key="instructions" preventSwipe={["up", "down"]} swipeRequirementType="position">
+      <div className={styles.card__content}>
+        <div className={styles.card__header}>
+          <span className={styles.card__header__theme}>Mode d&apos;emploi</span>
+          <h3 className={styles.card__header__title}>
+            Faites glisser les cartes pour découvrir les propositions des candidats
+          </h3>
+        </div>
+        <small className={styles.card__description}>
+          Si vous êtes d&apos;accord avec une proposition, glissez la carte vers la droite. Sinon, glissez la vers la
+          gauche.
+        </small>
+      </div>
+    </Card>
+  );
 
   return (
     <div className={className}>
-      <div className={styles.card} key={"result-container"}>
-        <div key={"result"} className={styles.card__content}>
-          {(swipedPolicies.length === policies.length && (
-            <>
-              <div className={styles.card__header} key={"result"}>
-                <span className={styles.card__header__theme}>{bestCandidate?.slogan}</span>
-                <h3 className={styles.card__header__title}>
-                  {`${bestCandidate?.name} semble être ${bestCandidate?.sex === "M" ? "le candidat" : "la candidate"} qui vous correspond le plus`}
-                </h3>
-              </div>
-              <div
-                aria-label={gif?.alt || "Une erreur est survenue"}
-                style={{
-                  backgroundImage: gif ? `url(${gif.url})` : "none",
-                }}
-                className={styles.card__image}
-                draggable={false}
-              />
-              {!hasError && (
-                <button
-                  className={styles.card__button}
-                  disabled={!voteId}
-                >{`Pourquoi ${bestCandidate?.sex === "M" ? "lui" : "elle"} ?`}</button>
-              )}
-            </>
-          )) || (
-            <h3 className={styles.card__header__title}>
-              {`Continuez à swiper pour découvrir le candidat qui vous correspond le plus`}
-            </h3>
-          )}
-        </div>
-      </div>
-
-      {policies.map((policy: { id: string; theme: string; title: string; description: string }, index: number) => (
-        <Card
-          className={styles.card}
-          key={policy.id}
-          preventSwipe={["up", "down"]}
-          onSwipe={(direction) => handleSwipe(policy.id, direction)}
-        >
-          <div
-            key={policy.id}
-            className={styles.card__content}
-            style={{ transform: `rotate(${index % 2 === 0 ? 5 : -5}deg)` }}
-          >
-            <div className={styles.card__header}>
-              <span className={styles.card__header__theme}>{policy.theme}</span>
-              <h3 className={styles.card__header__title}>{policy.title}</h3>
-            </div>
-            <small className={styles.card__description}>{policy.description}</small>
-          </div>
-        </Card>
-      ))}
-
-      <Card className={styles.card} key={""} preventSwipe={["up", "down"]} swipeRequirementType="position">
-        <div key={"mode-emploi"} className={styles.card__content}>
-          <div className={styles.card__header} key={"mode-emploi"}>
-            <span className={styles.card__header__theme}>Mode d&apos;emploi</span>
-            <h3 className={styles.card__header__title}>
-              Faites glisser les cartes pour découvrir les propositions des candidats
-            </h3>
-          </div>
-          <small className={styles.card__description}>
-            Si vous êtes d&apos;accord avec une proposition, glissez la carte vers la droite. Sinon, glissez la vers la
-            gauche.
-          </small>
-        </div>
-      </Card>
+      {renderResultCard()}
+      {renderLoaderCard()}
+      {renderPolicyCards()}
+      {renderInstructionCard()}
     </div>
   );
 }
