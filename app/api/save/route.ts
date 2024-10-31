@@ -36,21 +36,10 @@ export async function POST(req: Request) {
         update: { votes: { increment: 1 } },
         create: { id: winnerId, votes: 1 },
       });
-
-      await Promise.all(
-        body.map(({ id, isFor }) =>
-          tx.policy.upsert({
-            where: { id },
-            update: { votes: { increment: isFor ? 1 : -1 } },
-            create: { id, votes: isFor ? 1 : -1 },
-          }),
-        ),
-      );
-
       return await tx.vote.create({
         data: {
           candidateId: winnerId,
-          policies: body.map(({ id }) => id),
+          data: JSON.stringify(body),
         },
       });
     });
