@@ -2,7 +2,12 @@
 
 import { useRouter } from "next/navigation";
 
-export default function Link({ children, href, ...props }: Readonly<{ children: React.ReactNode; href: string }>) {
+export default function Link({
+  children,
+  href,
+  className,
+  ...props
+}: Readonly<{ children: React.ReactNode; href: string; className: string }>) {
   const router = useRouter();
 
   function handleClick(event: React.MouseEvent<HTMLAnchorElement>) {
@@ -13,7 +18,7 @@ export default function Link({ children, href, ...props }: Readonly<{ children: 
     }, 500);
   }
   return (
-    <a href={href} {...props} onClick={handleClick}>
+    <a href={href} {...props} onClick={handleClick} className={className}>
       {children}
     </a>
   );
