@@ -117,7 +117,9 @@ export default function CardStack({
   }, [swipedPolicies, policies]);
 
   useEffect(() => {
-    const bestCandidateId = MockAPI.get.score.compute(swipedPolicies);
+    if (swipedPolicies.length == 0 || swipedPolicies.length !== policies.length) return;
+    const score = MockAPI.get.score.compute(swipedPolicies);
+    const bestCandidateId = Object.entries(score).reduce((a, b) => (a[1] > b[1] ? a : b))[0];
     if (!bestCandidateId) return;
     const candidate = MockAPI.get.candidates.fromId(bestCandidateId)?.profile;
     if (!candidate) return;
@@ -175,8 +177,8 @@ export default function CardStack({
   const renderActionButton = () => {
     if (voteId) {
       return (
-        <Link href={`/vote/${voteId}`} className={styles.card__button__container}>
-          <button className={styles.card__button}>{`Analyser mon vote`}</button>
+        <Link href={`/vote/${voteId}?shareable=true`} className={styles.card__button__container}>
+          <button className={styles.card__button}>{`Analyser mes choix`}</button>
         </Link>
       );
     }
@@ -215,6 +217,9 @@ export default function CardStack({
             <h3 className={styles.card__header__title}>{policy.title}</h3>
           </div>
           <small className={styles.card__description}>{policy.description}</small>
+          <small>
+            {MockAPI.get.candidates.fromId(MockAPI.get.policies.fromId(policy.id)?.candidateId as string)?.profile.name}
+          </small>
         </div>
       </Card>
     ));
