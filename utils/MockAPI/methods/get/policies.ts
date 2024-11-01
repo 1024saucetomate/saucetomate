@@ -35,6 +35,12 @@ export function random(count: number) {
     }
   }
 
+  const randomCandidateId = candidateIds[Math.floor(Math.random() * candidateIds.length)];
+  const extraPolicy = getRandomPolicy(randomCandidateId);
+  if (extraPolicy) {
+    candidatePolicies[randomCandidateId].push(extraPolicy);
+  }
+
   const result = Object.values(candidatePolicies).flat();
   for (let i = result.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
