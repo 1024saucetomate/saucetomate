@@ -18,7 +18,6 @@ export async function GET(_req: NextRequest, { params }: { params: { id: string 
       return NextResponse.json(
         {
           code: HTTP_STATUS.NOT_FOUND,
-          message: "Vote not found",
         },
         { status: HTTP_STATUS.NOT_FOUND },
       );
@@ -26,14 +25,12 @@ export async function GET(_req: NextRequest, { params }: { params: { id: string 
 
     return NextResponse.json({
       code: HTTP_STATUS.OK,
-      message: "Success",
       data: vote,
     });
   } catch {
     return NextResponse.json(
       {
         code: HTTP_STATUS.SERVER_ERROR,
-        message: "Internal server error",
       },
       { status: HTTP_STATUS.SERVER_ERROR },
     );
