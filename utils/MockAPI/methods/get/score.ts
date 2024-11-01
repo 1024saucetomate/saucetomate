@@ -16,16 +16,5 @@ export function compute(
     tracker[candidateId] = (tracker[candidateId] ?? 0) + (policy.isFor ? 1 : -1);
   }
 
-  if (Object.keys(tracker).length === 0) {
-    return null;
-  }
-
-  const topCandidate = Object.entries(tracker).reduce((prev, curr) => {
-    if (prev[1] === curr[1]) {
-      return Math.random() < 0.5 ? prev : curr;
-    }
-    return prev[1] > curr[1] ? prev : curr;
-  });
-
-  return topCandidate[0];
+  return tracker;
 }
