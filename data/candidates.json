@@ -6,7 +6,8 @@
       "party": "Républicain",
       "slogan": "Make America Great Again",
       "age": 78,
-      "sex": "M"
+      "sex": "M",
+      "description": "Donald Trump est un homme d'affaires et homme politique américain, 45e président des États-Unis (2017-2021), connu pour son style provocateur et ses politiques populistes."
     },
     "image": {
       "src": "/assets/candidates/donald-trump.png",
@@ -16,6 +17,22 @@
     "gif": {
       "directory": "/assets/candidates/gif/donald-trump/",
       "count": 10
+    },
+    "badges": [
+      {
+        "src": "/assets/candidates/badges/donald-trump/1.png",
+        "width": 1000,
+        "height": 1000
+      },
+      {
+        "src": "/assets/candidates/badges/donald-trump/2.png",
+        "width": 1000,
+        "height": 1000
+      }
+    ],
+    "equivalent": {
+      "party": "Droite",
+      "names": ["Marine Le Pen", "Eric Zemmour"]
     }
   },
   {
@@ -25,7 +42,8 @@
       "party": "Démocrate",
       "slogan": "We Are Not Going Back",
       "age": 59,
-      "sex": "W"
+      "sex": "W",
+      "description": "Kamala Harris est une femme politique américaine, vice-présidente des États-Unis depuis 2021, et première femme et première personne de couleur à occuper ce poste. Ancienne sénatrice de Californie, elle est connue pour ses positions progressistes sur les droits civiques et l'égalité."
     },
     "image": {
       "src": "/assets/candidates/kamala-harris.png",
@@ -35,6 +53,22 @@
     "gif": {
       "directory": "/assets/candidates/gif/kamala-harris/",
       "count": 10
+    },
+    "badges": [
+      {
+        "src": "/assets/candidates/badges/kamala-harris/1.png",
+        "width": 1000,
+        "height": 1000
+      },
+      {
+        "src": "/assets/candidates/badges/kamala-harris/2.png",
+        "width": 1000,
+        "height": 1000
+      }
+    ],
+    "equivalent": {
+      "party": "Gauche",
+      "names": ["Christiane Taubira", "Clémentine Autain"]
     }
   }
 ]
