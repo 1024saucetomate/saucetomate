@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 
 import type { Metadata } from "next";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { Toaster } from "react-hot-toast";
 
 import Loading from "@/components/Loading";
@@ -18,9 +19,11 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body>
-        <Loading />
-        <Toaster />
-        {children}
+        <NuqsAdapter>
+          <Loading />
+          <Toaster />
+          {children}
+        </NuqsAdapter>
       </body>
     </html>
   );
