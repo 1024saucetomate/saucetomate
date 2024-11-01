@@ -71,7 +71,9 @@ export default function CardStack({
   useEffect(() => {
     const candidates = MockAPI.get.candidates.all();
     setPolicies(
-      MockAPI.get.policies.random(candidates.length * 10) as {
+      MockAPI.get.policies.random(
+        candidates.length * parseInt(process.env.NEXT_PUBLIC_POLICIES_PER_CANDIDATE as string),
+      ) as {
         id: string;
         theme: string;
         title: string;
