@@ -22,10 +22,14 @@ const ERROR_MESSAGES = {
   INTERNAL_SERVER_ERROR: "INTERNAL_SERVER_ERROR",
 } as const;
 
-const isValidPolicyVote = (item: unknown): item is PolicyVote => {
+const isValidPolicyVote = async (item: unknown): Promise<boolean> => {
   if (!item || typeof item !== "object") return false;
   const vote = item as Partial<PolicyVote>;
-  return typeof vote.id === "string" && typeof vote.isFor === "boolean";
+  if (typeof vote.id !== "string" || typeof vote.isFor !== "boolean") return false;
+
+  const policyExists = MockAPI.get.policies.fromId(vote.id) !== undefined;
+
+  return policyExists;
 };
 
 const createResponse = <T>(status: number, data: T) => {
@@ -42,12 +46,23 @@ export async function POST(req: Request) {
       return createErrorResponse(HTTP_STATUS.TOO_MANY_REQUESTS, "TOO_MANY_REQUESTS");
     }
 
-    const body = await req.json();
-    if (!Array.isArray(body) || !body.every(isValidPolicyVote)) {
+    const contentType = req.headers.get("Content-Type");
+    if (!contentType || !contentType.includes("application/json")) {
       return createErrorResponse(HTTP_STATUS.BAD_REQUEST, "BAD_REQUEST");
     }
 
-    const winnerId = await MockAPI.get.score.compute(body);
+    let body: unknown;
+    try {
+      body = await req.json();
+    } catch {
+      return createErrorResponse(HTTP_STATUS.BAD_REQUEST, "BAD_REQUEST");
+    }
+
+    if (!Array.isArray(body) || !(await Promise.all(body.map(isValidPolicyVote))).every((isValid) => isValid)) {
+      return createErrorResponse(HTTP_STATUS.BAD_REQUEST, "BAD_REQUEST");
+    }
+
+    const winnerId = await MockAPI.get.score.compute(body as PolicyVote[]);
     if (!winnerId) {
       return createErrorResponse(HTTP_STATUS.INTERNAL_SERVER_ERROR, "INTERNAL_SERVER_ERROR");
     }
@@ -62,7 +77,7 @@ export async function POST(req: Request) {
       return tx.vote.create({
         data: {
           candidateId: winnerId,
-          policies: body.map((policy) => JSON.stringify(policy)),
+          policies: body.map((policy: PolicyVote) => JSON.stringify(policy)),
         },
       });
     });
