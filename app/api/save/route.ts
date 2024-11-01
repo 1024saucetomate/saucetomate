@@ -62,7 +62,9 @@ export async function POST(req: Request) {
       return createErrorResponse(HTTP_STATUS.BAD_REQUEST, "BAD_REQUEST");
     }
 
-    const winnerId = await MockAPI.get.score.compute(body as PolicyVote[]);
+    const score = MockAPI.get.score.compute(body as PolicyVote[]);
+    const winnerId = Object.entries(score).reduce((a, b) => (a[1] > b[1] ? a : b))[0];
+    console.log(MockAPI.get.score.compute(body as PolicyVote[]));
     if (!winnerId) {
       return createErrorResponse(HTTP_STATUS.INTERNAL_SERVER_ERROR, "INTERNAL_SERVER_ERROR");
     }
@@ -83,7 +85,6 @@ export async function POST(req: Request) {
     });
 
     return createResponse(HTTP_STATUS.OK, {
-      message: "OK",
       data: { voteId: result.id },
     });
   } catch (error) {
