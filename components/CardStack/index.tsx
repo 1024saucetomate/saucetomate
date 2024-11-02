@@ -178,7 +178,7 @@ export default function CardStack({
     if (voteId) {
       return (
         <Link href={`/vote/${voteId}?shareable=true`} className={styles.card__button__container}>
-          <button className={styles.card__button}>{`Analyser mes choix`}</button>
+          <button className={styles.card__button}>{`Pourquoi ${bestCandidate?.sex === "M" ? "lui" : "elle"} ?`}</button>
         </Link>
       );
     }
@@ -217,9 +217,6 @@ export default function CardStack({
             <h3 className={styles.card__header__title}>{policy.title}</h3>
           </div>
           <small className={styles.card__description}>{policy.description}</small>
-          <small>
-            {MockAPI.get.candidates.fromId(MockAPI.get.policies.fromId(policy.id)?.candidateId as string)?.profile.name}
-          </small>
         </div>
       </Card>
     ));
