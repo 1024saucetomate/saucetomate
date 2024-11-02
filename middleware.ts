@@ -8,7 +8,7 @@ export async function middleware(request: NextRequest) {
       await axios.get(`${request.nextUrl.origin}/api/vote/${voteId}`);
       return NextResponse.next();
     } catch {
-      return NextResponse.error();
+      return NextResponse.redirect(`${request.nextUrl.origin}/404`);
     }
   }
 }
