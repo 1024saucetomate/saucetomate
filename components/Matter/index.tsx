@@ -1,15 +1,17 @@
 import { cloneElement, lazy, Suspense } from "react";
 
+import type { MatterSceneProps, SceneWrapperProps } from "@/utils/interfaces";
+
 const CandidatesBubble = lazy(() => import("./scenes/CandidatesBubble"));
 
-function SceneWrapper({ children, ...props }: Readonly<{ children: React.ReactElement }>) {
-  return <Suspense>{cloneElement(children, props)}</Suspense>;
-}
+const SceneWrapper = ({ children, ...props }: Readonly<SceneWrapperProps>): JSX.Element => (
+  <Suspense fallback={null}>{cloneElement(children, props)}</Suspense>
+);
 
 const Matter = {
-  CandidatesBubble: (props: { className?: string }) => (
+  CandidatesBubble: ({ className }: MatterSceneProps): JSX.Element => (
     <SceneWrapper>
-      <CandidatesBubble {...props} />
+      <CandidatesBubble className={className} />
     </SceneWrapper>
   ),
 };

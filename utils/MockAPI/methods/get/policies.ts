@@ -1,17 +1,18 @@
 import policies from "@/data/policies.json";
+import type { Policy } from "@/utils/interfaces";
 
-export function random(count: number) {
+export const random = (count: number): Policy[] => {
   const candidateIds = Array.from(new Set(policies.map((policy) => policy.candidateId)));
 
   const basePoliciesPerCandidate = Math.floor(count / candidateIds.length);
   let remainingPolicies = count % candidateIds.length;
 
-  const candidatePolicies: { [key: string]: unknown[] } = {};
+  const candidatePolicies: { [key: string]: Policy[] } = {};
   candidateIds.forEach((id) => {
     candidatePolicies[id] = [];
   });
 
-  const getRandomPolicy = (candidateId: string): unknown | undefined => {
+  const getRandomPolicy = (candidateId: string): Policy | undefined => {
     const availablePolicies = policies.filter(
       (p) => p.candidateId === candidateId && !candidatePolicies[candidateId].includes(p),
     );
@@ -48,8 +49,8 @@ export function random(count: number) {
   }
 
   return result;
-}
+};
 
-export function fromId(id: string) {
+export const fromId = (id: string): Policy | undefined => {
   return policies.find((policy) => policy.id === id);
-}
+};

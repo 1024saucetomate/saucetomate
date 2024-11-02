@@ -5,17 +5,14 @@ import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { Toaster } from "react-hot-toast";
 
 import Loading from "@/components/Loading";
+import type { RootLayoutProps } from "@/utils/interfaces";
 
 export const metadata: Metadata = {
   title: "SAUCETOMATE",
   description: "Et si vous deviez voter ?",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const RootLayout = ({ children }: Readonly<RootLayoutProps>): JSX.Element => {
   return (
     <html lang="fr">
       <body>
@@ -27,4 +24,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

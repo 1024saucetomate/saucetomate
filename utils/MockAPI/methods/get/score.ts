@@ -1,20 +1,13 @@
+import type { PolicyVote, ScoreTracker } from "@/utils/interfaces";
+
 import MockAPI from "../..";
 
-export function compute(
-  policies: {
-    id: string;
-    isFor: boolean;
-  }[],
-) {
-  const tracker: Record<string, number> = {};
-
-  for (const policy of policies) {
+export const compute = (policies: PolicyVote[]): ScoreTracker => {
+  return policies.reduce((tracker: ScoreTracker, policy: PolicyVote) => {
     const candidateId = MockAPI.get.policies.fromId(policy.id)?.candidateId;
-    if (!candidateId) {
-      continue;
+    if (candidateId) {
+      tracker[candidateId] = (tracker[candidateId] ?? 0) + (policy.isFor ? 1 : -1);
     }
-    tracker[candidateId] = (tracker[candidateId] ?? 0) + (policy.isFor ? 1 : -1);
-  }
-
-  return tracker;
-}
+    return tracker;
+  }, {});
+};

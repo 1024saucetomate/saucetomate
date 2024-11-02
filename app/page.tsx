@@ -1,11 +1,12 @@
 import Link from "@/components/Link";
 import Matter from "@/components/Matter";
 import styles from "@/styles/app/root.module.css";
+import type { RootProps } from "@/utils/interfaces";
 
-export default function Root() {
+const Root: React.FC<RootProps> = (): JSX.Element => {
   return (
     <div className={styles.container}>
-      <div className={styles.container__menu}>
+      <nav className={styles.container__menu}>
         <h1>SAUCETOMATE</h1>
         <div>
           <Link href="/swipe">
@@ -18,8 +19,10 @@ export default function Root() {
             <h3>À propos</h3>
           </Link>
         </div>
-      </div>
+      </nav>
       <Matter.CandidatesBubble className={styles.container__scene} />
     </div>
   );
-}
+};
+
+export default Root;

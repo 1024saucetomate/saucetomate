@@ -6,13 +6,14 @@ import SlotCounter from "react-slot-counter";
 import CardStack from "@/components/CardStack";
 import Link from "@/components/Link";
 import styles from "@/styles/app/swipe.module.css";
+import type { SwipeProps } from "@/utils/interfaces";
 
-export default function Swipe() {
-  const [percentage, setPercentage] = useState(0);
+const Swipe: React.FC<SwipeProps> = () => {
+  const [percentage, setPercentage] = useState<number>(0);
 
-  function handlePercentageUpdate(percentage: number) {
-    setPercentage(percentage);
-  }
+  const handlePercentageUpdate = (newPercentage: number): void => {
+    setPercentage(newPercentage);
+  };
 
   return (
     <div className={styles.container}>
@@ -29,4 +30,6 @@ export default function Swipe() {
       </div>
     </div>
   );
-}
+};
+
+export default Swipe;

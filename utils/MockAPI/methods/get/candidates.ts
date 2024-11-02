@@ -1,19 +1,14 @@
 import candidates from "@/data/candidates.json";
+import type { Candidate } from "@/utils/interfaces";
+export const all = (): Candidate[] => candidates;
 
-export function all() {
-  return candidates;
-}
+export const fromId = (id: string): Candidate | undefined => candidates.find((candidate) => candidate.id === id);
 
-export function fromId(id: string) {
-  return candidates.find((candidate) => candidate.id === id);
-}
-
-export function randomGIF(candidateId: string) {
+export const randomGIF = (candidateId: string): string | null => {
   const candidate = fromId(candidateId);
   if (!candidate) {
     return null;
   }
-  const gifCount = candidate.gif.count;
-  const gifIndex = Math.floor(Math.random() * gifCount);
+  const gifIndex = Math.floor(Math.random() * candidate.gif.count);
   return `${candidate.gif.directory}${gifIndex}.gif`;
-}
+};

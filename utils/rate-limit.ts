@@ -1,23 +1,15 @@
+import type { RateLimitTracker } from "@/utils/interfaces";
+
 import { getIp } from "./get-ip";
 
-const trackers: Record<
-  string,
-  {
-    count: number;
-    expiresAt: number;
-  }
-> = {};
+const trackers: Record<string, RateLimitTracker> = {};
 
-export async function isRateLimited(limit: number = 1, window: number = 60 * 1000) {
+export const isRateLimited = async (limit: number = 1, window: number = 60 * 1000): Promise<boolean> => {
   const ip = await getIp();
-  if (!ip) {
-    return true;
-  }
+  if (!ip) return true;
 
   const tracker = trackers[ip] || { count: 0, expiresAt: 0 };
-  if (!trackers[ip]) {
-    trackers[ip] = tracker;
-  }
+  if (!trackers[ip]) trackers[ip] = tracker;
 
   if (tracker.expiresAt < Date.now()) {
     tracker.count = 0;
@@ -26,9 +18,5 @@ export async function isRateLimited(limit: number = 1, window: number = 60 * 100
 
   tracker.count++;
 
-  if (tracker.count > limit) {
-    return true;
-  } else {
-    return false;
-  }
-}
+  return tracker.count > limit;
+};

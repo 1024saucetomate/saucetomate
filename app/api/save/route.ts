@@ -1,13 +1,9 @@
 import { NextResponse } from "next/server";
 
+import type { PolicyVote } from "@/utils/interfaces";
 import MockAPI from "@/utils/MockAPI";
 import { prisma } from "@/utils/prisma";
 import { isRateLimited } from "@/utils/rate-limit";
-
-type PolicyVote = {
-  id: string;
-  isFor: boolean;
-};
 
 const HTTP_STATUS = {
   OK: 200,

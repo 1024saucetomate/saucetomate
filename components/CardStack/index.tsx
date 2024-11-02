@@ -7,6 +7,7 @@ import { TailSpin } from "react-loader-spinner";
 import Card from "react-tinder-card";
 
 import styles from "@/styles/components/card-stack.module.css";
+import type { BestCandidate, CardStackProps, Gif, Policy, SwipedPolicy } from "@/utils/interfaces";
 import MockAPI from "@/utils/MockAPI";
 
 import Link from "../Link";
@@ -22,42 +23,11 @@ const TOAST_STYLE = {
   maxWidth: "350px",
 };
 
-export default function CardStack({
-  className,
-  onPercentageUpdate,
-}: {
-  className?: string;
-  onPercentageUpdate: (percentage: number) => void;
-}) {
-  const [policies, setPolicies] = useState<
-    {
-      id: string;
-      theme: string;
-      title: string;
-      description: string;
-      candidateId: string;
-    }[]
-  >([]);
-  const [swipedPolicies, setSwipedPolicies] = useState<
-    {
-      id: string;
-      isFor: boolean;
-    }[]
-  >([]);
-  const [bestCandidate, setBestCandidate] = useState<{
-    id: string;
-    name: string;
-    slogan: string;
-    sex: string;
-  } | null>(null);
-  const [gifs, setGifs] = useState<
-    | {
-        url: string;
-        alt: string;
-        candidateId?: string;
-      }[]
-    | null
-  >(null);
+const CardStack = ({ className, onPercentageUpdate }: CardStackProps): JSX.Element => {
+  const [policies, setPolicies] = useState<Policy[]>([]);
+  const [swipedPolicies, setSwipedPolicies] = useState<SwipedPolicy[]>([]);
+  const [bestCandidate, setBestCandidate] = useState<BestCandidate | null>(null);
+  const [gifs, setGifs] = useState<Gif[] | null>(null);
   const [voteId, setVoteId] = useState<string | null>(null);
   const [hasError, setHasError] = useState(false);
 
@@ -68,20 +38,36 @@ export default function CardStack({
     });
   }, []);
 
-  useEffect(() => {
+  const loadInitialPolicies = useCallback(() => {
     const candidates = MockAPI.get.candidates.all();
-    setPolicies(
-      MockAPI.get.policies.random(
-        candidates.length * parseInt(process.env.NEXT_PUBLIC_POLICIES_PER_CANDIDATE as string),
-      ) as {
-        id: string;
-        theme: string;
-        title: string;
-        description: string;
-        candidateId: string;
-      }[],
-    );
+    const policiesPerCandidate = parseInt(process.env.NEXT_PUBLIC_POLICIES_PER_CANDIDATE as string);
+    setPolicies(MockAPI.get.policies.random(candidates.length * policiesPerCandidate) as Policy[]);
   }, []);
+
+  const loadGifs = useCallback(() => {
+    const candidates = MockAPI.get.candidates.all();
+    const newGifs = candidates.map((candidate) => ({
+      url: MockAPI.get.candidates.randomGIF(candidate.id) || "",
+      alt: `GIF de ${candidate.profile.name}`,
+      candidateId: candidate.id,
+    }));
+    setGifs(newGifs);
+  }, []);
+
+  const saveVotes = useCallback(async () => {
+    try {
+      const response = await axios.post("/api/save", swipedPolicies);
+      setVoteId(response.data.data.voteId);
+    } catch (error) {
+      setHasError(true);
+      throw error;
+    }
+  }, [swipedPolicies]);
+
+  useEffect(() => {
+    loadInitialPolicies();
+    loadGifs();
+  }, [loadInitialPolicies, loadGifs]);
 
   useEffect(() => {
     onPercentageUpdate((swipedPolicies.length / policies.length) * 100);
@@ -91,18 +77,6 @@ export default function CardStack({
     const isComplete = policies.length !== 0 && swipedPolicies.length === policies.length;
     if (!isComplete) return;
 
-    async function saveVotes() {
-      return axios
-        .post("/api/save", swipedPolicies)
-        .then((response) => {
-          setVoteId(response.data.data.voteId);
-        })
-        .catch((error) => {
-          setHasError(true);
-          throw new Error(error);
-        });
-    }
-
     toast.promise(
       saveVotes(),
       {
@@ -110,69 +84,28 @@ export default function CardStack({
         success: "Votre vote a été sauvegardé",
         error: "Impossible de sauvegarder votre vote. Veuillez réessayer plus tard.",
       },
-      {
-        style: TOAST_STYLE,
-      },
+      { style: TOAST_STYLE },
     );
-  }, [swipedPolicies, policies]);
+  }, [swipedPolicies, policies, saveVotes]);
 
   useEffect(() => {
-    if (swipedPolicies.length == 0 || swipedPolicies.length !== policies.length) return;
+    if (swipedPolicies.length === 0 || swipedPolicies.length !== policies.length) return;
+
     const score = MockAPI.get.score.compute(swipedPolicies);
     const bestCandidateId = Object.entries(score).reduce((a, b) => (a[1] > b[1] ? a : b))[0];
-    if (!bestCandidateId) return;
-    const candidate = MockAPI.get.candidates.fromId(bestCandidateId)?.profile;
-    if (!candidate) return;
-    setBestCandidate({
-      id: bestCandidateId,
-      name: candidate.name,
-      slogan: candidate.slogan,
-      sex: candidate.sex,
-    });
+
+    if (bestCandidateId) {
+      const candidate = MockAPI.get.candidates.fromId(bestCandidateId)?.profile;
+      if (candidate) {
+        setBestCandidate({
+          id: bestCandidateId,
+          name: candidate.name,
+          slogan: candidate.slogan,
+          sex: candidate.sex,
+        });
+      }
+    }
   }, [swipedPolicies, policies]);
-
-  useEffect(() => {
-    const loadGifs = () => {
-      const candidates = MockAPI.get.candidates.all();
-      const newGifs = candidates.map((candidate) => ({
-        url: MockAPI.get.candidates.randomGIF(candidate.id) || "",
-        alt: `GIF de ${candidate.profile.name}`,
-        candidateId: candidate.id,
-      }));
-      setGifs(newGifs);
-    };
-
-    loadGifs();
-  }, []);
-
-  const renderResultCard = () => (
-    <div className={styles.card} key="result-container">
-      <div className={styles.card__content}>
-        <div className={styles.card__header}>
-          <span className={styles.card__header__theme}>{bestCandidate?.slogan}</span>
-          <h3 className={styles.card__header__title}>
-            {`${bestCandidate?.name} semble être ${bestCandidate?.sex === "M" ? "le candidat" : "la candidate"} qui vous correspond le plus`}
-          </h3>
-        </div>
-        <div className={styles.card__gifs__container}>
-          {gifs?.map((gif, index) => (
-            <div
-              key={index}
-              aria-label={gif.alt || "Une erreur est survenue"}
-              style={{
-                backgroundImage: `url(${gif.url})`,
-                display:
-                  swipedPolicies.length !== policies.length || gif.candidateId === bestCandidate?.id ? "block" : "none",
-              }}
-              className={styles.card__gif}
-              draggable={false}
-            />
-          ))}
-        </div>
-        {!hasError && renderActionButton()}
-      </div>
-    </div>
-  );
 
   const renderActionButton = () => {
     if (voteId) {
@@ -188,6 +121,35 @@ export default function CardStack({
       </button>
     );
   };
+
+  const renderResultCard = () => (
+    <div className={styles.card} key="result-container">
+      <div className={styles.card__content}>
+        <div className={styles.card__header}>
+          <span className={styles.card__header__theme}>{bestCandidate?.slogan}</span>
+          <h3 className={styles.card__header__title}>
+            {`${bestCandidate?.name} semble être ${bestCandidate?.sex === "M" ? "le candidat" : "la candidate"} qui vous correspond le plus`}
+          </h3>
+        </div>
+        <div className={styles.card__gifs__container}>
+          {gifs?.map((gif, index) => (
+            <div
+              key={index}
+              aria-label={gif.alt}
+              style={{
+                backgroundImage: `url(${gif.url})`,
+                display:
+                  swipedPolicies.length !== policies.length || gif.candidateId === bestCandidate?.id ? "block" : "none",
+              }}
+              className={styles.card__gif}
+              draggable={false}
+            />
+          ))}
+        </div>
+        {!hasError && renderActionButton()}
+      </div>
+    </div>
+  );
 
   const renderLoaderCard = () => (
     <div
@@ -246,4 +208,6 @@ export default function CardStack({
       {renderInstructionCard()}
     </div>
   );
-}
+};
+
+export default CardStack;
