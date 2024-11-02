@@ -31,8 +31,7 @@
       }
     ],
     "equivalent": {
-      "party": "Droite",
-      "names": ["Marine Le Pen", "Eric Zemmour"]
+      "party": "Droite"
     }
   },
   {
@@ -67,8 +66,7 @@
       }
     ],
     "equivalent": {
-      "party": "Gauche",
-      "names": ["Christiane Taubira", "Clémentine Autain"]
+      "party": "Gauche"
     }
   }
 ]
