@@ -1,5 +1,7 @@
+import md5 from "md5";
 import { NextResponse } from "next/server";
 
+import { getIp } from "@/utils/get-ip";
 import type { PolicyVote } from "@/utils/interfaces";
 import MockAPI from "@/utils/MockAPI";
 import { prisma } from "@/utils/prisma";
@@ -76,6 +78,7 @@ export async function POST(req: Request) {
         data: {
           candidateId: winnerId,
           policies: body.map((policy: PolicyVote) => JSON.stringify(policy)),
+          deviceId: md5((await getIp()) || "UNKNOWN"),
         },
       });
     });
