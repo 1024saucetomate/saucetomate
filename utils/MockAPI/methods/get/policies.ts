@@ -9,37 +9,42 @@ export const random = (count: number): Policy[] => {
 
   const candidatePolicies: { [key: string]: Policy[] } = {};
   candidateIds.forEach((id) => {
-    candidatePolicies[id] = [];
+    candidatePolicies[id as string] = [];
   });
 
   const getRandomPolicy = (candidateId: string): Policy | undefined => {
     const availablePolicies = policies.filter(
       (p) => p.candidateId === candidateId && !candidatePolicies[candidateId].includes(p),
-    );
+    ) as Policy[];
+
     if (availablePolicies.length === 0) return undefined;
     return availablePolicies[Math.floor(Math.random() * availablePolicies.length)];
   };
 
   candidateIds.forEach((id) => {
     for (let i = 0; i < basePoliciesPerCandidate; i++) {
-      const policy = getRandomPolicy(id);
-      if (policy) candidatePolicies[id].push(policy);
+      const policy = getRandomPolicy(id as string);
+      if (policy) candidatePolicies[id as string].push(policy);
     }
   });
 
   while (remainingPolicies > 0) {
     const randomCandidateId = candidateIds[Math.floor(Math.random() * candidateIds.length)];
-    const policy = getRandomPolicy(randomCandidateId);
-    if (policy) {
-      candidatePolicies[randomCandidateId].push(policy);
-      remainingPolicies--;
+    if (randomCandidateId !== undefined) {
+      const policy = getRandomPolicy(randomCandidateId);
+      if (policy) {
+        candidatePolicies[randomCandidateId].push(policy);
+        remainingPolicies--;
+      }
     }
   }
 
   const randomCandidateId = candidateIds[Math.floor(Math.random() * candidateIds.length)];
-  const extraPolicy = getRandomPolicy(randomCandidateId);
-  if (extraPolicy) {
-    candidatePolicies[randomCandidateId].push(extraPolicy);
+  if (randomCandidateId !== undefined) {
+    const extraPolicy = getRandomPolicy(randomCandidateId);
+    if (extraPolicy) {
+      candidatePolicies[randomCandidateId].push(extraPolicy);
+    }
   }
 
   const result = Object.values(candidatePolicies).flat();
@@ -52,5 +57,6 @@ export const random = (count: number): Policy[] => {
 };
 
 export const fromId = (id: string): Policy | undefined => {
-  return policies.find((policy) => policy.id === id);
+  const policy = policies.find((policy) => policy.id === id);
+  return policy as Policy | undefined;
 };
