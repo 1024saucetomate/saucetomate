@@ -2,78 +2,603 @@
   {
     "id": "b8c6e340-0db3-4876-8e6b-77c9e344d18b",
     "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Donald Trump",
-    "description": "Mettre en place des mesures pour réduire les émissions de gaz à effet de serre des industries.",
+    "title": "Augmenter la production de pétrole américain",
+    "description": "Actuellement, les États-Unis produisent environ 18 millions de barils de pétrole par jour. Cette proposition vise à augmenter significativement cette production en autorisant plus de forages sur les terres publiques (parcs nationaux, réserves naturelles) et en accordant des avantages fiscaux aux entreprises pétrolières et gazières. L'objectif est de réduire la dépendance énergétique américaine vis-à-vis d'autres pays et de faire baisser les prix du carburant et de l'électricité pour les consommateurs américains.",
     "theme": "Environnement"
   },
   {
-    "id": "4eb3b4e6-30c5-4144-b84b-49046c20a928",
+    "id": "30142df4-9989-42f6-87f4-6abcc9347875",
     "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Donald Trump",
-    "description": "Soutenir l'exploitation des ressources énergétiques américaines pour stimuler l'économie.",
+    "title": "Sortir des Accords de Paris sur le climat",
+    "description": "Les Accords de Paris, signés en 2015, engagent 195 pays à réduire leurs émissions de gaz à effet de serre pour limiter le réchauffement climatique à 2°C. Les États-Unis s'en étaient déjà retirés une première fois sous Donald Trump (2017-2021) avant d'y revenir sous Joe Biden. Cette proposition vise à en sortir à nouveau, estimant que ces accords désavantagent l'économie américaine en imposant des restrictions sur l'industrie et l'énergie. Le candidat souhaite que chaque pays gère sa politique environnementale de manière indépendante.",
     "theme": "Environnement"
   },
   {
-    "id": "a965f8b4-9e6a-4873-b97d-7c2df914e6ed",
+    "id": "e6d74bc4-1d5b-4ca3-9c48-b70b1f1fe08d",
     "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Donald Trump",
-    "description": "Réduire les réglementations pour faciliter les activités commerciales.",
+    "title": "Stopper la transition vers les voitures électriques",
+    "description": "L'administration Biden a fixé un objectif de 54% de véhicules électriques neufs vendus d'ici 2030, soutenu par des aides à l'achat et des obligations pour les constructeurs. Cette proposition vise à annuler ces objectifs et ces aides, considérant qu'ils menacent l'industrie automobile traditionnelle qui emploie des millions d'Américains. Elle prévoit aussi une taxe de 100% sur les voitures électriques fabriquées au Mexique pour protéger l'industrie américaine.",
     "theme": "Environnement"
   },
   {
-    "id": "4e6cdaee-f493-4d52-803f-8e5552da3bc2",
+    "id": "a976ab41-2bef-4205-9f11-f454ce699b3c",
     "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Donald Trump",
-    "description": "Investir dans des infrastructures favorisant le développement durable.",
+    "title": "Interdire les éoliennes en mer",
+    "description": "Les États-Unis développent actuellement plusieurs grands projets d'éoliennes en mer, notamment le long de la côte Est, pour produire de l'électricité renouvelable. Cette proposition veut arrêter tous ces projets et supprimer les subventions à l'énergie éolienne, affirmant qu'ils perturbent la navigation maritime, menacent les baleines et autres espèces marines, et défigurent le paysage côtier. Les partisans de l'éolien contestent ces arguments, soulignant que les études d'impact environnemental montrent des risques limités.",
     "theme": "Environnement"
   },
   {
-    "id": "e5eb1ef0-96db-47c5-bfb8-31a368f1ee14",
+    "id": "852dad1b-40ea-4b8a-b7e2-d127668a4437",
     "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Donald Trump",
-    "description": "Encourager les pratiques agricoles respectueuses de l'environnement.",
+    "title": "Supprimer les obligations environnementales des entreprises",
+    "description": "Depuis mars 2024, les grandes entreprises américaines doivent publier leurs émissions de gaz à effet de serre et leur impact sur l'environnement, une obligation imposée par le gendarme de la bourse américaine (SEC). Cette proposition vise à supprimer cette obligation ainsi que 125 autres règles environnementales, estimant qu'elles créent trop de paperasse et de coûts pour les entreprises. Les défenseurs de ces règles affirment qu'elles sont nécessaires pour informer les investisseurs des risques climatiques.",
     "theme": "Environnement"
   },
   {
-    "id": "a7f325f0-3b5d-4dcb-b7c0-efae92dfdf4e",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Kamala Harris",
-    "description": "Promouvoir le développement d'énergies renouvelables comme l'éolien et le solaire.",
-    "theme": "Environnement"
-  },
-  {
-    "id": "3aeb4d46-3d30-4ff8-9e82-2b4011c2c7ae",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Kamala Harris",
-    "description": "Rejoindre et respecter les accords internationaux sur la réduction des émissions de carbone.",
-    "theme": "Environnement"
-  },
-  {
-    "id": "cd80f55e-fb3f-49b2-b88e-85e83b4d27b6",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Kamala Harris",
-    "description": "Imposer des normes strictes aux industries pour limiter la pollution.",
-    "theme": "Environnement"
-  },
-  {
-    "id": "bca46c77-1c60-4634-8ef3-6635184de6c5",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Kamala Harris",
-    "description": "Encourager les pratiques agricoles durables et respectueuses de l'environnement.",
-    "theme": "Environnement"
-  },
-  {
-    "id": "3c511473-0d7b-4742-b276-10ad7247dfb3",
-    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
-    "title": "Kamala Harris",
-    "description": "Éduquer le public sur l'importance de la protection de l'environnement.",
-    "theme": "Environnement"
-  },
-  {
-    "id": "18f2e9f7-7358-4810-abc1-b4cdd3c96436",
+    "id": "a93593dd-a5fe-4aa4-8666-f067b8df63c7",
     "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
-    "title": "Donald Trump",
-    "description": "Diminuer les impôts pour stimuler l'investissement des entreprises.",
+    "title": "Taxer toutes les importations",
+    "description": "Actuellement, de nombreux produits entrent aux États-Unis sans droits de douane grâce aux accords de libre-échange. Cette proposition veut imposer une taxe de 10 à 20% sur tous les produits importés, avec des taxes supplémentaires pour les pays accusés de manipuler leur monnaie comme la Chine. L'objectif est de protéger l'industrie américaine et de réduire le déficit commercial, même si les économistes estiment que cela augmenterait le coût de la vie d'environ 1 700€ par an pour une famille moyenne.",
     "theme": "Économie"
+  },
+  {
+    "id": "d6dace86-de9a-49bd-8c17-044395b9e9a5",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Limiter la dépendance économique envers la Chine",
+    "description": "La Chine est aujourd'hui le principal fournisseur des États-Unis pour de nombreux produits essentiels comme les composants électroniques, l'acier ou les médicaments. Ce plan propose de réduire drastiquement ces importations sur 4 ans et de forcer les entreprises chinoises à vendre leurs participations dans des secteurs stratégiques américains (énergie, technologie). L'objectif est de réduire la dépendance envers la Chine, considérée comme un rival géopolitique, même si cela risque d'augmenter les prix pour les consommateurs.",
+    "theme": "Économie"
+  },
+  {
+    "id": "5ca6d23c-ea7c-4ae7-bbb8-ffa24c1f69d8",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Défiscaliser les pourboires",
+    "description": "Aux États-Unis, les pourboires représentent une part importante du salaire dans la restauration et les services, et sont actuellement imposés comme un revenu normal. Cette proposition veut supprimer ces impôts pour augmenter le revenu net des serveurs, chauffeurs de taxi et autres travailleurs des services. Cependant, cette mesure coûterait entre 150 et 250 milliards de dollars sur dix ans aux finances publiques, ce qui pourrait nécessiter des coupes dans d'autres programmes ou augmenter le déficit.",
+    "theme": "Économie"
+  },
+  {
+    "id": "39a9c1ff-e09b-4781-b7a8-4f6ab139efb0",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Donner le contrôle des taux d'intérêt au président",
+    "description": "La Réserve fédérale (FED), équivalent de la Banque centrale européenne, est actuellement indépendante du pouvoir politique et fixe les taux d'intérêt pour contrôler l'inflation. Cette proposition veut donner ce pouvoir directement au président des États-Unis. Les partisans affirment que cela permettrait une meilleure coordination entre politique économique et monétaire, mais les économistes alertent sur les risques d'inflation si les taux sont maintenus trop bas pour des raisons politiques.",
+    "theme": "Économie"
+  },
+  {
+    "id": "dd306530-3af2-4537-9141-216c9d75673f",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Dévaluer le dollar",
+    "description": "Le dollar est aujourd'hui la principale monnaie mondiale et sa valeur élevée rend les produits américains plus chers à l'export. Cette proposition vise à faire baisser artificiellement sa valeur pour rendre les exportations américaines moins chères et réduire le déficit commercial. Cependant, une telle politique risquerait d'augmenter l'inflation en rendant les importations plus chères et pourrait affaiblir le statut international du dollar, aujourd'hui utilisé dans la majorité des échanges mondiaux.",
+    "theme": "Économie"
+  },
+  {
+    "id": "f6a08a28-f75a-496c-8ed3-ad1dc82bd3df",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Supprimer l'Obamacare",
+    "description": "Contrairement à la France où la Sécurité sociale est universelle, les États-Unis ont un système principalement privé. L'Obamacare (Affordable Care Act), mis en place en 2010, oblige les Américains à avoir une assurance santé et aide les plus modestes à la payer. Cette proposition vise à supprimer ce système, ce qui pourrait faire passer le nombre d'Américains sans assurance santé de 30 à 51 millions. Les partisans affirment que cela réduirait les coûts, tandis que les opposants craignent une crise sanitaire majeure.",
+    "theme": "Santé"
+  },
+  {
+    "id": "b5180d1f-49d6-4145-b380-a789bfa76f19",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Rendre l'assurance santé facultative",
+    "description": "Actuellement, les Américains qui choisissent de ne pas avoir d'assurance santé doivent payer une amende. Cette obligation a été mise en place pour que les personnes en bonne santé participent au système et le rendent viable financièrement, comme dans le système français de Sécurité sociale. La proposition vise à supprimer cette amende, permettant à chacun de choisir librement d'être assuré ou non. Les critiques soulignent que cela augmenterait les coûts pour ceux qui restent assurés, les jeunes et les personnes en bonne santé quittant le système.",
+    "theme": "Santé"
+  },
+  {
+    "id": "e3416c5b-948e-4f67-8658-6bdd23f8a867",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Créer des camps obligatoires pour les sans-abris",
+    "description": "Les grandes villes américaines font face à une crise majeure des sans-abris, avec des campements dans de nombreux centres-villes. Cette proposition prévoit de déplacer de force ces personnes vers des centres de traitement situés en périphérie, où elles seraient obligées de suivre des cures de désintoxication sous peine d'arrestation. Cette approche controversée diffère des politiques européennes qui privilégient généralement le logement d'abord ('Housing First') et l'accompagnement volontaire.",
+    "theme": "Santé"
+  },
+  {
+    "id": "4eaf4a76-c018-4000-b8be-a9a82a0cfe71",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Autoriser les assurances santé bas coût",
+    "description": "Les assurances santé américaines complètes coûtent en moyenne 7 000€ par an pour une personne seule. Cette proposition veut autoriser des assurances à bas coût (environ 2 000€ par an) qui couvriraient uniquement les urgences, excluant les maladies chroniques et les soins préventifs. Ces assurances, interdites sous Obama car jugées trop précaires, permettraient selon les partisans d'assurer plus d'Américains, même si la couverture serait minimale comparée aux standards européens.",
+    "theme": "Santé"
+  },
+  {
+    "id": "f2f8c4b7-bb71-4e80-b4a2-f309f1f4d2a5",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Décentraliser le système de santé",
+    "description": "Actuellement, le gouvernement fédéral américain définit de nombreuses règles en matière de santé et gère des programmes comme Medicare (pour les seniors) et Medicaid (pour les plus pauvres). Cette proposition veut transférer la gestion de ces programmes aux 50 États, avec un budget fixe. Comparable à une forte régionalisation de la Sécurité sociale en France, cette réforme donnerait plus de liberté aux États mais risquerait de créer de grandes inégalités entre États riches et pauvres.",
+    "theme": "Santé"
+  },
+  {
+    "id": "2f9576be-474f-4adc-aef0-510530492e41",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Arrêter l'aide à l'Ukraine",
+    "description": "Depuis l'invasion russe en 2022, les États-Unis ont fourni plus de 75 milliards d'euros d'aide à l'Ukraine, soit bien plus que l'Union européenne. Cette proposition promet d'arrêter cette aide et de négocier rapidement la fin du conflit, même si cela implique des concessions territoriales à la Russie. Le plan prévoit aussi de demander aux pays européens de rembourser le coût des armes déjà fournies, estimant que la défense de l'Ukraine devrait être principalement une responsabilité européenne.",
+    "theme": "Politique étrangère"
+  },
+  {
+    "id": "e2e5502b-9340-49f1-b153-021844cba093",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Réformer l'OTAN",
+    "description": "L'OTAN est une alliance militaire créée en 1949 qui lie l'Amérique du Nord et l'Europe. Les États-Unis en sont le principal contributeur, finançant environ 70% de son budget. Cette proposition veut conditionner la protection américaine au paiement par les autres pays (notamment européens) de leurs contributions, fixées à 2% de leur PIB. Plusieurs pays, dont la France et l'Allemagne, n'atteignent pas actuellement cet objectif. Le candidat menace de ne pas défendre ces pays en cas d'attaque s'ils ne paient pas davantage.",
+    "theme": "Politique étrangère"
+  },
+  {
+    "id": "07d5fbe0-ea54-4854-b17b-f3b4c7db1a5d",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Soutenir Israël et interdire les manifestations pro-palestiniennes",
+    "description": "Depuis l'attaque du Hamas le 7 octobre 2023 et la riposte israélienne à Gaza, les États-Unis, principal allié d'Israël, lui fournissent un soutien militaire et diplomatique important. Cette proposition veut renforcer ce soutien tout en interdisant l'entrée aux États-Unis des Palestiniens de Gaza et en réprimant les manifestations pro-palestiniennes sur le sol américain. Cette approche contraste avec celle de pays européens comme la France qui, tout en soutenant Israël, autorisent les manifestations pacifiques des deux camps.",
+    "theme": "Politique étrangère"
+  },
+  {
+    "id": "bb4e6e6c-16b2-48bc-b3cc-7ee0012cfe92",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Durcir la position face à la Chine",
+    "description": "Les États-Unis et la Chine sont engagés dans une rivalité économique et géopolitique majeure. Cette proposition prévoit des mesures économiques agressives contre la Chine (taxes, restrictions commerciales) tout en questionnant l'engagement américain à défendre Taïwan, île démocratique que la Chine considère comme une province rebelle. Cette position ambiguë inquiète les alliés asiatiques des États-Unis (Japon, Corée du Sud) qui craignent une expansion de l'influence chinoise dans la région.",
+    "theme": "Politique étrangère"
+  },
+  {
+    "id": "91b134f0-4150-4a8e-9c94-f5b67ad6e48f",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Intervenir militairement au Mexique",
+    "description": "Le Mexique est confronté à de puissants cartels de drogue qui contrôlent certaines régions du pays et sont responsables d'une grande partie du trafic de drogue vers les États-Unis, notamment de fentanyl qui cause 70 000 décès par overdose par an aux USA. Cette proposition suggère d'envoyer l'armée américaine au Mexique pour combattre ces cartels, même sans l'accord du gouvernement mexicain. Une telle intervention militaire dans un pays voisin et allié serait sans précédent et pourrait déclencher une crise diplomatique majeure.",
+    "theme": "Politique étrangère"
+  },
+  {
+    "id": "bd32cc06-f484-4d2c-bc48-4cc2418329df",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Expulser massivement les sans-papiers",
+    "description": "On estime qu'environ 11 millions de personnes vivent aux États-Unis sans papiers, souvent depuis des décennies, travaillant notamment dans l'agriculture, la construction et les services. Cette proposition vise à en expulser 15 à 20 millions en créant des camps de détention temporaires, s'inspirant d'une opération similaire menée en 1954. Le coût estimé est de 315 milliards d'euros et l'impact économique pourrait être majeur, ces travailleurs représentant environ 5% de la main d'œuvre américaine.",
+    "theme": "Immigration"
+  },
+  {
+    "id": "3bb644c3-1e49-4978-9c4b-5aafcd9a9c25",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Accélérer les expulsions",
+    "description": "Actuellement, l'expulsion d'un sans-papiers aux États-Unis peut prendre plusieurs années en raison des procédures judiciaires et du manque de personnel. Cette proposition vise à accélérer drastiquement ce processus en mobilisant la police, la Garde nationale (équivalent des réservistes en France) et en construisant de nouveaux centres de détention. Les défenseurs des droits humains s'inquiètent que cette accélération ne prive les migrants de leurs droits à la défense.",
+    "theme": "Immigration"
+  },
+  {
+    "id": "9ea26124-a342-46f5-b8dd-69e70be2a8e7",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Interdire l'entrée aux musulmans",
+    "description": "Entre 2017 et 2021, les États-Unis avaient interdit l'entrée aux ressortissants de plusieurs pays majoritairement musulmans comme l'Iran ou la Syrie. Cette proposition veut rétablir et élargir cette interdiction, tout en suspendant l'accueil de réfugiés. Elle prévoit aussi de révoquer le statut de protection accordé à certains groupes, comme les Afghans ayant aidé l'armée américaine pendant la guerre en Afghanistan. Cette politique contraste avec l'approche européenne qui, malgré des restrictions, n'applique pas de discrimination religieuse.",
+    "theme": "Immigration"
+  },
+  {
+    "id": "1458193e-6796-4033-8475-3d77dcad2448",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Supprimer le droit du sol",
+    "description": "Aux États-Unis, comme en France, toute personne née sur le territoire obtient automatiquement la nationalité (droit du sol). Cette proposition veut supprimer ce droit pour les enfants de parents sans papiers. Elle prévoit aussi d'expulser les 'Dreamers', environ 800 000 jeunes arrivés enfants aux États-Unis sans papiers et protégés de l'expulsion depuis 2012. Cette réforme nécessiterait probablement un changement de la Constitution américaine qui garantit ce droit depuis 1868.",
+    "theme": "Immigration"
+  },
+  {
+    "id": "d53accaf-e04c-4bb2-9ebc-c1e1dc2e0673",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Renforcer les contrôles aux frontières",
+    "description": "La frontière entre les États-Unis et le Mexique s'étend sur plus de 3 000 km, avec actuellement environ 20 000 agents pour la surveiller. Face à un nombre record d'entrées illégales (2,4 millions en 2023), cette proposition vise à embaucher 10 000 agents supplémentaires avec des salaires augmentés de 10% et des primes de 10 000 dollars. Pour comparaison, l'Union européenne emploie environ 10 000 garde-frontières pour surveiller toutes ses frontières extérieures.",
+    "theme": "Immigration"
+  },
+  {
+    "id": "b6e92f5d-f8e7-40d5-96db-aa0c20cb6955",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Limiter l'avortement à 15 semaines au niveau fédéral",
+    "description": "Aux États-Unis, depuis l'annulation de l'arrêt Roe v. Wade en 2022, chaque État peut définir ses propres lois sur l'avortement. Certains l'interdisent totalement, d'autres l'autorisent jusqu'à la naissance. Cette proposition vise à créer une loi nationale qui fixerait une limite à 15 semaines de grossesse, avec des exceptions pour le viol, l'inceste et la santé de la mère. Cette position tente de trouver un compromis entre les partisans du droit à l'avortement (pro-choice) et ses opposants (pro-life).",
+    "theme": "Droits civiques et sociaux"
+  },
+  {
+    "id": "e00b88f6-e6d8-4db6-b9ad-ddb7f5763485",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Supprimer la discrimination positive",
+    "description": "La discrimination positive (affirmative action) existe aux États-Unis depuis les années 1960 pour favoriser l'accès des minorités ethniques à l'université et à l'emploi, en compensation des discriminations historiques. Cette proposition vise à éliminer ces programmes, considérant qu'ils créeraient une discrimination injuste envers les Américains blancs. Ce débat est très sensible car il touche à la question de l'égalité des chances et aux moyens de corriger les inégalités raciales qui persistent dans la société américaine.",
+    "theme": "Droits civiques et sociaux"
+  },
+  {
+    "id": "e7fecc37-6daa-4472-a451-7e1ae4df9969",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Interdire les traitements de transition de genre pour les mineurs",
+    "description": "Actuellement, certains États américains autorisent les mineurs transgenres à recevoir des traitements hormonaux et des opérations chirurgicales pour affirmer leur identité de genre, avec l'accord de leurs parents et des médecins. Cette proposition vise à interdire ces soins dans tout le pays et à couper le financement fédéral (assurance santé publique) aux établissements qui les proposent. Les partisans affirment protéger les enfants, tandis que les opposants y voient une atteinte aux droits des personnes trans et à la liberté des familles de prendre des décisions médicales.",
+    "theme": "Droits civiques et sociaux"
+  },
+  {
+    "id": "f5254286-3ff6-44e0-a53e-160d2e840c36",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Interdire l'accès des personnes trans aux toilettes de leur choix",
+    "description": "Le Title IX est une loi fédérale qui interdit la discrimination basée sur le sexe dans l'éducation. Actuellement, elle protège le droit des élèves transgenres à utiliser les toilettes et vestiaires correspondant à leur identité de genre. Cette proposition vise à modifier cette loi pour obliger les écoles à réserver l'accès aux toilettes et vestiaires selon le sexe biologique assigné à la naissance. Ce débat reflète une tension plus large dans la société américaine sur la reconnaissance des droits des personnes transgenres.",
+    "theme": "Droits civiques et sociaux"
+  },
+  {
+    "id": "838a79cc-4809-4658-abe3-1173dc501728",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Défendre le mariage homosexuel",
+    "description": "Le mariage entre personnes de même sexe est légal aux États-Unis depuis 2015, suite à une décision de la Cour Suprême. Cette proposition vise à maintenir ce droit et à interdire les 'thérapies de conversion' (pratiques controversées visant à changer l'orientation sexuelle d'une personne). Cette position marque une évolution au sein du parti républicain, traditionnellement opposé aux droits LGBTQ+, mais maintient des positions conservatrices sur les questions trans.",
+    "theme": "Droits civiques et sociaux"
+  },
+  {
+    "id": "f2938bef-8a11-4698-ad27-b91738c523ab",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Réformer le statut des enseignants",
+    "description": "Aux États-Unis, la plupart des enseignants du public bénéficient de la 'tenure' (équivalent de la titularisation en France), qui les protège contre les licenciements abusifs. Cette proposition vise à supprimer ce statut, à instaurer un salaire basé sur les performances, et à permettre aux parents d'élire les directeurs d'école. L'objectif est de rendre les écoles plus 'responsables' devant les parents, mais les syndicats d'enseignants s'y opposent, craignant une précarisation de la profession.",
+    "theme": "Éducation"
+  },
+  {
+    "id": "d3dee317-0d5b-4aeb-85af-698ca3ec8f77",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Créer une université publique en ligne gratuite",
+    "description": "L'enseignement supérieur aux États-Unis est très coûteux, avec des frais de scolarité pouvant dépasser 50 000 dollars par an dans les universités privées. Pour financer une université publique en ligne gratuite, cette proposition suggère de taxer les 'endowments' (fonds de dotation) des universités les plus riches comme Harvard ou Yale, qui possèdent des dizaines de milliards de dollars. Cette initiative vise à démocratiser l'accès à l'enseignement supérieur face à la crise de la dette étudiante.",
+    "theme": "Éducation"
+  },
+  {
+    "id": "511a459a-836a-439d-808d-d1e39894e5d0",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Financer l'école privée par des bons scolaires",
+    "description": "Actuellement, la majorité des élèves américains fréquentent des écoles publiques gratuites attribuées selon leur lieu de résidence. Cette proposition veut donner aux parents des 'bons scolaires' (chèques éducation) leur permettant de choisir n'importe quelle école, y compris privée ou religieuse. Les partisans y voient une question de liberté de choix, particulièrement pour les familles défavorisées, tandis que les opposants craignent un affaiblissement de l'école publique.",
+    "theme": "Éducation"
+  },
+  {
+    "id": "65e32e82-88be-4b83-b4c3-087aed399884",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Imposer un enseignement patriotique à l'école",
+    "description": "Ces dernières années, un débat intense divise les États-Unis sur l'enseignement de l'histoire américaine à l'école, notamment concernant l'esclavage et le racisme. Cette proposition veut imposer un programme scolaire mettant l'accent sur les aspects positifs de l'histoire américaine, autoriser la prière dans les écoles publiques (actuellement interdite), et limiter l'enseignement des théories critiques sur le racisme systémique. Ce débat reflète une polarisation plus large sur l'identité nationale américaine.",
+    "theme": "Éducation"
+  },
+  {
+    "id": "62dfa527-b644-43f3-ade1-693374b3a470",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Armer les enseignants contre les fusillades scolaires",
+    "description": "Face aux nombreuses fusillades dans les écoles américaines, cette proposition suggère d'autoriser les enseignants à porter des armes et de financer des gardes armés, plutôt que de restreindre l'accès aux armes à feu. Elle prévoit aussi de couper les financements aux écoles qui imposent le port du masque ou la vaccination contre le Covid-19, reflétant l'opposition conservatrice aux mesures sanitaires dans les écoles.",
+    "theme": "Éducation"
+  },
+  {
+    "id": "c30d3450-095a-4e92-ac2f-8c6c05cfa472",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Renforcer les pouvoirs de la police",
+    "description": "Suite au mouvement Black Lives Matter contre les violences policières, de nombreuses villes ont restreint les pouvoirs de la police. Cette proposition veut au contraire les renforcer, notamment en rétablissant la politique du 'stop-and-frisk' à New York (permettant à la police de fouiller n'importe qui dans la rue sans mandat). Les partisans affirment que cela réduira la criminalité, les opposants dénoncent une mesure qui cible disproportionnément les minorités.",
+    "theme": "Justice et sécurité"
+  },
+  {
+    "id": "53f63390-4912-4078-a3b6-2a8e2392c8a5",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Protéger les policiers contre les poursuites judiciaires",
+    "description": "L'immunité qualifiée est une doctrine juridique qui protège les policiers contre les poursuites civiles pour leurs actions en service, sauf violation manifeste des droits constitutionnels. Cette proposition veut renforcer cette protection et garantir une indemnisation totale des frais de justice des policiers. Ce débat s'inscrit dans la confrontation entre protection des forces de l'ordre et lutte contre les violences policières.",
+    "theme": "Justice et sécurité"
+  },
+  {
+    "id": "6a2ee0a9-2113-40cd-8d46-04dfab83ca21",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Élargir l'application de la peine de mort",
+    "description": "Contrairement à la France et à l'Union Européenne, 27 États américains pratiquent encore la peine de mort, principalement pour les meurtres avec circonstances aggravantes. Cette proposition veut étendre son application à de nouveaux crimes, notamment le trafic de drogue ayant entraîné des décès et le meurtre de policiers. Elle s'inscrit dans une approche punitive de la justice pénale, caractéristique des États-Unis.",
+    "theme": "Justice et sécurité"
+  },
+  {
+    "id": "efe39d4e-af89-4c78-b093-2e13faf96550",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Pénaliser la critique des juges",
+    "description": "Dans un contexte de forte polarisation politique, les juges américains, notamment ceux de la Cour Suprême, font l'objet de critiques croissantes. Cette proposition controversée veut créer des sanctions pénales (amendes ou prison) pour les personnes critiquant publiquement les juges. Elle soulève des questions constitutionnelles majeures car le Premier Amendement protège fortement la liberté d'expression aux États-Unis, y compris la critique des institutions.",
+    "theme": "Justice et sécurité"
+  },
+  {
+    "id": "af439482-f2aa-48bb-909b-0bb17a090c0b",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Réduire le budget du FBI",
+    "description": "Le FBI est la principale agence fédérale d'investigation criminelle aux États-Unis. Cette proposition vise à réduire significativement son financement, ainsi que celui du Département de la Justice (équivalent du Ministère de la Justice). Cette position reflète une méfiance croissante envers ces institutions fédérales, accusées par certains conservateurs d'être politisées, notamment depuis l'enquête sur Donald Trump.",
+    "theme": "Justice et sécurité"
+  },
+  {
+    "id": "7d3ab99b-bb6e-4ccf-b647-7869fa80e520",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Limiter la régulation de l'intelligence artificielle",
+    "description": "Face au développement rapide de l'IA (ChatGPT, etc.), l'Europe a adopté une régulation stricte avec l'AI Act. Cette proposition prend le contrepied en limitant la régulation aux États-Unis pour favoriser l'innovation et la compétition avec la Chine. Elle met l'accent sur le développement militaire de l'IA et laisse le secteur privé s'autoréguler, reflétant une approche typiquement américaine privilégiant la liberté d'entreprendre.",
+    "theme": "Technologie"
+  },
+  {
+    "id": "4fb0a74e-9596-4444-a00f-70b91fc373ce",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Renforcer la cyberdéfense militaire",
+    "description": "Les États-Unis font face à des cyberattaques croissantes visant leurs infrastructures critiques (pipelines, réseaux électriques, etc.), notamment de la part de la Russie et de la Chine. Cette proposition privilégie une approche militaire de la cybersécurité, en augmentant les capacités offensives et défensives de l'armée, plutôt qu'une régulation civile des entreprises. Cette stratégie reflète la vision américaine de la technologie comme outil de puissance militaire.",
+    "theme": "Technologie"
+  },
+  {
+    "id": "e445e396-4c6e-47de-a18c-7a281c182690",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Relocaliser la production de puces électroniques",
+    "description": "Les semi-conducteurs (puces électroniques) sont essentiels pour tous les appareils électroniques, mais leur production est largement concentrée à Taiwan, créant une dépendance stratégique. Cette proposition vise à relocaliser leur fabrication aux États-Unis en taxant les importations et en subventionnant les usines américaines. C'est un enjeu majeur face à la Chine, qui menace Taiwan et investit massivement dans ce secteur.",
+    "theme": "Technologie"
+  },
+  {
+    "id": "bfe76ab8-d93e-49dd-9b37-032bbfff4fad",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Accélérer le déploiement de la 5G",
+    "description": "Contrairement à l'Europe où la 5G est strictement régulée (notamment pour des questions sanitaires et environnementales), cette proposition veut accélérer son déploiement aux États-Unis avec peu de contraintes. Elle prévoit aussi de favoriser l'internet par satellite (comme Starlink d'Elon Musk) pour connecter les zones rurales. Cette approche reflète la priorité américaine donnée à l'innovation rapide plutôt qu'à la précaution.",
+    "theme": "Technologie"
+  },
+  {
+    "id": "76f8f373-588e-41c4-b729-ad47db3fc529",
+    "candidateId": "c04eccb9-39f1-4157-8f99-bfb451f0ae71",
+    "title": "Faire des États-Unis un paradis des cryptomonnaies",
+    "description": "Alors que de nombreux pays, dont la France, renforcent la régulation des cryptomonnaies (Bitcoin, etc.) suite à divers scandales, cette proposition veut faire des États-Unis un refuge pour cette industrie. Elle prévoit des avantages fiscaux pour les entreprises crypto et limite les pouvoirs du gendarme boursier américain (SEC). L'objectif est de concurrencer des hubs crypto comme Singapour, au risque d'une moindre protection des investisseurs.",
+    "theme": "Technologie"
+  },
+  {
+    "id": "9f9914f7-155e-4bee-871f-1d8a7fa50318",
+    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
+    "title": "Développer les énergies renouvelables sur le sol américain",
+    "description": "Actuellement, les États-Unis dépendent encore largement du pétrole et du gaz pour leur énergie. Pour changer cela, le candidat veut maintenir les aides financières du gouvernement pour développer l'énergie solaire et éolienne. Ces aides permettent aux entreprises et aux particuliers d'installer des panneaux solaires ou des éoliennes à moindre coût. L'objectif est de créer des emplois dans ce secteur tout en réduisant la pollution.",
+    "theme": "Environnement"
+  },
+  {
+    "id": "25d94845-44b8-4c90-aee5-f4e913a0f670",
+    "title": "Appliquer la grande loi climat de 2022",
+    "description": "En 2022, les États-Unis ont voté l'Inflation Reduction Act, une loi historique qui prévoit 369 milliards de dollars d'investissements pour lutter contre le changement climatique. C'est la plus grande somme jamais investie par les États-Unis dans ce domaine. Le candidat s'engage à mettre en œuvre cette loi qui finance notamment l'achat de voitures électriques par les Américains et la rénovation énergétique des bâtiments.",
+    "theme": "Environnement"
+  },
+  {
+    "id": "5739db23-a5c2-4ed3-a370-3d773d5bd53e",
+    "title": "Moderniser le réseau électrique national",
+    "description": "Le réseau électrique américain est vieillissant et mal adapté aux énergies renouvelables. En effet, les parcs solaires et éoliens sont souvent situés loin des villes, dans des déserts ou en mer. Le candidat veut investir dans de nouvelles lignes électriques pour acheminer cette électricité verte vers les zones urbaines. C'est un projet crucial car sans ces infrastructures, l'électricité produite par les énergies renouvelables ne peut pas être utilisée efficacement.",
+    "theme": "Environnement"
+  },
+  {
+    "id": "cc6068da-287e-4d3a-8bb6-e3c209b01b1c",
+    "title": "Lutter contre la pollution dans les quartiers défavorisés",
+    "description": "Aux États-Unis, les usines polluantes et les autoroutes sont souvent construites près des quartiers pauvres, où vivent majoritairement des minorités ethniques. Ces populations souffrent davantage de maladies respiratoires et de cancers à cause de cette pollution. Le candidat veut imposer des règles plus strictes pour protéger ces communautés et faire fermer ou moderniser les installations les plus polluantes.",
+    "theme": "Environnement"
+  },
+  {
+    "id": "57467cb4-35d6-452c-8a93-c960eb580f78",
+    "title": "Imposer des limites d'émissions aux industries",
+    "description": "Les grandes industries comme les aciéries ou les cimenteries sont responsables d'une grande partie des émissions de gaz à effet de serre aux États-Unis. Malgré l'opposition de la Cour Suprême qui limite les pouvoirs du gouvernement dans ce domaine, le candidat veut utiliser les agences fédérales pour forcer ces industries à réduire leurs émissions de 50% d'ici 2030. Cette mesure est contestée mais nécessaire pour respecter les engagements climatiques américains.",
+    "theme": "Environnement"
+  },
+  {
+    "id": "6af08ede-0219-4d25-92f6-451e8d5892a8",
+    "title": "Soutenir financièrement les jeunes parents",
+    "description": "Avoir un enfant aux États-Unis coûte très cher : entre 20 000 et 25 000 dollars la première année en moyenne. Pour aider les jeunes parents, le candidat propose une aide de 6 000 dollars pour chaque nouveau-né. De plus, il veut supprimer les impôts sur les pourboires, qui représentent une grande partie du salaire des serveurs et autres employés de la restauration, payés bien en-dessous du salaire minimum.",
+    "theme": "Économie"
+  },
+  {
+    "id": "abeae46a-4d71-4ee5-a9f9-7b3209280d8c",
+    "title": "Donner 25 000 dollars aux premiers acheteurs immobiliers",
+    "description": "Le prix des maisons aux États-Unis a augmenté de 50% depuis 2019, rendant l'accès à la propriété impossible pour beaucoup de jeunes Américains. Pour les aider, le candidat propose une aide de 25 000 dollars pour l'achat d'une première maison. Cette somme importante s'explique par le fait qu'aux États-Unis, il faut généralement verser 20% du prix du logement en apport personnel pour obtenir un prêt bancaire.",
+    "theme": "Économie"
+  },
+  {
+    "id": "04a20c9c-f815-49d5-a3dd-2829c1116c7f",
+    "title": "Augmenter les impôts des plus riches",
+    "description": "Les États-Unis comptent plus de 700 milliardaires dont certains ne paient presque pas d'impôts grâce à des stratégies d'optimisation fiscale. Le candidat veut augmenter l'impôt sur les sociétés de 21% à 28% et créer un impôt minimum pour les milliardaires. Ces mesures permettraient de récolter 5 000 milliards de dollars sur 10 ans pour financer des services publics comme l'éducation et la santé.",
+    "theme": "Économie"
+  },
+  {
+    "id": "6810b0be-9349-40b4-84a1-25baf2431217",
+    "title": "Encadrer les prix et les frais bancaires",
+    "description": "L'inflation aux États-Unis a atteint des records en 2022, faisant grimper les prix de l'alimentation et du logement. Pour protéger les Américains, le candidat veut interdire les frais cachés des banques (qui peuvent atteindre plusieurs centaines de dollars par an) et limiter les augmentations de loyer abusives dans un pays où 35% des habitants sont locataires.",
+    "theme": "Économie"
+  },
+  {
+    "id": "d476a38c-69bd-458e-810e-b6bab46884c8",
+    "title": "Réduire les impôts des petites entreprises",
+    "description": "Les petites entreprises américaines font face à une concurrence féroce des grandes chaînes et des géants du commerce en ligne comme Amazon. Pour les aider à survivre, le candidat propose de multiplier par 10 leurs réductions d'impôts, passant de 5 000 à 50 000 dollars d'économies par an. Cette mesure vise particulièrement les commerces de proximité qui font vivre les centres-villes.",
+    "theme": "Économie"
+  },
+  {
+    "id": "40bb31cb-acb5-447a-9ea2-3b0d09af0344",
+    "title": "Maintenir les aides pour l'assurance santé",
+    "description": "Contrairement à la France, les États-Unis n'ont pas de sécurité sociale universelle. L'assurance santé est principalement privée et très coûteuse (500$ par mois en moyenne). L'Obamacare (ACA) aide les Américains modestes à payer leur assurance via des subventions. Ces aides devaient s'arrêter en 2025, mais le candidat veut les rendre permanentes pour éviter que des millions d'Américains ne perdent leur couverture santé.",
+    "theme": "Santé"
+  },
+  {
+    "id": "baf9d635-7806-48a6-a2bf-0cf45a3abcca",
+    "title": "Étendre l'assurance santé aux familles",
+    "description": "Actuellement, si un employeur propose une assurance santé trop chère pour couvrir toute la famille d'un employé, ses enfants et conjoint n'ont pas droit aux aides de l'Obamacare. Cette faille du système laisse des millions de familles sans couverture abordable. Le candidat veut corriger ce problème en permettant aux familles d'accéder aux subventions même si l'un des parents a une assurance par son employeur.",
+    "theme": "Santé"
+  },
+  {
+    "id": "01a03cf8-e069-4625-b6f4-505e6fd75c1e",
+    "title": "Créer des centres d'aide à l'assurance santé",
+    "description": "Le système de santé américain est extrêmement complexe avec des centaines de compagnies d'assurance proposant différents plans. Beaucoup d'Américains, notamment les plus âgés ou ceux ne parlant pas bien anglais, ont du mal à s'y retrouver. Le candidat veut financer des centres d'aide où des conseillers pourront expliquer aux gens quelles assurances correspondent le mieux à leurs besoins et budget.",
+    "theme": "Santé"
+  },
+  {
+    "id": "b48e4d2e-45a3-4c42-a636-8d2e2cbab7de",
+    "title": "Interdire les assurances santé au rabais",
+    "description": "Certaines compagnies proposent des assurances santé à bas prix mais qui couvrent très peu de soins, laissant les gens avec d'énormes factures en cas de problème grave. Ces 'mini-assurances' sont particulièrement dangereuses car les Américains peuvent facilement se retrouver en faillite personnelle à cause de factures médicales (première cause de faillite aux USA). Le candidat veut interdire ces contrats trompeurs.",
+    "theme": "Santé"
+  },
+  {
+    "id": "eebf5cc7-0e12-46f4-a8e4-ef5463a66bc8",
+    "title": "Augmenter le nombre d'Américains assurés",
+    "description": "Environ 8% des Américains (30 millions de personnes) n'ont toujours aucune assurance santé et doivent payer tous leurs soins de leur poche. Le candidat veut continuer à augmenter le nombre de personnes inscrites à l'Obamacare, qui a déjà permis d'assurer plus de 16 millions d'Américains. L'objectif est d'atteindre une couverture santé universelle comme dans la plupart des pays développés.",
+    "theme": "Santé"
+  },
+  {
+    "id": "457d2384-16fc-4ddc-9d1a-d13fc12768dc",
+    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
+    "title": "Protéger les alliés asiatiques face à la Chine",
+    "description": "La Chine revendique la quasi-totalité de la mer de Chine méridionale, une zone maritime cruciale par où transite 30% du commerce mondial. Elle menace aussi Taïwan, une île démocratique qu'elle considère comme son territoire. Le candidat veut renforcer la présence militaire américaine dans la région et développer des alliances avec le Japon, la Corée du Sud et l'Inde pour contrer l'influence chinoise grandissante.",
+    "theme": "Politique étrangère"
+  },
+  {
+    "id": "bb9702a2-ca03-48cd-a4ed-877748c535e8",
+    "title": "Réduire la dépendance économique à la Chine",
+    "description": "La Chine fabrique aujourd'hui une grande partie des produits consommés aux États-Unis, des iPhone aux panneaux solaires. Cette dépendance pose des problèmes quand la Chine menace les droits humains (comme avec les Ouïghours, minorité musulmane persécutée) ou l'ordre international (comme à Hong Kong où la démocratie a été supprimée). Le candidat veut encourager les entreprises à produire ailleurs qu'en Chine pour réduire cette dépendance.",
+    "theme": "Politique étrangère"
+  },
+  {
+    "id": "e2c71f21-81cc-4370-9c28-59c4c7034690",
+    "title": "Conditionner l'aide militaire à Israël",
+    "description": "Les États-Unis sont le principal soutien d'Israël, lui fournissant plus de 3 milliards de dollars d'aide militaire par an. Depuis l'attaque du Hamas le 7 octobre 2023 et la riposte israélienne à Gaza, de nombreux Américains s'inquiètent du nombre élevé de victimes civiles palestiniennes. Le candidat veut maintenir l'aide à Israël mais exige en contrepartie plus de protection des civils et la reprise des négociations pour créer un État palestinien.",
+    "theme": "Politique étrangère"
+  },
+  {
+    "id": "9faf88fa-e889-4c9b-bd93-d4c5d1f87fe8",
+    "title": "Soutenir l'Ukraine face à la Russie",
+    "description": "Depuis l'invasion russe de l'Ukraine en février 2022, les États-Unis sont le principal soutien militaire de Kiev, ayant fourni plus de 75 milliards de dollars d'aide. Le candidat veut continuer cette politique et renforcer l'OTAN, l'alliance militaire qui unit l'Amérique du Nord et l'Europe. Cette position contraste avec celle de ses opposants qui veulent réduire l'aide à l'Ukraine.",
+    "theme": "Politique étrangère"
+  },
+  {
+    "id": "fd38e596-aab6-4f79-96f1-569171741f04",
+    "title": "Réviser les accords de libre-échange",
+    "description": "Les accords de libre-échange comme l'ALENA (avec le Canada et le Mexique) sont critiqués car ils ont encouragé les entreprises américaines à délocaliser leurs usines vers des pays aux salaires plus bas. Le candidat veut maintenir ces accords mais les modifier pour mieux protéger les travailleurs américains. Il veut aussi garder les taxes douanières sur les produits chinois pour protéger l'industrie nationale.",
+    "theme": "Politique étrangère"
+  },
+  {
+    "id": "2a93f707-8ce5-46c5-ab7d-7e5156189ef1",
+    "title": "Renforcer les contrôles à la frontière mexicaine",
+    "description": "En 2023, plus de 2,4 millions de migrants ont été arrêtés à la frontière entre les États-Unis et le Mexique, un record historique. Face à cette situation, le candidat veut embaucher 1500 agents supplémentaires aux frontières et construire de nouveaux centres de détention pouvant accueillir 10 000 personnes. Cette position plus ferme reflète l'inquiétude des Américains face à l'immigration illégale massive.",
+    "theme": "Immigration"
+  },
+  {
+    "id": "3594908c-dbdb-40af-9b66-4eb9238285c6",
+    "title": "Accélérer le traitement des demandes d'asile",
+    "description": "Actuellement, il faut en moyenne 4,3 ans aux États-Unis pour traiter une demande d'asile, contre 8 mois en France. Cette lenteur crée d'énormes camps de migrants à la frontière mexicaine. Le candidat veut embaucher plus de juges spécialisés dans l'immigration pour traiter les dossiers plus rapidement, permettant d'accepter plus vite les réfugiés légitimes et de renvoyer plus rapidement ceux qui ne le sont pas.",
+    "theme": "Immigration"
+  },
+  {
+    "id": "d4b8cbfc-0300-4457-9342-84a7d4d8eb41",
+    "title": "Aider les pays d'Amérique centrale",
+    "description": "La majorité des migrants viennent du Guatemala, du Honduras et du Salvador, des pays pauvres ravagés par les gangs et la violence. Plutôt que de seulement arrêter les migrants à la frontière, le candidat veut investir dans ces pays pour réduire la pauvreté et la criminalité qui poussent les gens à partir. Cette approche s'inspire de ce que l'Union Européenne fait avec l'Afrique pour réduire l'immigration.",
+    "theme": "Immigration"
+  },
+  {
+    "id": "06e995cf-3476-4909-aa8d-bb0160a29d58",
+    "title": "Régulariser les immigrés bien intégrés",
+    "description": "Il y a environ 11 millions d'immigrés sans papiers aux États-Unis, dont beaucoup vivent là depuis des décennies, travaillent, paient des impôts et ont des enfants américains. Le candidat veut créer un chemin vers la légalisation pour ceux qui n'ont pas commis de crimes et sont bien intégrés. Il veut aussi simplifier le système d'immigration légale, actuellement si complexe que même des ingénieurs qualifiés attendent parfois 10 ans pour un visa.",
+    "theme": "Immigration"
+  },
+  {
+    "id": "27c243f1-11ba-4bed-9080-9608463ed474",
+    "title": "Lutter contre les cartels de la drogue",
+    "description": "Les cartels mexicains de la drogue contrôlent une grande partie de l'immigration illégale, faisant payer très cher les migrants pour traverser la frontière. Ils sont aussi responsables du trafic de fentanyl, une drogue qui tue plus de 70 000 Américains chaque année. Le candidat veut investir 1,4 milliard de dollars pour combattre ces cartels et aider les villes qui accueillent beaucoup de migrants.",
+    "theme": "Immigration"
+  },
+  {
+    "id": "0ee29c77-7216-4513-bc2d-3cec96f6b229",
+    "title": "Garantir le droit à l'avortement",
+    "description": "En 2022, la Cour Suprême a annulé l'arrêt Roe v. Wade qui garantissait le droit à l'avortement dans tout le pays depuis 1973. Depuis, 21 États ont interdit ou fortement restreint l'avortement, obligeant certaines femmes à voyager des centaines de kilomètres pour avorter. Le candidat veut faire voter une loi fédérale qui protégerait ce droit dans tout le pays, comme c'est le cas en France.",
+    "theme": "Droits civiques et sociaux"
+  },
+  {
+    "id": "0058c1ac-49e4-4d1b-997d-9fbd004b77c0",
+    "title": "Légaliser le cannabis au niveau fédéral",
+    "description": "Bien que 24 États aient légalisé le cannabis à usage récréatif, il reste illégal au niveau fédéral et classé dans la même catégorie que l'héroïne. Cette situation juridique complexe crée des problèmes pour les entreprises légales du cannabis qui ne peuvent pas utiliser les banques. Le candidat veut légaliser le cannabis au niveau national pour harmoniser les lois et libérer les personnes emprisonnées pour simple possession.",
+    "theme": "Droits civiques et sociaux"
+  },
+  {
+    "id": "83a28d99-553d-497a-9003-56d280698f36",
+    "title": "Réformer la police",
+    "description": "Depuis la mort de George Floyd en 2020, tué par un policier, les États-Unis débattent de la violence policière qui touche particulièrement les Noirs américains. Le candidat veut réformer la police en interdisant certaines pratiques dangereuses et en améliorant la formation, mais sans réduire les budgets comme le demandent certains militants. Il veut aussi protéger le droit de vote des minorités, souvent entravé dans certains États.",
+    "theme": "Droits civiques et sociaux"
+  },
+  {
+    "id": "e44172f7-edd2-4e99-b066-c096e791d1de",
+    "title": "Protéger les droits LGBT",
+    "description": "Bien que le mariage homosexuel soit légal depuis 2015 aux États-Unis, plusieurs États républicains adoptent des lois contre les personnes transgenres, notamment en leur interdisant l'accès aux toilettes de leur choix ou en limitant leurs soins médicaux. Le candidat s'oppose à ces lois et veut renforcer les protections fédérales pour les personnes LGBT, comme l'interdiction des discriminations au travail.",
+    "theme": "Droits civiques et sociaux"
+  },
+  {
+    "id": "398fced0-b162-47e8-a2c8-797379dce360",
+    "title": "Donner 6000 dollars par enfant aux familles",
+    "description": "Élever un enfant aux États-Unis coûte très cher : environ 300 000 dollars jusqu'à ses 18 ans. La garde d'enfants seule coûte en moyenne 10 000 dollars par an. Pour aider les familles, le candidat propose un crédit d'impôt de 6000 dollars par enfant et veut plafonner le prix des médicaments, qui peut atteindre plusieurs centaines de dollars par mois pour les maladies chroniques.",
+    "theme": "Droits civiques et sociaux"
+  },
+  {
+    "id": "3d85bb35-6bc7-4fe5-960a-c8c1f4608c88",
+    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
+    "title": "Effacer partiellement la dette étudiante américaine",
+    "description": "Aux États-Unis, contrairement à la France, les études supérieures sont très coûteuses et la plupart des étudiants doivent emprunter des dizaines de milliers de dollars pour étudier. Cette dette peut les suivre pendant des décennies. Le candidat propose d'effacer une partie de cette dette, particulièrement pour les fonctionnaires comme les enseignants. Cette mesure toucherait environ 40 millions d'Américains qui croulent sous le poids de leurs prêts étudiants.",
+    "theme": "Éducation"
+  },
+  {
+    "id": "6aab4e04-e32e-40a5-a749-06f4e828772b",
+    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
+    "title": "Enseigner l'histoire des discriminations raciales à l'école",
+    "description": "Dans certains États américains, des lois sont proposées pour interdire aux professeurs d'aborder en classe certains aspects de l'histoire raciale du pays, comme l'esclavage ou la ségrégation. Le candidat s'oppose à ces restrictions et défend le droit d'enseigner toute l'histoire américaine, y compris ses périodes les plus sombres, pour que les élèves comprennent les origines des inégalités actuelles.",
+    "theme": "Éducation"
+  },
+  {
+    "id": "fd1d90db-ee6b-4529-9148-a4dd9f78ae6f",
+    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
+    "title": "Autoriser les discussions sur l'identité LGBTQ+ en classe",
+    "description": "Plusieurs États américains ont adopté des lois, surnommées 'Don't Say Gay', qui interdisent aux enseignants de parler d'orientation sexuelle ou d'identité de genre en classe. Certaines écoles ont même retiré des bibliothèques les livres abordant ces thèmes. Le candidat s'oppose à ces restrictions et défend le droit des élèves LGBTQ+ à se sentir représentés et acceptés dans leur environnement scolaire.",
+    "theme": "Éducation"
+  },
+  {
+    "id": "e70eadc2-2d7e-495a-b462-d345ce69c9f9",
+    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
+    "title": "Protéger les droits des élèves transgenres à l'école",
+    "description": "Dans plusieurs États américains, des lois ont été votées pour restreindre les droits des élèves transgenres, par exemple en leur interdisant d'utiliser les toilettes correspondant à leur identité de genre ou de participer aux activités sportives. Le candidat propose des règles fédérales pour protéger ces élèves contre la discrimination et garantir leur accès à une éducation dans un environnement sûr et respectueux.",
+    "theme": "Éducation"
+  },
+  {
+    "id": "8cc20c37-cbcd-4829-a16d-6e474dbfadff",
+    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
+    "title": "Garantir l'accès aux soins pour les jeunes transgenres",
+    "description": "Certains États américains ont interdit l'accès aux traitements médicaux d'affirmation de genre pour les mineurs transgenres, même avec l'accord des parents et des médecins. Ces traitements peuvent inclure des bloqueurs de puberté ou des hormones. Le candidat s'oppose à ces interdictions et souhaite protéger légalement l'accès à ces soins médicaux, considérés comme essentiels par les professionnels de santé pour le bien-être des jeunes transgenres.",
+    "theme": "Éducation"
+  },
+  {
+    "id": "769bea4e-378a-457a-b6f8-902fb89ef644",
+    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
+    "title": "Réduire la population carcérale américaine",
+    "description": "Les États-Unis ont le plus grand nombre de prisonniers au monde, avec plus de 2 millions de personnes incarcérées. Le candidat a soutenu une loi majeure (First Step Act) qui permet de réduire certaines peines de prison, notamment pour les délits non-violents liés à la drogue, et facilite la réinsertion des anciens détenus. Cette réforme vise à corriger un système qui emprisonne de manière disproportionnée les minorités raciales.",
+    "theme": "Justice et sécurité"
+  },
+  {
+    "id": "1a82e9ee-1ad9-441e-9d1a-5a0dc1f6cb3d",
+    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
+    "title": "Légaliser le cannabis au niveau fédéral",
+    "description": "Bien que de nombreux États aient légalisé le cannabis, il reste illégal au niveau fédéral aux États-Unis. Cette situation crée des complications juridiques et maintient en prison de nombreuses personnes pour possession de cannabis, particulièrement dans les communautés afro-américaines et hispaniques. Le candidat propose de légaliser le cannabis au niveau national et d'effacer les condamnations passées liées à cette drogue.",
+    "theme": "Justice et sécurité"
+  },
+  {
+    "id": "33b938a9-3293-4955-bfb0-8d1214ad57ec",
+    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
+    "title": "Confisquer les armes des personnes dangereuses",
+    "description": "Face aux nombreuses fusillades de masse aux États-Unis, le candidat soutient les lois 'red flag' qui permettent à la police ou aux familles de demander à un juge de retirer temporairement les armes à feu d'une personne qui présente un danger pour elle-même ou pour les autres. Ces lois existent déjà dans certains États mais le candidat veut les étendre à tout le pays pour prévenir les tragédies.",
+    "theme": "Justice et sécurité"
+  },
+  {
+    "id": "afd0d31e-8406-46cc-9b92-8e8b4e5178d1",
+    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
+    "title": "Vérifier les antécédents pour tout achat d'arme",
+    "description": "Actuellement aux États-Unis, il est possible d'acheter des armes à feu lors de salons d'armes ou sur internet sans vérification approfondie des antécédents de l'acheteur. Le candidat veut rendre obligatoire une vérification complète (casier judiciaire, santé mentale) pour tout achat d'arme, quel que soit le lieu ou le mode d'achat, pour empêcher les personnes dangereuses d'acquérir légalement des armes.",
+    "theme": "Justice et sécurité"
+  },
+  {
+    "id": "d3e8f613-03b7-4262-8dd4-c73f415378db",
+    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
+    "title": "Permettre de poursuivre en justice les fabricants d'armes",
+    "description": "Aux États-Unis, une loi protège les fabricants d'armes contre les poursuites judiciaires, même lorsque leurs produits sont utilisés dans des fusillades de masse. Le candidat veut abroger cette protection spéciale pour que les victimes et leurs familles puissent poursuivre ces entreprises en justice, comme c'est le cas pour tous les autres fabricants de produits dangereux.",
+    "theme": "Justice et sécurité"
+  },
+  {
+    "id": "0df11aa3-2273-4a87-b3f3-bca2de017286",
+    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
+    "title": "Réglementer le développement de l'intelligence artificielle",
+    "description": "Avec l'essor rapide de l'IA comme ChatGPT, le candidat propose des règles nationales pour encadrer son développement. Ces règles obligeraient les entreprises à être transparentes sur le fonctionnement de leurs algorithmes, à prévenir les biais discriminatoires et à respecter la vie privée des utilisateurs. L'objectif est de profiter des avantages de l'IA tout en protégeant les droits des citoyens.",
+    "theme": "Technologie"
+  },
+  {
+    "id": "2cbb6dce-1daf-47f8-b4a3-16b8af40fb7c",
+    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
+    "title": "Protéger les infrastructures critiques des cyberattaques",
+    "description": "Face à la multiplication des cyberattaques venant de Russie, de Chine et d'autres pays, qui visent les centrales électriques, les hôpitaux ou les réseaux de transport américains, le candidat veut imposer des normes strictes de cybersécurité. Le plan prévoit aussi de former plus d'experts en cybersécurité et de collaborer avec d'autres pays pour lutter contre les pirates informatiques.",
+    "theme": "Technologie"
+  },
+  {
+    "id": "e023ec2d-d771-4ad3-9536-4973df53e52d",
+    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
+    "title": "Limiter le pouvoir des géants du numérique",
+    "description": "Les grandes entreprises technologiques américaines (Google, Apple, Facebook, Amazon) sont devenues extrêmement puissantes, contrôlant une grande partie d'Internet. Le candidat veut renforcer les lois antitrust pour limiter leur domination, les obliger à mieux protéger les données personnelles des utilisateurs, et faciliter l'émergence de nouvelles entreprises concurrentes.",
+    "theme": "Technologie"
+  },
+  {
+    "id": "6f904329-cbed-42e4-9e4b-ac7798599364",
+    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
+    "title": "Réduire la dépendance technologique envers la Chine",
+    "description": "La Chine produit une grande partie des composants électroniques utilisés dans le monde. Pour réduire cette dépendance, qui pose des risques pour la sécurité nationale, le candidat propose de développer la production de semi-conducteurs aux États-Unis et de contrôler les exportations de technologies sensibles vers la Chine. Il souhaite aussi collaborer avec les pays alliés pour créer des chaînes d'approvisionnement plus sûres.",
+    "theme": "Technologie"
+  },
+  {
+    "id": "f4a63d4d-5d16-455a-ba47-ce184b51e42f",
+    "candidateId": "4b15a86a-e5c6-46f6-b1b8-9f484deaffec",
+    "title": "Connecter toutes les régions à Internet haut débit",
+    "description": "Aux États-Unis, de nombreuses zones rurales n'ont pas accès à une connexion Internet rapide, ce qui crée des inégalités dans l'accès à l'éducation et au travail à distance. Le candidat propose un grand plan d'investissement pour déployer la fibre optique et la 5G dans tout le pays, et rendre l'accès Internet plus abordable pour les familles à faibles revenus.",
+    "theme": "Technologie"
   }
 ]
