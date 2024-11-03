@@ -1,13 +1,14 @@
 "use client";
 
 import axios from "axios";
+import Drawer from "rc-drawer";
 import { useCallback, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { TailSpin } from "react-loader-spinner";
 import Card from "react-tinder-card";
 
 import styles from "@/styles/components/card-stack.module.css";
-import type { BestCandidate, CardStackProps, Gif, Policy, SwipedPolicy } from "@/utils/interfaces";
+import type { BestCandidate, CardStackProps, DrawerContent, Gif, Policy, SwipedPolicy } from "@/utils/interfaces";
 import MockAPI from "@/utils/MockAPI";
 
 import Link from "../Link";
@@ -30,6 +31,11 @@ const CardStack = ({ className, onPercentageUpdate }: CardStackProps): JSX.Eleme
   const [gifs, setGifs] = useState<Gif[] | null>(null);
   const [voteId, setVoteId] = useState<string | null>(null);
   const [hasError, setHasError] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [drawerContent, setDrawerContent] = useState<DrawerContent>({
+    title: "",
+    description: "",
+  });
 
   const handleSwipe = useCallback((policyId: string, direction: string) => {
     setSwipedPolicies((prev) => {
@@ -107,11 +113,16 @@ const CardStack = ({ className, onPercentageUpdate }: CardStackProps): JSX.Eleme
     }
   }, [swipedPolicies, policies]);
 
+  const handleDrawerOpen = (title: string, description: string) => {
+    setDrawerContent({ title, description });
+    setDrawerOpen(true);
+  };
+
   const renderActionButton = () => {
     if (voteId) {
       return (
         <Link href={`/vote/${voteId}?shareable=true`} className={styles.card__button__container}>
-          <button className={styles.card__button}>{`Pourquoi ${bestCandidate?.sex === "M" ? "lui" : "elle"} ?`}</button>
+          <button className={styles.card__button}>{`Découvrez pourquoi`}</button>
         </Link>
       );
     }
@@ -173,12 +184,17 @@ const CardStack = ({ className, onPercentageUpdate }: CardStackProps): JSX.Eleme
         preventSwipe={["up", "down"]}
         onSwipe={(direction) => handleSwipe(policy.id, direction)}
       >
-        <div className={styles.card__content} style={{ transform: `rotate(${index % 2 === 0 ? 5 : -5}deg)` }}>
+        <div
+          className={styles.card__content}
+          style={{ transform: `rotate(${index % 2 === 0 ? 5 : -5}deg)`, justifyContent: "space-between" }}
+        >
           <div className={styles.card__header}>
             <span className={styles.card__header__theme}>{policy.theme}</span>
             <h3 className={styles.card__header__title}>{policy.title}</h3>
           </div>
-          <small className={styles.card__description}>{policy.description}</small>
+          <button className="pressable" onClick={() => handleDrawerOpen(policy.title, policy.description)}>
+            En savoir plus
+          </button>
         </div>
       </Card>
     ));
@@ -201,12 +217,28 @@ const CardStack = ({ className, onPercentageUpdate }: CardStackProps): JSX.Eleme
   );
 
   return (
-    <div className={className}>
-      {renderResultCard()}
-      {renderLoaderCard()}
-      {renderPolicyCards()}
-      {renderInstructionCard()}
-    </div>
+    <>
+      <Drawer open={true} className={`${styles.drawer} ${drawerOpen ? styles.drawer__open : ""}`}>
+        <h3>{drawerContent.title}</h3>
+        <div className={styles.drawer__content}>
+          <small>{drawerContent.description}</small>
+        </div>
+        <button className={styles.drawer__button} onClick={() => setDrawerOpen(false)}>
+          Retour
+        </button>
+      </Drawer>
+      <Drawer
+        open={true}
+        className={`${styles.drawer_mask} ${drawerOpen ? styles.drawer_mask__open : ""}`}
+        onClick={() => setDrawerOpen(false)}
+      />
+      <div className={className}>
+        {renderResultCard()}
+        {renderLoaderCard()}
+        {renderPolicyCards()}
+        {renderInstructionCard()}
+      </div>
+    </>
   );
 };
 
