@@ -141,3 +141,14 @@ export interface CardStackProps {
   className?: string;
   onPercentageUpdate: (percentage: number) => void;
 }
+
+// eslint-disable-next-line
+export interface AboutProps {}
+
+// eslint-disable-next-line
+export interface NoticeProps {}
+
+export interface DrawerContent {
+  title: string;
+  description: string;
+}
