@@ -64,6 +64,61 @@
 .card__button__container {
   width: 100%;
 }
+
 .card__button {
   position: relative;
+}
+
+.drawer {
+  position: fixed;
+  bottom: 0;
+  height: 100%;
+  max-height: 500px;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--color-white);
+  border-top: 5px solid var(--color-black);
+  transform: translateY(110%);
+  transition: transform var(--transition-duration) var(--transition-timing-function);
+  padding: var(--spacing);
+  display: flex;
+  flex-flow: column nowrap;
+  gap: calc(var(--spacing) / 2);
+}
+
+.drawer_mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-black);
+  opacity: 0;
+  z-index: 99;
+  visibility: hidden;
+  transition: opacity var(--transition-duration) var(--transition-timing-function);
+}
+
+.drawer__open {
+  transform: translateY(0);
+}
+
+.drawer_mask__open {
+  visibility: visible;
+  opacity: 0.5;
+}
+
+.drawer__bar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing);
+}
+
+.drawer__content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
 }
