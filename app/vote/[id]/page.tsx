@@ -45,7 +45,7 @@ const Vote = ({ params }: VoteProps): JSX.Element => {
     try {
       await navigator.share({
         title: "Je viens de voter ! 🇺🇸",
-        text: "Je viens de découvrir pour quel candidat je voterais, d'après mes préférences ! #USA2024",
+        text: "Je viens de découvrir pour quel candidat j'aurais voté aux élections présidentielles américaines. #USA2024",
         url: `${window.location.origin}/vote/${voteData.id}`,
       });
     } catch (error) {
