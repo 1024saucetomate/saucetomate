@@ -20,6 +20,7 @@ model Vote {
   candidate   Candidate @relation(fields: [candidateId], references: [id])
   candidateId String
   policies    String[]
+  deviceId    String
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
 }
