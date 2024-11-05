@@ -33,7 +33,7 @@ const About: React.FC<AboutProps> = () => {
           préoccupations.
         </h3>
         <h3 className={styles.content__os}>
-          SAUCETOMATE est un projet open-source sous license AGPL-3.0. Si vous souhaitez participer à son développement
+          SAUCETOMATE est un projet open-source sous licence AGPL-3.0. Si vous souhaitez participer à son développement
           et à son évolution, vous pouvez contribuer directement sur le&nbsp;
           <NextLink href={"https://github.com/1024saucetomate/saucetomate"} className={styles.link} target="_blank">
             dépôt GitHub
