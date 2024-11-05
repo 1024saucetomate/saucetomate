@@ -10,6 +10,21 @@ import type { RootLayoutProps } from "@/utils/interfaces";
 export const metadata: Metadata = {
   title: "SAUCETOMATE",
   description: "Et si vous deviez voter ?",
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: "https://saucetomate.xyz",
+    title: "SAUCETOMATE",
+    description: "Et si vous deviez voter ?",
+    images: [
+      {
+        url: "https://saucetomate.xyz/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "SAUCETOMATE",
+      },
+    ],
+  },
 };
 
 const RootLayout = ({ children }: Readonly<RootLayoutProps>): JSX.Element => {
