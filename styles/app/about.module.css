@@ -1,0 +1,80 @@
+.link {
+  text-decoration: underline var(--color-black) !important;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: var(--spacing);
+}
+
+.header {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  gap: var(--spacing);
+  margin-top: calc(var(--spacing) * 2);
+}
+
+.content__text {
+  color: var(--color-gray);
+}
+
+.content__text span {
+  color: var(--color-black);
+}
+
+.content__os {
+  align-items: center;
+}
+
+.emojiYaniv::before {
+  content: "";
+  background-color: white;
+  padding: 0.8rem;
+  background: url("/assets/emoji-yaniv.png") no-repeat;
+  background-size: contain;
+  background-position-y: 0.8rem;
+}
+
+.emojiMargaux::before {
+  content: "";
+  background-color: white;
+  padding: 0.8rem;
+  background: url("/assets/emoji-margaux.png") no-repeat;
+  background-size: contain;
+  background-position-y: 0.7rem;
+}
+
+.emojiNayla::before {
+  content: "";
+  background-color: white;
+  padding: 0.8rem;
+  background: url("/assets/emoji-nayla.png") no-repeat;
+  background-size: contain;
+  background-position-y: 0.7rem;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-black);
+  opacity: 0.2;
+}
+
+.faq {
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  gap: var(--spacing);
+}
