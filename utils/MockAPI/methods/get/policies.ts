@@ -60,3 +60,7 @@ export const fromId = (id: string): Policy | undefined => {
   const policy = policies.find((policy) => policy.id === id);
   return policy as Policy | undefined;
 };
+
+export const categories = (): string[] => Array.from(new Set(policies.map((policy) => policy.category)));
+
+export const all = (): Policy[] => policies;
