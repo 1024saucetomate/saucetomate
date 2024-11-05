@@ -22,6 +22,11 @@ const faqItems: FAQItem[] = [
     answer:
       "Les scores sont établis en fonction de vos réponses aux propositions. Plus vos réponses sont en accord avec celles d'un candidat, plus votre score associé à ce candidat sera élevé. Le candidat qui vous correspond le mieux est celui dont le score atteint le niveau le plus élevé.",
   },
+  {
+    question: "J'ai une erreur quand je valide mon vote, que faire ?",
+    answer:
+      "Afin de garantir la fiabilité des résultats, vous ne pouvez voter qu'une seule fois toutes les 5 minutes. Si vous rencontrez une erreur, veuillez réessayer ultérieurement. Si le problème persiste, contactez-nous à l'adresse mail suivante : help@saucetomate.xyz.",
+  },
 ];
 
 const TeamMember = ({ name, emojiClass }: { name: string; emojiClass: string }) => (
