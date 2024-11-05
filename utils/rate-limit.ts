@@ -4,7 +4,7 @@ import { getIp } from "./get-ip";
 
 const trackers: Record<string, RateLimitTracker> = {};
 
-export const isRateLimited = async (limit: number = 1, window: number = 60 * 1000): Promise<boolean> => {
+export const isRateLimited = async (limit: number = 1, window: number = 60 * 5 * 1000): Promise<boolean> => {
   const ip = await getIp();
   if (!ip) return true;
 
