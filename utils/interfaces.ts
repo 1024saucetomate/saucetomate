@@ -46,7 +46,7 @@ export interface CandidateCardProps {
 
 export interface Policy {
   id: string;
-  theme: string;
+  category: string;
   title: string;
   description: string;
   candidateId: string;
@@ -146,7 +146,7 @@ export interface CardStackProps {
 export interface AboutProps {}
 
 // eslint-disable-next-line
-export interface NoticeProps {}
+export interface PoliciesProps {}
 
 export interface DrawerContent {
   title: string;
@@ -156,4 +156,17 @@ export interface DrawerContent {
 export interface FAQItem {
   question: string;
   answer: string;
+}
+
+export interface SelectOption {
+  value: string;
+  label: string;
+}
+
+export interface FilterSelectProps {
+  options: SelectOption[];
+  onChange: (value: string) => void;
+  placeholder: string;
+  defaultValue: SelectOption;
+  noOptionsMessage: string;
 }
