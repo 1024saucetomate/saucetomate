@@ -49,10 +49,10 @@ const About: React.FC<AboutProps> = () => (
         dans le cadre du projet d&apos;EMC dédié aux <span>élections américaines</span> de 2024. Notre objectif est de
         rendre la politique plus <span>accessible et interactive</span>, en aidant chacun à découvrir quel candidat
         américain correspond le mieux à ses <span>opinions</span> et <span>valeurs</span>. En vous proposant une série
-        de questions et d&apos;affirmations sur des <span>thèmes variés</span>
-        (économie, environnement, immigration, politique étrangère, etc.), nous analysons vos choix pour calculer un
-        score. Ce score vous permet ensuite d&apos;<span>identifier le candidat</span> qui semble le plus en phase avec
-        vos <span>préférences</span> et préoccupations.
+        de questions et d&apos;affirmations sur des <span>thèmes variés</span>&nspb; (économie, environnement,
+        immigration, politique étrangère, etc.), nous analysons vos choix pour calculer un score. Ce score vous permet
+        ensuite d&apos;<span>identifier le candidat</span> qui semble le plus en phase avec vos <span>préférences</span>{" "}
+        et préoccupations.
       </h3>
 
       <h3 className={styles.content__os}>
