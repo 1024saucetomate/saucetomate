@@ -137,7 +137,7 @@ const CardStack = ({ className, onPercentageUpdate }: CardStackProps): JSX.Eleme
     <div className={styles.card} key="result-container">
       <div className={styles.card__content}>
         <div className={styles.card__header}>
-          <span className={styles.card__header__theme}>{bestCandidate?.slogan}</span>
+          <span className={styles.card__header__category}>{bestCandidate?.slogan}</span>
           <h3 className={styles.card__header__title}>
             {`${bestCandidate?.name} semble être ${bestCandidate?.sex === "M" ? "le candidat" : "la candidate"} qui vous correspond le plus`}
           </h3>
@@ -189,7 +189,7 @@ const CardStack = ({ className, onPercentageUpdate }: CardStackProps): JSX.Eleme
           style={{ transform: `rotate(${index % 2 === 0 ? 5 : -5}deg)`, justifyContent: "space-between" }}
         >
           <div className={styles.card__header}>
-            <span className={styles.card__header__theme}>{policy.theme}</span>
+            <span className={styles.card__header__category}>{policy.category}</span>
             <h3 className={styles.card__header__title}>{policy.title}</h3>
           </div>
           <button className="pressable" onClick={() => handleDrawerOpen(policy.title, policy.description)}>
@@ -203,7 +203,7 @@ const CardStack = ({ className, onPercentageUpdate }: CardStackProps): JSX.Eleme
     <Card className={styles.card} key="instructions" preventSwipe={["up", "down"]} swipeRequirementType="position">
       <div className={styles.card__content}>
         <div className={styles.card__header}>
-          <span className={styles.card__header__theme}>Mode d&apos;emploi</span>
+          <span className={styles.card__header__category}>Mode d&apos;emploi</span>
           <h3 className={styles.card__header__title}>
             Faites glisser les cartes pour découvrir les propositions des candidats
           </h3>
