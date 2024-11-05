@@ -15,7 +15,7 @@ const Root: React.FC<RootProps> = (): JSX.Element => {
           <Link href="#">
             <h3>Les programmes</h3>
           </Link>
-          <Link href="#">
+          <Link href="/about">
             <h3>À propos</h3>
           </Link>
         </div>
