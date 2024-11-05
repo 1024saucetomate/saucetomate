@@ -30,6 +30,7 @@
     "react-dom": "^18",
     "react-hot-toast": "^2.4.1",
     "react-loader-spinner": "^6.1.6",
+    "react-select": "^5.8.2",
     "react-slot-counter": "^3.0.1",
     "react-tinder-card": "^1.6.4",
     "uuid": "^11.0.2"
