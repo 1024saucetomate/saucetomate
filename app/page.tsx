@@ -12,7 +12,7 @@ const Root: React.FC<RootProps> = (): JSX.Element => {
           <Link href="/swipe">
             <h3>Démarrer</h3>
           </Link>
-          <Link href="#">
+          <Link href="/policies">
             <h3>Les programmes</h3>
           </Link>
           <Link href="/about">
