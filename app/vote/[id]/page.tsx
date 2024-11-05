@@ -82,7 +82,7 @@ const Vote = ({ params }: VoteProps): JSX.Element => {
         )}
       </div>
       <div className={styles.content}>
-        <h3 className={styles.content__title}>Récapitulatif de vos choix</h3>
+        <h3 className={styles.content__title}>{shareable ? "Récapitulatif de vos choix" : "Résultats du vote"}</h3>
         <div className={styles.content__view}>
           {scores.map((score, index) => {
             const candidateId = Object.keys(score)[0];
